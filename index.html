@@ -61,7 +61,6 @@
       font-weight: 700;
       text-decoration: none;
       border-radius: 6px;
-      transition: background-color 0.3s ease;
     }
 
     .hero-ticket-button:hover {
@@ -79,8 +78,6 @@
       margin: 0 1rem;
       font-weight: bold;
       text-decoration: none;
-      padding: 0.3rem 0.6rem;
-      border-radius: 4px;
     }
 
     section {
@@ -134,10 +131,6 @@
       display: none;
     }
 
-    .sticky-ticket:hover {
-      background-color: #b8672f;
-    }
-
     @media (max-width: 600px) {
       header h1 { font-size: 1.6rem; }
       nav a { display: block; margin: 0.5rem 0; }
@@ -151,26 +144,16 @@
   </style>
 
   <script>
-    function trackTicketClick(source) {
-      console.log("Ticket click:", source);
-
-      if (typeof gtag === "function") {
-        gtag("event", "ticket_click", {
-          event_category: "engagement",
-          event_label: source
-        });
-      }
-    }
-
     window.addEventListener("scroll", () => {
-      const sticky = document.querySelector(".sticky-ticket");
-      const ticketsSection = document.getElementById("tickets");
-      const ticketsTop = ticketsSection.getBoundingClientRect().top;
+      const heroButton = document.querySelector(".hero-ticket-button");
+      const stickyButton = document.querySelector(".sticky-ticket");
 
-      if (window.scrollY > 300 && ticketsTop > 200) {
-        sticky.style.display = "block";
+      const heroRect = heroButton.getBoundingClientRect();
+
+      if (heroRect.bottom < 0) {
+        stickyButton.style.display = "block";
       } else {
-        sticky.style.display = "none";
+        stickyButton.style.display = "none";
       }
     });
   </script>
@@ -188,7 +171,6 @@
     target="_blank"
     rel="noopener noreferrer"
     class="hero-ticket-button"
-    onclick="trackTicketClick('hero_button')"
   >
     Get Tickets
   </a>
@@ -198,7 +180,6 @@
   <a href="#about">About</a>
   <a href="#course">Course</a>
   <a href="#gallery">Photos</a>
-  <a href="#tickets">Tickets</a>
   <a href="#community">What You Get</a>
   <a href="#contact">Contact</a>
 </nav>
@@ -222,8 +203,7 @@
   <p>
     The event follows the classic Backyard Ultra (Last One Standing) format.
     Runners complete a 4.167-mile (6.7 km) trail loop every hour, on the hour.
-    You have 60 minutes to complete each loop. Finish early and you rest.
-    Finish late, or fail to make the start line when the bell rings, and your race is over.
+    You have 60 minutes to complete each loop.
   </p>
 
   <p>
@@ -231,86 +211,46 @@
     That final runner must complete one last solo loop to be crowned
     <strong>Last One Standing</strong>.
   </p>
-
-  <p>
-    Every other participant, regardless of the distance they cover, is recorded as a DNF.
-    This is not a race about speed. It is about pacing, recovery, decision-making,
-    and managing the mental challenge of repetition.
-  </p>
 </section>
-
 
 <section id="course">
   <h2>The Course</h2>
+
   <p>
-   The course winds through the varied trails of Blaise Castle Estate, combining woodland
-    paths, open parkland, and gently rolling terrain. Conditions will evolve as the hours
-    pass, with sections that feel forgiving early on and more demanding later. The loop 
-    is fully marked and easy to follow, with no navigation required, allowing runners to 
-    focus solely on completing each lap and returning to the start before the next bell.
+    The course winds through the varied trails of <strong>Blaise Castle Estate</strong>,
+    combining woodland paths, open parkland, and gently rolling terrain.
+  </p>
+
+  <p>
+    <strong>Conditions will evolve as the hours pass</strong>, with sections that feel
+    forgiving early on and more demanding later.
+  </p>
+
+  <p>
+    The loop is fully marked and easy to follow, with no navigation required,
+    allowing runners to focus solely on completing each lap and returning to the
+    start before the next bell.
   </p>
 </section>
 
-  <p style="text-align:center; margin-top: 1.5rem;">
-    <a
-      href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="hero-ticket-button"
-      onclick="trackTicketClick('tickets_section')"
-    >
-      Tickets
-    </a>
-  </p>
+<section id="gallery">
+  <h2>Photos from the team's recent Backyard Ultras</h2>
+  <div class="image-gallery">
+    <img src="night-running.JPEG">
+    <img src="running-open-field.JPEG">
+    <img src="walking-finish.JPEG">
+  </div>
 </section>
 
 <section id="community">
   <h2>What You’ll Get</h2>
-
   <ul>
-    <li>
-      <strong>A true Backyard Ultra experience</strong><br>
-      A classic Last One Standing format, run to official Backyard Ultra standards.
-      One loop every hour, on the hour, until only one runner remains.
-    </li>
-
-    <li>
-      <strong>Fully supported race basecamp</strong><br>
-      A central start/finish area with space for crew, drop bags, chairs, and
-      personal setups — designed to make each hourly reset calm, efficient, and familiar.
-    </li>
-
-    <li>
-      <strong>Medical cover and on-course support</strong><br>
-      Professional medical presence throughout the event, plus marshals and
-      volunteers keeping an eye on runners as the hours progress.
-    </li>
-
-    <li>
-      <strong>Clear, well-marked course</strong><br>
-      A fully marked loop through the trails and parkland of Blaise Castle Estate.
-      No navigation required — your only job is to manage pace, recovery, and mindset.
-    </li>
-
-    <li>
-      <strong>An inclusive, runner-first atmosphere</strong><br>
-      Whether you’re aiming for one loop or pushing deep into the night,
-      this is an event where every runner is respected and supported.
-      No ego, no pressure — just shared challenge.
-    </li>
-
-    <li>
-      <strong>A test of strategy, not speed</strong><br>
-      Backyard Ultras reward patience, consistency, and decision-making.
-      You’ll have time between laps to eat, rest, and reset — as much a mental
-      challenge as a physical one.
-    </li>
-
-    <li>
-      <strong>A memorable day (and night) on the trails</strong><br>
-      From early daylight laps to the quiet hours after dark, this event offers
-      a unique progression that few races can match — one hour at a time.
-    </li>
+    <li><strong>A true Backyard Ultra experience</strong> — run to classic Last One Standing rules.</li>
+    <li><strong>Fully supported race basecamp</strong> — space for crew, chairs, and personal setups.</li>
+    <li><strong>Medical cover and volunteers</strong> — support throughout day and night.</li>
+    <li><strong>Clear, well-marked course</strong> — no navigation, no distractions.</li>
+    <li><strong>An inclusive, runner-first atmosphere</strong> — all goals respected.</li>
+    <li><strong>A test of strategy, not speed</strong> — patience, pacing, and decision-making.</li>
   </ul>
 </section>
 
@@ -319,15 +259,6 @@
   <p style="text-align:center;">
     Email us at <a href="mailto:info@gravelandgritevents.com">info@gravelandgritevents.com</a>
   </p>
-</section>
-
-  <section id="gallery">
-  <h2>Photos from the team's recent Backyard Ultras</h2>
-  <div class="image-gallery">
-    <img src="night-running.JPEG">
-    <img src="running-open-field.JPEG">
-    <img src="walking-finish.JPEG">
-  </div>
 </section>
 
 <footer>
@@ -339,8 +270,13 @@
   target="_blank"
   rel="noopener noreferrer"
   class="sticky-ticket"
-  onclick="trackTicketClick('sticky_button')"
 >
+  Get Tickets
+</a>
+
+</body>
+</html>
+
   Get Tickets
 </a>
 
