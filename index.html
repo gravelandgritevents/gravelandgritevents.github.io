@@ -32,7 +32,7 @@
     header {
       background-color: var(--earthy-green);
       text-align: center;
-      padding: 2.5rem 1rem;
+      padding: 2.5rem 1rem 3rem;
     }
 
     header img {
@@ -52,6 +52,22 @@
       font-size: 1.1rem;
     }
 
+    .hero-ticket-button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.9rem 1.8rem;
+      background-color: var(--burnt-orange);
+      color: var(--stone);
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-ticket-button:hover {
+      background-color: #b8672f;
+    }
+
     nav {
       background-color: var(--earthy-green);
       text-align: center;
@@ -65,14 +81,6 @@
       text-decoration: none;
       padding: 0.3rem 0.6rem;
       border-radius: 4px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    nav a:hover,
-    nav a:focus {
-      color: var(--burnt-orange);
-      background-color: rgba(209,124,58,0.15);
-      outline: none;
     }
 
     section {
@@ -101,11 +109,6 @@
       width: 100%;
       border-radius: 8px;
       object-fit: cover;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    #tickets a:hover {
-      background-color: var(--burnt-orange);
     }
 
     footer {
@@ -115,11 +118,62 @@
       padding-bottom: 2rem;
     }
 
+    /* Sticky ticket button */
+    .sticky-ticket {
+      position: fixed;
+      bottom: 1.2rem;
+      right: 1.2rem;
+      background-color: var(--burnt-orange);
+      color: var(--stone);
+      padding: 0.8rem 1.4rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      z-index: 1000;
+      display: none;
+    }
+
+    .sticky-ticket:hover {
+      background-color: #b8672f;
+    }
+
     @media (max-width: 600px) {
       header h1 { font-size: 1.6rem; }
       nav a { display: block; margin: 0.5rem 0; }
+
+      .sticky-ticket {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+      }
     }
   </style>
+
+  <script>
+    function trackTicketClick(source) {
+      console.log("Ticket click:", source);
+
+      if (typeof gtag === "function") {
+        gtag("event", "ticket_click", {
+          event_category: "engagement",
+          event_label: source
+        });
+      }
+    }
+
+    window.addEventListener("scroll", () => {
+      const sticky = document.querySelector(".sticky-ticket");
+      const ticketsSection = document.getElementById("tickets");
+      const ticketsTop = ticketsSection.getBoundingClientRect().top;
+
+      if (window.scrollY > 300 && ticketsTop > 200) {
+        sticky.style.display = "block";
+      } else {
+        sticky.style.display = "none";
+      }
+    });
+  </script>
 </head>
 
 <body>
@@ -128,6 +182,16 @@
   <img src="logo.jpeg" alt="Gravel & Grit Logo" />
   <h1>Bristol’s First Backyard Ultra</h1>
   <p>Saturday 2nd May 2026 · Blaise Castle Estate</p>
+
+  <a
+    href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="hero-ticket-button"
+    onclick="trackTicketClick('hero_button')"
+  >
+    Get Tickets
+  </a>
 </header>
 
 <nav>
@@ -144,45 +208,30 @@
   <p>
     The Bristol Backyard Ultra is a last-runner-standing endurance event.
     Runners complete a <strong>4.167-mile (6.7km) loop every hour, on the hour</strong>.
-    Finish the loop in time and you start again. Miss the bell, and your race is over.
-  </p>
-  <p>
-    There’s no set finish distance and no pressure to “go long”.
-    Run one loop or run all day — this event is about pacing, persistence, and seeing how far you want to go.
   </p>
 </section>
 
 <section id="course">
   <h2>The Course</h2>
   <p>
-    The course is a professionally measured 4.167-mile loop set entirely within
-    <strong>Blaise Castle Estate</strong>, one of central Bristol’s most beautiful wild spaces.
-  </p>
-  <p>
-    Expect a varied and runnable route featuring woodland trails, single track,
-    open green fields, long flat sections, and short rolling hills.
-  </p>
-  <p>
-    The loop starts and finishes at a central basecamp area with space for personal kit,
-    crew support, and between-loop recovery.
+    A professionally measured loop within <strong>Blaise Castle Estate</strong>,
+    featuring woodland trails, open fields, long flat sections, and short rolling hills.
   </p>
 </section>
 
 <section id="gallery">
   <h2>Photos from recent Backyard Ultras</h2>
   <div class="image-gallery">
-    <img src="night-running.JPEG" alt="Running at night with headtorches">
-    <img src="running-open-field.JPEG" alt="Runner in open grassy field">
-    <img src="walking-finish.JPEG" alt="Runners walking together at the finish">
+    <img src="night-running.JPEG">
+    <img src="running-open-field.JPEG">
+    <img src="walking-finish.JPEG">
   </div>
 </section>
 
 <section id="tickets">
   <h2>Enter the Bristol Backyard Ultra</h2>
-
   <p style="text-align:center;">
     Tickets are now live. Run one loop or run all day — this is your race.
-    Secure your place at Bristol’s first Backyard Ultra at Blaise Castle Estate.
   </p>
 
   <p style="text-align:center; margin-top: 1.5rem;">
@@ -190,15 +239,8 @@
       href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra"
       target="_blank"
       rel="noopener noreferrer"
-      style="
-        display:inline-block;
-        padding:0.8rem 1.6rem;
-        background-color: var(--earthy-green);
-        color: var(--stone);
-        font-weight:700;
-        text-decoration:none;
-        border-radius:6px;
-      "
+      class="hero-ticket-button"
+      onclick="trackTicketClick('tickets_section')"
     >
       Get Tickets on RaceNation
     </a>
@@ -208,22 +250,15 @@
 <section id="community">
   <h2>What You’ll Get</h2>
   <ul>
-    <li><strong>A properly delivered Backyard Ultra</strong> — an accurately measured 6.7km loop, clear course markings, and on-the-hour starts, every hour.</li>
-    <li><strong>Beautiful trail running in central Bristol</strong> — woodland paths, open fields, and varied terrain set within the historic Blaise Castle Estate.</li>
-    <li><strong>A fully supported event basecamp</strong> — space for your kit, chair, crew setup, or small tent.</li>
-    <li><strong>End-of-loop aid station</strong> — water, hot drinks, and essential snacks available at the end of every loop.</li>
-    <li><strong>Toilets available on site</strong> — permanent facilities within the estate, close to the event hub.</li>
-    <li><strong>Car parking nearby</strong> — convenient public parking within walking distance.</li>
-    <li><strong>Free professional photography</strong> — capturing the grit and atmosphere of the event.</li>
-    <li><strong>A welcoming environment for friends and family</strong> — café and play park nearby.</li>
-    <li><strong>An inclusive, runner-first atmosphere</strong> — first ultra or fiftieth, everyone is welcome.</li>
+    <li>A true Backyard Ultra experience</li>
+    <li>Fully supported basecamp</li>
+    <li>Inclusive, runner-first atmosphere</li>
   </ul>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <p style="text-align:center;">
-    Questions or want to get involved?<br>
     Email us at <a href="mailto:info@gravelandgritevents.com">info@gravelandgritevents.com</a>
   </p>
 </section>
@@ -231,6 +266,16 @@
 <footer>
   &copy; 2026 Gravel & Grit Events · Built with grit, community, and care.
 </footer>
+
+<a
+  href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="sticky-ticket"
+  onclick="trackTicketClick('sticky_button')"
+>
+  Get Tickets
+</a>
 
 </body>
 </html>
