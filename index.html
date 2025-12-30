@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Gravel & Grit | Bristol Backyard Ultra 2026</title>
+
+  <!-- SEO-Optimised Title -->
+  <title>Bristol Backyard Ultra 2026 | UK Backyard Ultra Race | Gravel & Grit</title>
+
+  <!-- SEO Meta Description -->
+  <meta name="description" content="The Bristol Backyard Ultra returns in 2026 at Blaise Castle Estate. A UK Backyard Ultra (Last One Standing) trail race — one 6.7km loop every hour until only one runner remains." />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -63,10 +69,6 @@
       border-radius: 6px;
     }
 
-    .hero-ticket-button:hover {
-      background-color: #b8672f;
-    }
-
     nav {
       background-color: var(--earthy-green);
       text-align: center;
@@ -102,13 +104,11 @@
       padding-bottom: 2rem;
     }
 
-    /* Instagram centering */
     .instagram-wrapper {
       display: flex;
       justify-content: center;
     }
 
-    /* Sticky ticket button */
     .sticky-ticket {
       position: fixed;
       bottom: 1.2rem;
@@ -130,7 +130,6 @@
 
       .sticky-ticket {
         left: 50%;
-        right: auto;
         transform: translateX(-50%);
       }
     }
@@ -141,9 +140,7 @@
       const heroButton = document.querySelector(".hero-ticket-button");
       const stickyButton = document.querySelector(".sticky-ticket");
 
-      const heroRect = heroButton.getBoundingClientRect();
-
-      if (heroRect.bottom < 0) {
+      if (heroButton.getBoundingClientRect().bottom < 0) {
         stickyButton.style.display = "block";
       } else {
         stickyButton.style.display = "none";
@@ -155,16 +152,14 @@
 <body>
 
 <header>
-  <img src="logo.jpeg" alt="Gravel & Grit Logo" />
-  <h1>Welcome to Bristol's first Backyard Ultra!</h1>
-  <p>Saturday 2nd May 2026 · Blaise Castle Estate</p>
+  <img src="logo.jpeg" alt="Gravel & Grit – Bristol Backyard Ultra UK Logo" />
+  <h1>Bristol Backyard Ultra 2026</h1>
+  <p>Saturday 2nd May 2026 · Blaise Castle Estate · UK Backyard Ultra</p>
 
-  <a
-    href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="hero-ticket-button"
-  >
+  <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="hero-ticket-button">
     Get Tickets
   </a>
 </header>
@@ -172,6 +167,7 @@
 <nav>
   <a href="#about">About</a>
   <a href="#course">Course</a>
+  <a href="#faq">FAQ</a>
   <a href="#community">What You Get</a>
   <a href="#contact">Contact</a>
 </nav>
@@ -180,35 +176,25 @@
   <h2>What is a Backyard Ultra?</h2>
 
   <p>
-    The Bristol Backyard Ultra is not a typical ultramarathon. It is a simple,
-    relentless test of patience, pacing, and mental resolve, set within the
-    historic parkland and woodland trails of Blaise Castle Estate in Bristol —
-    close to the city, yet removed from it entirely.
+    The <strong>Bristol Backyard Ultra</strong> is one of the few official
+    <strong>UK Backyard Ultra</strong> events, following the classic
+    Last One Standing format.
   </p>
 
   <p>
-    <strong>There is no finish line to chase, no target time, and no fixed distance.</strong>
-    Just a loop, a bell, and one question asked again every hour:
-    <em>can you go again?</em>
-  </p>
-
-  <p>
-    The event follows the classic Backyard Ultra (Last One Standing) format.
     Runners complete a 4.167-mile (6.7 km) trail loop every hour, on the hour.
-    You have 60 minutes to complete each loop. Finish early and you rest.
-    Finish late, or fail to make the start line when the bell rings, and your race is over.
+    Finish within the hour and you earn the right to start again.
   </p>
 
   <p>
-    This repeats. Hour after hour. The event continues until only one runner remains.
-    That final runner must complete one last solo loop to be crowned
+    The event continues until only one runner remains.
+    That final athlete completes one last solo loop to be crowned
     <strong>Last One Standing</strong>.
   </p>
 
   <p>
-    Every other participant, regardless of the distance they cover, is recorded as a DNF.
-    This is not a race about speed. It is about pacing, recovery, decision-making,
-    and managing the mental challenge of repetition.
+    This is not a race about speed. It is a test of pacing, recovery,
+    decision-making, and mental resilience.
   </p>
 </section>
 
@@ -216,21 +202,33 @@
   <h2>The Course</h2>
 
   <p>
-    The course is 4.167-mile (6.7 km) long, and winds through the varied trails of <strong>Blaise Castle Estate</strong>,
-    combining woodland paths, open parkland, and gently rolling terrain.
+    The 4.167-mile loop winds through the varied trails of
+    <strong>Blaise Castle Estate, Bristol</strong>, combining woodland paths,
+    open fields, and gently rolling terrain.
   </p>
 
   <p>
-    The loop is fully marked and easy to follow, with no navigation required,
-    allowing runners to focus solely on completing each lap and returning to the
-    start before the next bell.
+    The course is fully marked, easy to follow, and requires no navigation,
+    allowing runners to focus entirely on each hourly effort.
   </p>
+</section>
+
+<section id="faq">
+  <h2>Backyard Ultra UK – FAQs</h2>
+
+  <p><strong>Is this suitable for beginners?</strong><br>
+  Yes. Many runners aim for just a few loops. You decide when to stop.</p>
+
+  <p><strong>Is this an official Backyard Ultra?</strong><br>
+  Yes — the event follows the official Backyard Ultra (Last One Standing) format.</p>
+
+  <p><strong>Where is the race held?</strong><br>
+  Blaise Castle Estate, Bristol, South West England.</p>
 </section>
 
 <section>
   <div class="instagram-wrapper">
-    <blockquote
-      class="instagram-media"
+    <blockquote class="instagram-media"
       data-instgrm-permalink="https://www.instagram.com/gravelandgritevents/"
       data-instgrm-version="14"
       style="background:#FFF; border:0; max-width:540px;">
@@ -243,13 +241,11 @@
 <section id="community">
   <h2>What You’ll Get</h2>
   <ul>
-    <li><strong>A true Backyard Ultra experience, run to the classic Last Man Standing rules.
-    <li><strong>Fully stocked basecamp inlucding toilets, food, and hot and cold water.
-    <li><strong>Medical cover and volunteers to support you through day and night.
-    <li><strong>Clear, well-marked course. No navigation, no distractions.
-    <li><strong>On site cafe, parking, toilets and playpark for family and friends.
-    <li><strong>An inclusive, runner-first atmosphere - everyone's goals are respected here.
-    <li><strong>A unique, memorable DNF token - or will you be the last one standing and claim the prize?
+    <li><strong>An official UK Backyard Ultra experience</strong></li>
+    <li><strong>Fully stocked basecamp and facilities</strong></li>
+    <li><strong>Medical cover and volunteer support</strong></li>
+    <li><strong>Inclusive, runner-first atmosphere</strong></li>
+    <li><strong>A unique DNF token — or the Last One Standing prize</strong></li>
   </ul>
 </section>
 
@@ -264,12 +260,10 @@
   &copy; 2026 Gravel & Grit Events · Built with grit, community, and care.
 </footer>
 
-<a
-  href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="sticky-ticket"
->
+<a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="sticky-ticket">
   Get Tickets
 </a>
 
