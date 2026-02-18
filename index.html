@@ -69,6 +69,31 @@
       border-radius: 6px;
     }
 
+    .capacity-section {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: var(--stone);
+    }
+
+    .capacity-section h2 {
+      font-size: 3rem;
+      margin: 0;
+      color: var(--earthy-green);
+    }
+
+    .capacity-section p {
+      margin-top: 0.8rem;
+      font-size: 1.1rem;
+      color: var(--slate-grey);
+    }
+
+    .capacity-subtext {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--earthy-green);
+      font-weight: 600;
+    }
+
     nav {
       background-color: var(--earthy-green);
       text-align: center;
@@ -127,6 +152,7 @@
     @media (max-width: 600px) {
       header h1 { font-size: 1.6rem; }
       nav a { display: block; margin: 0.5rem 0; }
+      .capacity-section h2 { font-size: 2.2rem; }
 
       .sticky-ticket {
         left: 50%;
@@ -148,50 +174,6 @@
     });
   </script>
 
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SportsEvent",
-  "name": "Bristol Backyard Ultra",
-  "description": "An inclusive South West UK Backyard Ultra held at Blaise Castle Estate, Bristol. Runners complete a 6.7km loop every hour on the hour until one runner remains. Community-focused, grassroots trail event.",
-  "eventStatus": "https://schema.org/EventScheduled",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "startDate": "2026-05-02T09:00",
-  "endDate": "2026-05-04T23:59",
-  "isAccessibleForFree": false,
-  "location": {
-    "@type": "Place",
-    "name": "Blaise Castle Estate",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Blaise Castle Estate",
-      "addressLocality": "Bristol",
-      "addressRegion": "South West England",
-      "postalCode": "BS10",
-      "addressCountry": "GB"
-    }
-  },
-  "organizer": {
-    "@type": "Organization",
-    "name": "Gravel & Grit Events",
-    "url": "https://www.gravelandgritevents.com/"
-  },
-  "url": "https://www.gravelandgritevents.com/",
-  "offers": {
-    "@type": "Offer",
-    "url": "https://www.gravelandgritevents.com/",
-    "price": "69.90",
-    "priceCurrency": "GBP",
-    "availability": "https://schema.org/InStock",
-    "validFrom": "2025-01-01T00:00"
-  },
-  "sport": "Trail running"
-}
-</script>
-
-<!-- Mailchimp script (moved to head for detection) -->
-<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/45362f8425ca47e31537b996b/edd1ed29fee84874ad4fd0764.js");</script>
-
 </head>
 
 <body>
@@ -208,6 +190,21 @@
     Get Tickets
   </a>
 </header>
+
+<section class="capacity-section">
+  <h2><span id="remaining-spots">49</span> Places Remaining</h2>
+  <p>Founding Year · Strictly capped at 125 runners</p>
+  <div class="capacity-subtext">
+    Once 110 entries are reached, the final 15 places increase to £89.90.
+  </div>
+</section>
+
+<script>
+  const capacity = 125;
+  const currentEntries = 76; // Update this number only
+  const remaining = capacity - currentEntries;
+  document.getElementById("remaining-spots").textContent = remaining;
+</script>
 
 <nav>
   <a href="#about">About</a>
@@ -241,12 +238,12 @@
 <section id="course"> <h2>The Course</h2>
   
 <p> The course is 4.167-mile (6.7 km) long, and winds through the varied trails of <strong>Blaise Castle Estate</strong>, 
-combining woodland paths, open parkland, and gently rolling terrain. </p> <p> The loop is fully marked and easy to follow,
+combining woodland paths, babbling brooks and open parkland. Elevation varies between long flat section, gentle climbs and descents, and one killer hill to crush on your way up to the castle. </p> <p> The loop is fully marked and easy to follow,
 with no navigation required, allowing runners to focus solely on completing each lap and returning to the start before the next bell. </p>
 </section>
 
 <section id="faq">
-  <h2>Backyard Ultra South West – Frequently Asked Questions</h2>
+  <h2>Bristol Backyard Ultra – Frequently Asked Questions</h2>
 
   <p><strong>What is a Backyard Ultra?</strong><br>
   A Backyard Ultra (also known as “Last One Standing”) is a unique endurance running format. Runners complete a 6.7km (4.167 mile) loop every hour, on the hour. You must finish each loop within the hour to be allowed to continue to the next one. The event continues until only one runner remains who completes a loop on their own.</p>
@@ -305,12 +302,16 @@ with no navigation required, allowing runners to focus solely on completing each
 <section id="community">
   <h2>What You’ll Get</h2>
   <ul>
-    <li><strong>An authentic South West UK Backyard Ultra experience, run to the classic Last One Standing Rules.</strong></li>
-    <li><strong>Fully stocked basecamp including toilets and food, as well as hot and cold water.</strong></li>
-    <li><strong>Medical cover and volunteers to support you though the day (and night)!</strong></li>
-    <li><strong>Clear, well-marked course. No navigation issues. No distractions.</strong></li>
-    <li><strong>On site cafe, parking, toilets and playpark for family and friends.</strong></li>
-    <li><strong>A unique DNF token — or the Last One Standing prize</strong></li>
+<li><strong>A professionally delivered Backyard Ultra, capped at 125 runners for a focused, well-supported founding year experience.</strong></li>
+<li><strong>Clearly marked 6.7km course with visible, friendly marshals — no navigation stress, no confusion.</strong></li>
+<li><strong>A large, organised basecamp with space for your own provisions and a calm 10am start.</strong></li>
+<li><strong>Hot and cold drinking water plus a solid selection of practical runner foods throughout the event.</strong></li>
+<li><strong>Plenty of toilets — no wasting precious minutes queuing between yards.</strong></li>
+<li><strong>Optional free recce run before race day to preview the course and build confidence.</strong></li>
+<li><strong>Thoughtful brand involvement to enhance the weekend experience.</strong></li>
+<li><strong>On-site cafés, play park and ample parking — making it easy for crew and family to settle in.</strong></li>
+<li><strong>A festival-style basecamp atmosphere including a dedicated “Crewless Crew” tent, decoration station and a few Backyard quirks.</strong></li>
+<li><strong>A unique DNF token — or the Last One Standing prize.</strong></li>
   </ul>
 </section>
 
