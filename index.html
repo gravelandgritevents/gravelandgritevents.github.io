@@ -225,12 +225,26 @@
       background: rgba(255,255,255,0.16);
     }
 
-    /* Capacity */
-    .capacity-band {
-      position: relative;
-      z-index: 3;
-      margin-top: -38px;
-    }
+    /* Capacity positioning (centred + overlapping hero cleanly) */
+.capacity-band {
+  position: relative;
+  z-index: 3;
+  margin: -60px auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.capacity-card {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Mobile adjustment */
+@media (max-width: 640px) {
+  .capacity-band {
+    margin: -40px auto 0;
+  }
+}
 
     .capacity-card {
       max-width: 900px;
