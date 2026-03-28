@@ -14,6 +14,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -380,6 +385,28 @@
       font-size: 0.95rem;
     }
 
+    /* Route map */
+    .route-map-shell {
+      margin-top: 36px;
+    }
+
+    #route-map {
+      width: 100%;
+      height: 520px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(9,73,60,0.08);
+      box-shadow: var(--shadow-soft);
+      background: #e9efe9;
+    }
+
+    .route-map-note {
+      margin-top: 12px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
     /* FAQ */
     .faq-grid {
       display: grid;
@@ -547,6 +574,10 @@
       .section-content {
         padding: 32px 22px;
       }
+
+      #route-map {
+        height: 420px;
+      }
     }
 
     @media (max-width: 640px) {
@@ -589,6 +620,10 @@
 
       .sticky-ticket:hover {
         transform: translateX(-50%) translateY(-2px);
+      }
+
+      #route-map {
+        height: 340px;
       }
     }
   </style>
@@ -712,20 +747,13 @@
           </div>
         </div>
 
-        <div style="margin-top: 36px;">
-          <div class="strava-embed-placeholder"
-            data-embed-type="route"
-            data-embed-id="3461003716969168320"
-            data-full-width="true"
-            data-style="satellite"
-            data-terrain="3d"
-            data-map-hash="13/51.49921/-2.64389"
-            data-from-embed="true">
-          </div>
+        <div class="route-map-shell">
+          <div id="route-map"></div>
+          <div class="route-map-note">Interactive course map powered directly by the official GPX route.</div>
         </div>
 
         <div style="text-align:center; margin-top:30px;">
-          <a href="bristol-backyard-ultra-2026.gpx"
+          <a href="bristol-backyard-ultra-route.gpx"
              download
              class="button-primary">
             Download Official Course GPX
@@ -942,7 +970,45 @@
   </a>
 
   <script async src="//www.instagram.com/embed.js"></script>
-  <script src="https://strava-embeds.com/embed.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const mapElement = document.getElementById("route-map");
+      if (!mapElement) return;
+
+      const map = L.map("route-map", {
+        scrollWheelZoom: false
+      });
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution: "&copy; OpenStreetMap contributors"
+      }).addTo(map);
+
+      new L.GPX("bristol-backyard-ultra-route.gpx", {
+        async: true,
+        marker_options: {
+          startIconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/pin-icon-start.png",
+          endIconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/pin-icon-end.png",
+          shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png"
+        },
+        polyline_options: {
+          color: "#D17C3A",
+          weight: 5,
+          opacity: 0.9
+        }
+      })
+      .on("loaded", function (e) {
+        map.fitBounds(e.target.getBounds(), { padding: [20, 20] });
+      })
+      .on("error", function () {
+        mapElement.innerHTML = "<p style='padding: 20px; text-align: center;'>Unable to load the GPX route map. Please use the download button above.</p>";
+      })
+      .addTo(map);
+    });
+  </script>
 
 </body>
 </html>
