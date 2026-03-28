@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8" />
 
-  <!-- SEO-Optimised Title -->
   <title>Bristol Backyard Ultra 2026 | South West UK Backyard Ultra Race | Gravel & Grit</title>
-
-  <!-- SEO Meta Description -->
   <meta name="description" content="The Bristol Backyard Ultra returns in 2026 at Blaise Castle Estate. A South West UK Backyard Ultra (Last One Standing) trail race — one 6.7km loop every hour until only one runner remains." />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-  <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
 {
@@ -55,232 +53,547 @@
   }
 }
 </script>
-  
+
   <style>
     :root {
       --earthy-green: #09493C;
+      --earthy-green-2: #0f5b4c;
       --burnt-orange: #D17C3A;
+      --burnt-orange-dark: #b8672c;
       --stone: #F5F5F0;
+      --stone-dark: #ecece4;
       --slate-grey: #3E3E3E;
+      --muted: #6f6f6f;
+      --white: #ffffff;
+      --shadow: 0 14px 32px rgba(0,0,0,0.08);
+      --shadow-soft: 0 8px 20px rgba(0,0,0,0.06);
+      --radius: 18px;
+      --max-width: 1120px;
     }
 
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: var(--stone);
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(209,124,58,0.08), transparent 20%),
+        linear-gradient(to bottom, #f8f8f3 0%, var(--stone) 35%, #f7f7f1 100%);
       color: var(--slate-grey);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    header {
-      background-color: var(--earthy-green);
-      text-align: center;
-      padding: 2.5rem 1rem 3rem;
+    a {
+      color: inherit;
     }
 
-    header img {
-      max-width: 160px;
-      margin-bottom: 1rem;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.3rem;
-      color: var(--burnt-orange);
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
     }
 
-    header p {
-      margin-top: 0.5rem;
+    /* Hero */
+    .hero {
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(9,73,60,0.96), rgba(15,91,76,0.92)),
+        url('logo.jpeg') center/cover no-repeat;
       color: var(--stone);
-      font-size: 1.1rem;
+      overflow: hidden;
     }
 
-    .capacity-section {
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.22));
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
       text-align: center;
-      padding: 3rem 1rem;
-      background-color: var(--stone);
+      padding: 72px 20px 84px;
+      max-width: 920px;
+      margin: 0 auto;
     }
 
-    .capacity-section h2 {
-      font-size: 3rem;
+    .hero-logo {
+      width: 150px;
+      margin: 0 auto 24px;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.18));
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.10);
+      color: rgba(245,245,240,0.92);
+      font-size: 0.83rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(6px);
+    }
+
+    .hero h1 {
       margin: 0;
-      color: var(--earthy-green);
+      font-size: clamp(2.4rem, 5vw, 4.6rem);
+      line-height: 1.05;
+      color: var(--white);
+      letter-spacing: -0.03em;
     }
 
-    .capacity-section p {
-      margin-top: 0.8rem;
-      font-size: 1.1rem;
-      color: var(--slate-grey);
+    .hero .subtitle {
+      max-width: 760px;
+      margin: 18px auto 0;
+      color: rgba(245,245,240,0.92);
+      font-size: clamp(1.05rem, 2vw, 1.22rem);
     }
 
-    .capacity-subtext {
-      margin-top: 0.5rem;
-      font-size: 0.95rem;
-      color: var(--earthy-green);
+    .hero-meta {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: rgba(245,245,240,0.88);
       font-weight: 600;
     }
 
-    /* Primary button */
-    .button-primary {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.95rem 2rem;
-      background-color: var(--burnt-orange);
-      color: var(--stone);
-      font-weight: 700;
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .button-primary,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 999px;
       text-decoration: none;
-      border-radius: 8px;
-      letter-spacing: 0.4px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      font-weight: 800;
+      letter-spacing: 0.01em;
       transition: all 0.2s ease;
+      min-width: 180px;
+    }
+
+    .button-primary {
+      background-color: var(--burnt-orange);
+      color: var(--white);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.16);
     }
 
     .button-primary:hover {
       transform: translateY(-2px);
-      filter: brightness(0.97);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+      background-color: var(--burnt-orange-dark);
     }
 
-    .button-primary:active {
-      transform: translateY(0);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    .button-secondary {
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.18);
+      backdrop-filter: blur(6px);
     }
 
-    .button-primary:focus-visible {
-      outline: 3px solid rgba(209, 124, 58, 0.45);
-      outline-offset: 4px;
+    .button-secondary:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.16);
     }
 
-    /* Benefits list styling */
-    .benefits-list {
-      list-style: none;
-      padding: 0;
-      margin: 2rem 0 0 0;
-    }
-
-    .benefits-list li {
+    /* Capacity */
+    .capacity-band {
       position: relative;
-      padding-left: 28px;
-      margin-bottom: 1.2rem;
-      line-height: 1.7;
-      font-weight: 500;
+      z-index: 3;
+      margin-top: -38px;
     }
 
-    .benefits-list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--burnt-orange);
-      font-size: 1.4rem;
-      line-height: 1;
-    }
-
-    nav {
-      background-color: var(--earthy-green);
+    .capacity-card {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 28px 28px 26px;
       text-align: center;
-      padding: 1rem 0;
+      border: 1px solid rgba(9,73,60,0.06);
+    }
+
+    .capacity-label {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--burnt-orange);
+      margin-bottom: 8px;
+    }
+
+    .capacity-card h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.05;
+      color: var(--earthy-green);
+      letter-spacing: -0.03em;
+    }
+
+    .capacity-card p {
+      margin: 10px auto 0;
+      max-width: 660px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .capacity-subtext {
+      margin-top: 12px;
+      font-weight: 700;
+      color: var(--slate-grey);
+    }
+
+    /* Nav */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(9,73,60,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 20px;
+      padding-top: 14px;
+      padding-bottom: 14px;
     }
 
     nav a {
       color: var(--stone);
-      margin: 0 1rem;
-      font-weight: bold;
       text-decoration: none;
+      font-weight: 700;
+      font-size: 0.96rem;
+      opacity: 0.95;
     }
 
-    section {
-      background-color: var(--stone);
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: 2rem auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    nav a:hover {
+      opacity: 1;
+      color: var(--white);
     }
 
-    h2 {
+    /* Sections */
+    .section-shell {
+      padding: 44px 20px 0;
+    }
+
+    section.card-section {
+      max-width: var(--max-width);
+      margin: 0 auto 28px;
+      background: rgba(255,255,255,0.86);
+      border: 1px solid rgba(9,73,60,0.06);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .section-content {
+      padding: 42px 32px;
+    }
+
+    .section-heading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .section-heading .kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--burnt-orange);
+    }
+
+    .section-heading h2 {
+      margin: 0;
       color: var(--earthy-green);
-      text-align: center;
-      margin-bottom: 1rem;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
     }
 
-    footer {
+    .section-content p {
+      margin: 0 0 18px 0;
+      max-width: 900px;
+    }
+
+    .section-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Course stats */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+      margin-bottom: 28px;
+    }
+
+    .stat-card {
+      background: linear-gradient(to bottom right, rgba(9,73,60,0.05), rgba(209,124,58,0.04));
+      border: 1px solid rgba(9,73,60,0.07);
+      border-radius: 16px;
+      padding: 18px;
       text-align: center;
-      font-size: 0.85rem;
-      margin-top: 3rem;
-      padding-bottom: 2rem;
+    }
+
+    .stat-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--earthy-green);
+      font-size: 0.95rem;
+    }
+
+    /* FAQ */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid rgba(9,73,60,0.07);
+      border-radius: 16px;
+      padding: 20px 20px 18px;
+    }
+
+    .faq-item strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--earthy-green);
+      font-size: 1rem;
+    }
+
+    /* Instagram section */
+    .instagram-section {
+      padding: 8px 0 0;
     }
 
     .instagram-wrapper {
       display: flex;
       justify-content: center;
+      padding: 10px 0 6px;
     }
 
+    /* Benefits */
+    .benefits-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 24px;
+    }
+
+    .benefits-list li {
+      position: relative;
+      background: var(--white);
+      border: 1px solid rgba(9,73,60,0.07);
+      border-radius: 16px;
+      padding: 18px 18px 18px 48px;
+      line-height: 1.65;
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .benefits-list li::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 22px;
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: var(--burnt-orange);
+      box-shadow: 0 0 0 6px rgba(209,124,58,0.13);
+    }
+
+    /* Partner sections */
+    .partner-section {
+      background: linear-gradient(to bottom right, rgba(255,255,255,0.95), rgba(245,245,240,0.95));
+    }
+
+    .partner-grid {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .partner-logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      border: 1px solid rgba(9,73,60,0.07);
+      border-radius: 20px;
+      padding: 22px;
+      min-height: 170px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    }
+
+    .partner-logo {
+      max-width: 210px;
+      max-height: 110px;
+      width: auto;
+      height: auto;
+    }
+
+    .partner-copy h3 {
+      margin: 0 0 10px 0;
+      color: var(--earthy-green);
+      font-size: 1.7rem;
+      line-height: 1.1;
+    }
+
+    .partner-copy p {
+      margin-bottom: 14px;
+      color: var(--slate-grey);
+    }
+
+    .partner-copy p:last-of-type {
+      margin-bottom: 20px;
+    }
+
+    .location-link {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    /* Contact */
+    .contact-card {
+      text-align: center;
+      padding: 6px 0 2px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.92rem;
+      color: var(--muted);
+      padding: 40px 20px 60px;
+    }
+
+    /* Sticky ticket */
     .sticky-ticket {
       position: fixed;
       bottom: 1.2rem;
       right: 1.2rem;
       background-color: var(--burnt-orange);
-      color: var(--stone);
-      padding: 0.8rem 1.4rem;
-      font-weight: 700;
+      color: var(--white);
+      padding: 0.95rem 1.4rem;
+      font-weight: 800;
       text-decoration: none;
       border-radius: 999px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
       z-index: 1000;
       display: none;
+      transition: transform 0.2s ease;
     }
 
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.6rem; }
-      nav a { display: block; margin: 0.5rem 0; }
-      .capacity-section h2 { font-size: 2.2rem; }
+    .sticky-ticket:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .partner-grid,
+      .benefits-list,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .partner-logo-wrap {
+        min-height: auto;
+      }
+
+      .section-content {
+        padding: 32px 22px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-inner {
+        padding: 56px 18px 72px;
+      }
+
+      .hero-logo {
+        width: 122px;
+      }
+
+      .capacity-band {
+        margin-top: -28px;
+      }
+
+      .capacity-card {
+        padding: 22px 18px;
+        border-radius: 20px;
+      }
+
+      .nav-inner {
+        gap: 8px 14px;
+      }
+
+      nav a {
+        font-size: 0.92rem;
+      }
+
+      .button-primary,
+      .button-secondary {
+        width: 100%;
+        min-width: unset;
+      }
 
       .sticky-ticket {
         left: 50%;
+        right: auto;
         transform: translateX(-50%);
+      }
+
+      .sticky-ticket:hover {
+        transform: translateX(-50%) translateY(-2px);
       }
     }
   </style>
 
-  <!-- Fir Tree Media Partnership Styling -->
-  <style>
-    .ftm-section {
-      background-color: #F5F5F0;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .ftm-container {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .ftm-heading {
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #3E3E3E;
-    }
-
-    .ftm-text {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #3E3E3E;
-      max-width: 700px;
-      margin: 0 auto 30px auto;
-    }
-
-    .ftm-logo {
-      max-width: 220px;
-      margin-bottom: 25px;
-    }
-  </style>
-
   <script>
-    // Sticky ticket button shows when the main CTA scrolls out of view
     window.addEventListener("scroll", () => {
       const heroButton = document.querySelector("header .button-primary");
       const stickyButton = document.querySelector(".sticky-ticket");
@@ -293,259 +606,343 @@
       }
     });
   </script>
-
 </head>
 
 <body>
 
-<header>
-  <img src="logo.jpeg" alt="Gravel & Grit – Bristol Backyard Ultra South West UK Logo" />
-  <h1>Bristol Backyard Ultra 2026</h1>
-  <p>Saturday 2nd May 2026 · Blaise Castle Estate · South West UK Backyard Ultra</p>
+  <header class="hero">
+    <div class="hero-inner">
+      <img src="logo.jpeg" alt="Gravel & Grit – Bristol Backyard Ultra South West UK Logo" class="hero-logo" />
+
+      <div class="eyebrow">Founding Year · Limited Field</div>
+
+      <h1>Bristol Backyard Ultra 2026</h1>
+
+      <p class="subtitle">
+        A premium South West Backyard Ultra set in the woodland trails and open parkland of Blaise Castle Estate.
+      </p>
+
+      <div class="hero-meta">Saturday 2nd May 2026 · 10:00am Start · Bristol</div>
+
+      <div class="hero-actions">
+        <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="button-primary">
+          Get Tickets
+        </a>
+
+        <a href="#about" class="button-secondary">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container capacity-band">
+    <div class="capacity-card">
+      <div class="capacity-label">Current Availability</div>
+      <h2><span id="remaining-spots">20</span> Places Remaining</h2>
+      <p>Founding Year · Capped at 125 runners</p>
+      <div class="capacity-subtext">Final 15 entries increase to £90</div>
+    </div>
+  </div>
+
+  <script>
+    const capacity = 125;
+    const currentEntries = 105; // Update this number only
+    const remaining = capacity - currentEntries;
+    document.getElementById("remaining-spots").textContent = remaining;
+  </script>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#about">About</a>
+      <a href="#course">Course</a>
+      <a href="#faq">FAQ</a>
+      <a href="#community">What You Get</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="section-shell">
+
+    <section id="about" class="card-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">The Format</div>
+          <h2>What is a Backyard Ultra?</h2>
+        </div>
+
+        <p>The Bristol Backyard Ultra is not a typical ultramarathon. It is a simple, relentless test of patience, pacing, and mental resolve, set within the historic parkland and woodland trails of Blaise Castle Estate in Bristol — a premier location in the South West, close to the city, yet removed from it entirely.</p>
+
+        <p><strong>There is no finish line to chase, no target time, and no fixed distance.</strong> Just a loop, a bell, and one question asked again every hour: <em>can you go again?</em></p>
+
+        <p>The event follows the classic Backyard Ultra (Last One Standing) format. Runners complete a 4.167-mile (6.7 km) trail loop every hour, on the hour. You have 60 minutes to complete each loop. Finish early and you rest. Finish late, or fail to make the start line when the bell rings, and your race is over.</p>
+
+        <p>This repeats. Hour after hour. The event continues until only one runner remains. That final runner must complete one last solo loop to be crowned <strong>Last One Standing</strong>.</p>
+
+        <p>Every other participant, regardless of the distance they cover, is recorded as a DNF. This is not a race about speed. It is about pacing, recovery, decision-making, and managing the mental challenge of repetition.</p>
+      </div>
+    </section>
+
+    <section id="course" class="card-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Blaise Castle Estate</div>
+          <h2>The Course</h2>
+        </div>
+
+        <p>The course is 4.167-mile (6.7 km) long, and winds through the varied trails of <strong>Blaise Castle Estate</strong>, combining woodland paths, babbling brooks and open parkland. Elevation varies between long flat sections, gentle climbs and descents, and one killer hill to crush on your way up to the castle.</p>
+
+        <p>The loop is fully marked and easy to follow, with no navigation required, allowing runners to focus solely on completing each lap and returning to the start before the next bell.</p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <strong>Lap Distance</strong>
+            4.167 miles (6.7km)
+          </div>
+          <div class="stat-card">
+            <strong>Elevation Gain</strong>
+            160m per lap
+          </div>
+          <div class="stat-card">
+            <strong>Terrain</strong>
+            Concrete, trail, grass and woodland path
+          </div>
+        </div>
+
+        <div style="margin-top: 36px;">
+          <div class="strava-embed-placeholder"
+            data-embed-type="route"
+            data-embed-id="3461003716969168320"
+            data-full-width="true"
+            data-style="satellite"
+            data-terrain="3d"
+            data-map-hash="13/51.49921/-2.64389"
+            data-from-embed="true">
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:30px;">
+          <a href="bristol-backyard-ultra-2026.gpx"
+             download
+             class="button-primary">
+            Download Official Course GPX
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="card-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Need to Know</div>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item">
+            <strong>What is a Backyard Ultra?</strong>
+            A Backyard Ultra (also known as “Last One Standing”) is a unique endurance running format. Runners complete a 6.7km (4.167 mile) loop every hour, on the hour. You must finish each loop within the hour to be allowed to continue to the next one. The event continues until only one runner remains who completes a loop on their own.
+          </div>
+
+          <div class="faq-item">
+            <strong>Is this Backyard Ultra suitable for beginners?</strong>
+            Yes — absolutely. While some runners will aim to go deep into the event, many participants come with the goal of completing just a few loops. The Backyard Ultra format is uniquely beginner-friendly because you choose when to stop. There is no minimum distance requirement beyond completing a single loop, and no pressure to continue beyond what feels right for you.
+          </div>
+
+          <div class="faq-item">
+            <strong>Is this an official Backyard Ultra event?</strong>
+            Yes. This event follows the official Backyard Ultra (Last One Standing) format: a 6.7km loop, run every hour on the hour, until one runner remains. Timing, distances, and rules align with the internationally recognised Backyard Ultra standard.
+          </div>
+
+          <div class="faq-item">
+            <strong>Where is the event held?</strong>
+            The event takes place at Blaise Castle Estate in Bristol, South West England. The estate offers a varied and scenic setting, combining woodland trails, open fields, gentle climbs, and flatter runnable sections.
+          </div>
+
+          <div class="faq-item">
+            <strong>What is the course like?</strong>
+            The looped course includes a mix of terrain: short hills, long flatter sections, woodland trails, and open fields. Runners can expect both single-track paths and wider, more open trail sections. The variety keeps the course interesting while remaining runnable and manageable across multiple loops.
+          </div>
+
+          <div class="faq-item">
+            <strong>Do I have to keep running until there is one person left?</strong>
+            No. You are free to stop after any completed loop. Many runners treat a Backyard Ultra as a personal challenge rather than a competition. Once you decide to stop, your result is recorded as the number of full loops completed.
+          </div>
+
+          <div class="faq-item">
+            <strong>Is this a competitive race?</strong>
+            While there is technically one winner, the event is community-focused and runner-led. The atmosphere is supportive rather than aggressive, with runners encouraging each other as the hours pass. Many participants value the shared experience as much as the physical challenge.
+          </div>
+
+          <div class="faq-item">
+            <strong>What kind of runners take part?</strong>
+            Backyard Ultras attract a wide range of runners — from those new to ultra-distance running, to experienced endurance athletes aiming for long distances. You do not need to be an elite runner to take part; pacing, patience, and consistency matter far more than speed.
+          </div>
+
+          <div class="faq-item">
+            <strong>Is there a time limit?</strong>
+            There is no fixed time limit. The event continues until only one runner completes a solo loop. Some runners may finish within a few hours, while others may continue overnight and beyond.
+          </div>
+
+          <div class="faq-item">
+            <strong>Is this event compliant with UK Athletics rules?</strong>
+            Yes. This event is licenced by the TRA and will adhere to UK Athletics rules for trail running.
+          </div>
+
+          <div class="faq-item">
+            <strong>What is the minimum age?</strong>
+            As the event complies with UK Athletics rules for trail running, participants must be 20 or older on the day of the event.
+          </div>
+
+          <div class="faq-item">
+            <strong>How do I enter?</strong>
+            Entry is via our official ticketing partner. Please visit the ticket link on this website for current availability and pricing.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-section instagram-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Follow the Journey</div>
+          <h2>On Instagram</h2>
+        </div>
+        <div class="instagram-wrapper">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/gravelandgritevents/"
+            data-instgrm-version="14"
+            style="background:#FFF; border:0; max-width:540px;">
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="community" class="card-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Race Weekend</div>
+          <h2>What You’ll Get</h2>
+        </div>
+
+        <ul class="benefits-list">
+          <li>A professionally delivered Backyard Ultra, capped at 125 runners for a focused, well-supported founding year experience.</li>
+          <li>Clearly marked 6.7km course with visible, friendly marshals — no navigation stress, no confusion.</li>
+          <li>A large, organised basecamp with space for your own provisions and a calm 10am start.</li>
+          <li>Hot and cold drinking water plus a solid selection of practical runner foods throughout the event.</li>
+          <li>Plenty of toilets — no wasting precious minutes queuing between yards.</li>
+          <li>Optional free recce run before race day to preview the course and build confidence.</li>
+          <li>Thoughtful brand involvement to enhance the weekend experience.</li>
+          <li>On-site cafés, play park and ample parking — making it easy for crew and family to settle in.</li>
+          <li>A festival-style basecamp atmosphere including a dedicated “Crewless Crew” tent, decoration station and a few Backyard quirks.</li>
+          <li>A unique DNF token — or the Last One Standing prize.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card-section partner-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Partnership</div>
+          <h2>Official Media Partner</h2>
+        </div>
+
+        <div class="partner-grid">
+          <div class="partner-logo-wrap">
+            <img src="images/fir-tree-media-logo.png" alt="Fir Tree Media Logo" class="partner-logo" loading="lazy">
+          </div>
+
+          <div class="partner-copy">
+            <h3>Fir Tree Media</h3>
+            <p>We’re proud to partner with Fir Tree Media, who will be producing the official event aftermovie for the Bristol Backyard Ultra.</p>
+            <p>Their team will also be delivering social media content, marketing support, and on-the-day media coverage — capturing the grit, the atmosphere, and the stories that make this event special.</p>
+
+            <a href="https://firtreemedia.co.uk/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="button-primary">
+              Visit Fir Tree Media
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-section partner-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Partnership</div>
+          <h2>Official Retail Partner</h2>
+        </div>
+
+        <div class="partner-grid">
+          <div class="partner-logo-wrap">
+            <img src="up-and-running-bristol-logo.png"
+                 alt="Up & Running Bristol Logo"
+                 class="partner-logo"
+                 loading="lazy">
+          </div>
+
+          <div class="partner-copy">
+            <h3>Up & Running Bristol</h3>
+            <p>We’re delighted to partner with Up & Running Bristol to offer all registered Bristol Backyard Ultra runners an exclusive <strong>15% off</strong> key race-day gear.</p>
+
+            <p>Their knowledgeable team share our passion for running and are fully briefed on the Backyard format — meaning they can help you dial in clothing, footwear, and fuelling for hour-after-hour consistency.</p>
+
+            <p>To redeem your discount, visit the store, select your gear, and show your ticket confirmation email at the till.</p>
+
+            <p style="font-weight:700; margin-bottom:20px;">
+              Up & Running Bristol<br>
+              <a href="https://www.google.com/maps?q=Up+%26+Running+Bristol,+38+North+View,+Westbury+Park,+Bristol+BS6+7QA"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="location-link">
+                38 North View, Westbury Park, Bristol BS6 7QA
+              </a>
+            </p>
+
+            <a href="https://www.upandrunning.co.uk/pages/up-running-bristol"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="button-primary">
+              Visit Up & Running
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="card-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Get in Touch</div>
+          <h2>Contact</h2>
+        </div>
+
+        <div class="contact-card">
+          <p>Email us at <a href="mailto:info@gravelandgritevents.com">info@gravelandgritevents.com</a></p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2026 Gravel & Grit Events · Built with grit, community, and care.
+  </footer>
 
   <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra"
      target="_blank"
      rel="noopener noreferrer"
-     class="button-primary">
+     class="sticky-ticket">
     Get Tickets
   </a>
-</header>
 
-<section class="capacity-section">
-  <h2><span id="remaining-spots">49</span> Places Remaining</h2>
-  <p>Founding Year · Capped at 125 runners</p>
-</section>
-
-<script>
-  const capacity = 125;
-  const currentEntries = 105; // Update this number only
-  const remaining = capacity - currentEntries;
-  document.getElementById("remaining-spots").textContent = remaining;
-</script>
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#course">Course</a>
-  <a href="#faq">FAQ</a>
-  <a href="#community">What You Get</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
-  <h2>What is a Backyard Ultra?</h2>
-
-  <p>The Bristol Backyard Ultra is not a typical ultramarathon.
-  It is a simple, relentless test of patience, pacing, and mental resolve, set within the historic parkland and
-  woodland trails of Blaise Castle Estate in Bristol — a premier location in the South West, close to the city, yet removed from it entirely.</p>
-
-  <p><strong>There is no finish line to chase, no target time, and no fixed distance.</strong>
-  Just a loop, a bell, and one question asked again every hour: <em>can you go again?</em></p>
-
-  <p>The event follows the classic Backyard Ultra (Last One Standing) format.
-  Runners complete a 4.167-mile (6.7 km) trail loop every hour, on the hour.
-  You have 60 minutes to complete each loop. Finish early and you rest.
-  Finish late, or fail to make the start line when the bell rings, and your race is over.</p>
-
-  <p>This repeats. Hour after hour. The event continues until only one runner remains.
-  That final runner must complete one last solo loop to be crowned <strong>Last One Standing</strong>.</p>
-
-  <p>Every other participant, regardless of the distance they cover, is recorded as a DNF.
-  This is not a race about speed. It is about pacing, recovery, decision-making, and managing the mental challenge of repetition.</p>
-</section>
-
-<section id="course">
-  <h2>The Course</h2>
-
-  <p>The course is 4.167-mile (6.7 km) long, and winds through the varied trails of <strong>Blaise Castle Estate</strong>,
-  combining woodland paths, babbling brooks and open parkland. Elevation varies between long flat section, gentle climbs and descents, and one killer hill to crush on your way up to the castle.</p>
-
-  <p>The loop is fully marked and easy to follow,
-  with no navigation required, allowing runners to focus solely on completing each lap and returning to the start before the next bell.</p>
-
-  <div style="text-align:center; margin-top:30px; margin-bottom:20px;">
-    <p><strong>Lap Distance:</strong> 4.167 miles (6.7km)</p>
-    <p><strong>Elevation Gain Per Lap:</strong> 160m</p>
-    <p><strong>Terrain:</strong> Small (1km) stretch of concrete, followed by a secluded trail, grass, and woodland path</p>
-  </div>
-
-  <div style="margin-top: 40px;">
-    <div class="strava-embed-placeholder"
-      data-embed-type="route"
-      data-embed-id="3461003716969168320"
-      data-full-width="true"
-      data-style="satellite"
-      data-terrain="3d"
-      data-map-hash="13/51.49921/-2.64389"
-      data-from-embed="true">
-    </div>
-  </div>
-
-  <div style="text-align:center; margin-top:30px;">
-    <a href="bristol-backyard-ultra-2026.gpx"
-       download
-       class="button-primary">
-      Download Official Course GPX
-    </a>
-  </div>
-</section>
-
-<section id="faq">
-  <h2>Bristol Backyard Ultra – Frequently Asked Questions</h2>
-
-  <p><strong>What is a Backyard Ultra?</strong><br>
-  A Backyard Ultra (also known as “Last One Standing”) is a unique endurance running format. Runners complete a 6.7km (4.167 mile) loop every hour, on the hour. You must finish each loop within the hour to be allowed to continue to the next one. The event continues until only one runner remains who completes a loop on their own.</p>
-
-  <p><strong>Is this Backyard Ultra suitable for beginners?</strong><br>
-  Yes — absolutely. While some runners will aim to go deep into the event, many participants come with the goal of completing just a few loops. The Backyard Ultra format is uniquely beginner-friendly because you choose when to stop. There is no minimum distance requirement beyond completing a single loop, and no pressure to continue beyond what feels right for you.</p>
-
-  <p>This event is designed to be inclusive and welcoming. Whether your goal is one loop, five loops, or an all-day challenge, you’ll be supported and celebrated for taking part.</p>
-
-  <p><strong>Is this an official Backyard Ultra event?</strong><br>
-  Yes. This event follows the official Backyard Ultra (Last One Standing) format: a 6.7km loop, run every hour on the hour, until one runner remains. Timing, distances, and rules align with the internationally recognised Backyard Ultra standard.</p>
-
-  <p><strong>Where is the Backyard Ultra held?</strong><br>
-  The event takes place at Blaise Castle Estate in Bristol, South West England. The estate offers a varied and scenic setting, combining woodland trails, open fields, gentle climbs, and flatter runnable sections.</p>
-
-  <p><strong>What is the course like?</strong><br>
-  The looped course includes a mix of terrain: short hills, long flatter sections, woodland trails, and open fields. Runners can expect both single-track paths and wider, more open trail sections. The variety keeps the course interesting while remaining runnable and manageable across multiple loops.</p>
-
-  <p><strong>Do I have to keep running until there is one person left?</strong><br>
-  No. You are free to stop after any completed loop. Many runners treat a Backyard Ultra as a personal challenge rather than a competition. Once you decide to stop, your result is recorded as the number of full loops completed.</p>
-
-  <p><strong>Is this a competitive race?</strong><br>
-  While there is technically one winner, the event is community-focused and runner-led. The atmosphere is supportive rather than aggressive, with runners encouraging each other as the hours pass. Many participants value the shared experience as much as the physical challenge.</p>
-
-  <p><strong>What kind of runners take part?</strong><br>
-  Backyard Ultras attract a wide range of runners — from those new to ultra-distance running, to experienced endurance athletes aiming for long distances. You do not need to be an elite runner to take part; pacing, patience, and consistency matter far more than speed.</p>
-
-  <p><strong>Is there a time limit?</strong><br>
-  There is no fixed time limit. The event continues until only one runner completes a solo loop. Some runners may finish within a few hours, while others may continue overnight and beyond.</p>
-
-  <p><strong>Is this a UK-based Backyard Ultra?</strong><br>
-  Yes. This is a South West UK Backyard Ultra held in Bristol, making it easily accessible for runners across the region and beyond.</p>
-
-  <p><strong>Is this event compliant with UK Athletics rules?</strong><br>
-  Yes. This event is licenced by the TRA and will adhere to UK Athletics rules for trail running.</p>
-
-  <p><strong>What is the minimum age for entering this event?</strong><br>
-  As the event complies with UK Athletics rules for trail running, participants must be 20 or older on the day of the event.</p>
-
-  <p><strong>How do I enter?</strong><br>
-  Entry is via our official ticketing partner. Please visit the ticket link on this website for current availability and pricing.</p>
-</section>
-
-<section>
-  <div class="instagram-wrapper">
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/gravelandgritevents/"
-      data-instgrm-version="14"
-      style="background:#FFF; border:0; max-width:540px;">
-    </blockquote>
-  </div>
-</section>
-
-<script async src="//www.instagram.com/embed.js"></script>
-
-<section id="community">
-  <h2>What You’ll Get</h2>
-  <ul class="benefits-list">
-    <li>A professionally delivered Backyard Ultra, capped at 125 runners for a focused, well-supported founding year experience.</li>
-    <li>Clearly marked 6.7km course with visible, friendly marshals — no navigation stress, no confusion.</li>
-    <li>A large, organised basecamp with space for your own provisions and a calm 10am start.</li>
-    <li>Hot and cold drinking water plus a solid selection of practical runner foods throughout the event.</li>
-    <li>Plenty of toilets — no wasting precious minutes queuing between yards.</li>
-    <li>Optional free recce run before race day to preview the course and build confidence.</li>
-    <li>Thoughtful brand involvement to enhance the weekend experience.</li>
-    <li>On-site cafés, play park and ample parking — making it easy for crew and family to settle in.</li>
-    <li>A festival-style basecamp atmosphere including a dedicated “Crewless Crew” tent, decoration station and a few Backyard quirks.</li>
-    <li>A unique DNF token — or the Last One Standing prize.</li>
-  </ul>
-</section>
-
-<!-- Fir Tree Media Partnership Section -->
-<section class="ftm-section">
-  <div class="ftm-container">
-    <h2 class="ftm-heading">Official Media Partner</h2>
-
-<img src="images/fir-tree-media-logo.png" alt="Fir Tree Media Logo" class="ftm-logo" loading="lazy">
-
-    <p class="ftm-text">
-      We’re proud to partner with Fir Tree Media, who will be producing the official event aftermovie for the Bristol Backyard Ultra.
-      Their team will also be delivering social media content, marketing support, and on-the-day media coverage — capturing the grit,
-      the atmosphere, and the stories that make this event special.
-    </p>
-
-    <a href="https://firtreemedia.co.uk/"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="button-primary">
-      Visit Fir Tree Media
-    </a>
-  </div>
-</section>
-
-<!-- Up & Running Bristol Partnership Section -->
-<section class="ftm-section">
-  <div class="ftm-container">
-    <h2 class="ftm-heading">Official Retail Partner</h2>
-
-<img src="up-and-running-bristol-logo.png"
-     alt="Up & Running Bristol Logo"
-     class="ftm-logo"
-     loading="lazy">
-
-    <p class="ftm-text">
-      We’re delighted to partner with Up & Running Bristol to offer all registered Bristol Backyard Ultra runners 
-      an exclusive <strong>15% off</strong> key race-day gear.
-    </p>
-
-    <p class="ftm-text">
-      Their knowledgeable team share our passion for running and are fully briefed on the Backyard format — 
-      meaning they can help you dial in clothing, footwear, and fuelling for hour-after-hour consistency.
-    </p>
-
-    <p class="ftm-text">
-      To redeem your discount, visit the store, select your gear, and show your ticket confirmation email at the till.
-    </p>
-
-    <p class="ftm-text" style="font-weight:600;">
-      Up & Running Bristol<br>
-      <a href="https://www.google.com/maps?q=Up+%26+Running+Bristol,+38+North+View,+Westbury+Park,+Bristol+BS6+7QA"
-         target="_blank"
-         rel="noopener noreferrer"
-         style="color: inherit; text-decoration: underline;">
-        38 North View, Westbury Park, Bristol BS6 7QA
-      </a>
-    </p>
-
-    <a href="https://www.upandrunning.co.uk/pages/up-running-bristol"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="button-primary">
-      Visit Up & Running
-    </a>
-  </div>
-</section>
-  
-<section id="contact">
-  <h2>Contact</h2>
-  <p style="text-align:center;">
-    Email us at <a href="mailto:info@gravelandgritevents.com">info@gravelandgritevents.com</a>
-  </p>
-</section>
-
-<footer>
-  &copy; 2026 Gravel & Grit Events · Built with grit, community, and care.
-</footer>
-
-<a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="sticky-ticket">
-  Get Tickets
-</a>
-
-<script src="https://strava-embeds.com/embed.js"></script>
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script src="https://strava-embeds.com/embed.js"></script>
 
 </body>
 </html>
