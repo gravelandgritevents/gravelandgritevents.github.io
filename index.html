@@ -115,7 +115,7 @@
     .hero {
       position: relative;
       background:
-        linear-gradient(135deg, rgba(9,73,60,0.96), rgba(15,91,76,0.92)),
+        linear-gradient(135deg, rgba(9,73,60,0.48), rgba(15,91,76,0.34)),
         url('images/GRAVEL&GRITPREEVENTSHOOTBTSLAUINFOCUS(31).jpg') center/cover no-repeat;
       color: var(--stone);
       overflow: hidden;
@@ -125,7 +125,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.22));
+      background: linear-gradient(to bottom, rgba(0,0,0,0.04), rgba(0,0,0,0.10));
       pointer-events: none;
     }
 
@@ -142,6 +142,7 @@
       width: 150px;
       margin: 0 auto 24px;
       filter: drop-shadow(0 10px 20px rgba(0,0,0,0.18));
+      mix-blend-mode: screen;
     }
 
     .eyebrow {
@@ -163,6 +164,7 @@
       font-size: clamp(2.4rem, 5vw, 4.6rem);
       line-height: 1.05;
       color: var(--white);
+      text-shadow: 0 4px 14px rgba(0,0,0,0.3);
       letter-spacing: -0.03em;
     }
 
