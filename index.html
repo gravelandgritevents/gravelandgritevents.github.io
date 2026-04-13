@@ -105,9 +105,33 @@
       color: inherit;
     }
 
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--burnt-orange);
+      outline-offset: 2px;
+    }
+
     img {
       max-width: 100%;
       display: block;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: -48px;
+      z-index: 1100;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--white);
+      color: var(--earthy-green);
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .skip-link:focus {
+      top: 12px;
     }
 
     .container {
@@ -731,21 +755,25 @@
   </style>
 
   <script>
-    window.addEventListener("scroll", () => {
+    document.addEventListener("DOMContentLoaded", function () {
       const heroButton = document.querySelector("header .button-primary");
       const stickyButton = document.querySelector(".sticky-ticket");
-      if (!heroButton || !stickyButton) return;
+      if (!heroButton || !stickyButton || !("IntersectionObserver" in window)) return;
 
-      if (heroButton.getBoundingClientRect().bottom < 0) {
-        stickyButton.style.display = "block";
-      } else {
-        stickyButton.style.display = "none";
-      }
+      const toggleStickyTicket = new IntersectionObserver(
+        ([entry]) => {
+          stickyButton.style.display = entry.isIntersecting ? "none" : "block";
+        },
+        { rootMargin: "-20px 0px 0px 0px", threshold: 0 }
+      );
+
+      toggleStickyTicket.observe(heroButton);
     });
   </script>
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <header class="hero">
     <div class="hero-inner">
       <div class="eyebrow">Founding Year · Limited Field</div>
@@ -788,7 +816,7 @@
     document.getElementById("remaining-spots").textContent = remaining;
   </script>
 
-  <nav>
+  <nav aria-label="Primary">
     <div class="nav-inner">
       <a href="#about">About</a>
       <a href="#course">Course</a>
@@ -800,7 +828,7 @@
     </div>
   </nav>
 
-  <div class="section-shell">
+  <main id="main-content" class="section-shell">
     <section id="about" class="card-section">
       <div class="section-content">
         <div class="section-heading">
@@ -1114,7 +1142,7 @@
               />
             </div>
             <h3>Salomon</h3>
-            <p>Supporting the event with a prize for thr winning.The Salomon team will also be in hand through race weekend to offer the opportunity to demo some of their footwear</p>
+            <p>Supporting the event with a winner’s prize. The Salomon team will also be on hand through race weekend to offer demo opportunities for some of their footwear.</p>
           </a>
 
           <a
@@ -1150,7 +1178,7 @@
               />
             </div>
             <h3>Tribo</h3>
-            <p>A Bristop-based drinks company supporting the weekend with a prize for one of our runner ups.</p>
+            <p>A Bristol-based drinks company supporting the weekend with a prize for one of our runner ups.</p>
           </a>
 
           <a
@@ -1204,7 +1232,7 @@
               />
             </div>
             <h3>Protein Rebel</h3>
-            <p>Supporting the event with a prize contribution, as well as offering 200 gels for runners to sample during the wvent.</p>
+            <p>Supporting the event with a prize contribution, as well as offering 200 gels for runners to sample during the event.</p>
           </a>
         </div>
       </div>
@@ -1254,7 +1282,7 @@
         </div>
       </div>
     </section>
-  </div>
+  </main>
 
   <footer>
     &copy; 2026 Gravel &amp; Grit Events · Built with grit, community, and care.
