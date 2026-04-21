@@ -56,7 +56,7 @@
       "url": "https://gravelandgritevents.com",
       "offers": {
         "@type": "Offer",
-        "url": "mailto:info@gravelandgritevents.com?subject=Join%20Bristol%20Backyard%20Ultra%20Newsletter%20Waitlist",
+        "url": "https://gravelandgritevents.com/#waitlist",
         "priceCurrency": "GBP",
         "price": "80.00",
         "availability": "https://schema.org/SoldOut",
@@ -64,7 +64,6 @@
       }
     }
   </script>
-  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/45362f8425ca47e31537b996b/edd1ed29fee84874ad4fd0764.js");</script>
 
   <style>
     :root {
@@ -305,15 +304,42 @@
       color: rgba(245, 245, 240, 0.9);
     }
 
-    .waitlist-cta {
-      margin-top: 18px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(9, 73, 60, 0.08);
+    .waitlist-form-wrap {
+      max-width: 560px;
+      margin: 28px auto 0;
     }
 
-    .waitlist-cta p {
-      margin-top: 0;
-      margin-bottom: 10px;
+    .waitlist-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .waitlist-label {
+      font-weight: 700;
+      color: var(--earthy-green);
+      text-align: left;
+    }
+
+    .waitlist-input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid rgba(9, 73, 60, 0.15);
+      border-radius: 12px;
+      font: inherit;
+      font-size: 1rem;
+      background: #fff;
+      color: var(--slate-grey);
+    }
+
+    .waitlist-input:focus {
+      outline: none;
+      border-color: var(--burnt-orange);
+      box-shadow: 0 0 0 4px rgba(209, 124, 58, 0.12);
+    }
+
+    .waitlist-submit {
+      width: 100%;
     }
 
     /* Nav */
@@ -798,25 +824,23 @@
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <header class="hero">
     <div class="hero-inner">
-      <div class="eyebrow">Founding Year · Limited Field</div>
+      <div class="eyebrow">Founding Year · Sold Out</div>
       <div class="hero-status-note">SOLD OUT · Founding Year</div>
 
       <h1>Bristol Backyard Ultra 2026</h1>
 
       <p class="subtitle">
-        A grassroots south west Backyard Ultra set in the woodland trails and open parkland of Blaise Castle Estate.
+        The 2026 event is now sold out. Join the 2027 waitlist for early access to next year’s entries.
       </p>
 
       <div class="hero-meta">Saturday 2nd May 2026 · 10:00am Start · Bristol</div>
 
       <div class="hero-actions">
         <a
-          href="mailto:info@gravelandgritevents.com?subject=Join%20Bristol%20Backyard%20Ultra%20Newsletter%20Waitlist"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#waitlist"
           class="button-primary"
         >
-          Join Waitlist
+          Join the 2027 Waitlist
         </a>
 
         <a href="#about" class="button-secondary">Learn More</a>
@@ -826,15 +850,10 @@
 
   <div class="container capacity-band">
     <div class="capacity-card">
-      <div class="capacity-label">Current Availability</div>
+      <div class="capacity-label">Current Status</div>
       <h2>SOLD OUT</h2>
       <p>The 2026 Bristol Backyard Ultra is now full.</p>
-      <p>Thank you to everyone who signed up for our founding year.</p>
-      <div class="waitlist-cta">
-        <p><strong>Missed out?</strong></p>
-        <p>Join the newsletter to get early access to 2027 entries and future Gravel &amp; Grit events.</p>
-        <a href="mailto:info@gravelandgritevents.com?subject=Join%20Bristol%20Backyard%20Ultra%20Newsletter%20Waitlist" class="button-primary">Join the Newsletter</a>
-      </div>
+      <p>Join the 2027 waitlist below for early access.</p>
     </div>
   </div>
 
@@ -1292,6 +1311,49 @@
       </div>
     </section>
 
+    <section id="waitlist" class="card-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Sold Out for 2026</div>
+          <h2>Join the 2027 Waitlist</h2>
+        </div>
+
+        <p>
+          The Bristol Backyard Ultra 2026 is now sold out.
+        </p>
+
+        <p>
+          Join the waitlist to get early access to 2027 entries and hear about future Gravel &amp; Grit events.
+        </p>
+
+        <div class="waitlist-form-wrap">
+          <form action="https://gravelandgritevents.us13.list-manage.com/subscribe/post?u=45362f8425ca47e31537b996b&amp;id=1cf3900049&amp;f_id=008834e5f0"
+                method="post"
+                target="_blank"
+                class="waitlist-form">
+
+            <label for="mce-EMAIL" class="waitlist-label">Email address</label>
+            <input type="email"
+                   name="EMAIL"
+                   id="mce-EMAIL"
+                   class="waitlist-input"
+                   placeholder="Enter your email address"
+                   required>
+
+            <input type="hidden" name="tags" value="7209489">
+
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="b_45362f8425ca47e31537b996b_1cf3900049" tabindex="-1" value="">
+            </div>
+
+            <button type="submit" class="button-primary waitlist-submit">
+              Join the Waitlist
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="card-section">
       <div class="section-content">
         <div class="section-heading">
@@ -1311,12 +1373,10 @@
   </footer>
 
   <a
-    href="mailto:info@gravelandgritevents.com?subject=Join%20Bristol%20Backyard%20Ultra%20Newsletter%20Waitlist"
-    target="_blank"
-    rel="noopener noreferrer"
+    href="#waitlist"
     class="sticky-ticket"
   >
-    Join Waitlist
+    Join the 2027 Waitlist
   </a>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
