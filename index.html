@@ -386,7 +386,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 6px 20px;
+      gap: 8px 28px;
     }
 
     nav a {
@@ -450,6 +450,20 @@
     }
 
     .section-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .course-copy {
+      max-width: 780px;
+      margin: 0 auto 30px;
+    }
+
+    .course-copy p {
+      max-width: none;
+      text-align: left;
+    }
+
+    .course-copy p:last-child {
       margin-bottom: 0;
     }
 
@@ -881,9 +895,10 @@
 
     /* Event partners grid */
     .event-partners-intro {
-      max-width: 760px;
-      margin: 0 auto 24px;
+      max-width: 680px;
+      margin: 0 auto 28px;
       text-align: center;
+      line-height: 1.65;
     }
 
     .event-partners-grid {
@@ -953,9 +968,24 @@
     }
 
     /* Contact */
+    #contact .section-heading {
+      margin-bottom: 22px;
+    }
+
     .contact-card {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 4px 0 0;
       text-align: center;
-      padding: 6px 0 2px;
+    }
+
+    .contact-card p {
+      max-width: none;
+      margin: 0 auto 10px;
+    }
+
+    .contact-card p:last-child {
+      margin-bottom: 0;
     }
 
     /* Footer */
@@ -1154,7 +1184,6 @@
   <nav aria-label="Primary">
     <div class="nav-inner">
       <a href="#home">Home</a>
-      <a href="#story">Bristol Backyard Ultra</a>
       <a href="results/bristol-backyard-ultra-2026/">2026 Results</a>
       <a href="#waitlist">2027 Waitlist</a>
       <a href="#contact">Contact</a>
@@ -1303,17 +1332,19 @@
           <h2>The Course</h2>
         </div>
 
-        <p>
-          Our course is always subject to review, but so far it has been carefully designed to take you through the highlights of the stunning Blaise Castle Estate. From basecamp you will wind up the hill to the folly, you will then run through woodland trails and along fields, finally dropping down Dynamite Hill to the river valley. This is not a fast, flat course! There are some technical sections on this course that involve roots, rocks and, if wet, muddy sections. This course is beautiful but it takes grit - do you have what it takes?
-        </p>
+        <div class="course-copy">
+          <p>
+            Our course is always subject to review, but so far it has been carefully designed to take you through the highlights of the stunning Blaise Castle Estate. From basecamp you will wind up the hill to the folly, you will then run through woodland trails and along fields, finally dropping down Dynamite Hill to the river valley. This is not a fast, flat course! There are some technical sections on this course that involve roots, rocks and, if wet, muddy sections. This course is beautiful but it takes grit - do you have what it takes?
+          </p>
 
-        <p>
-          The course is 4.167-mile (6.7 km) long, and winds through the varied trails of <strong>Blaise Castle Estate</strong>, combining woodland paths, open parkland and even a beautiful stream! Blaise Castle Estate is hilly, rocky and rooty. You will need grit to run into the night and beyond. If the weather is wet, good trail shoes are a must.
-        </p>
+          <p>
+            The course is 4.167-mile (6.7 km) long, and winds through the varied trails of <strong>Blaise Castle Estate</strong>, combining woodland paths, open parkland and even a beautiful stream! Blaise Castle Estate is hilly, rocky and rooty. You will need grit to run into the night and beyond. If the weather is wet, good trail shoes are a must.
+          </p>
 
-        <p>
-          The loop is fully marked with marshals for the first few loops, as well as signs and ribbon. The route is therefore easy to follow, with no navigation required, allowing runners to focus solely on completing each lap and returning to the start before the next bell.
-        </p>
+          <p>
+            The loop is fully marked with marshals for the first few loops, as well as signs and ribbon. The route is therefore easy to follow, with no navigation required, allowing runners to focus solely on completing each lap and returning to the start before the next bell.
+          </p>
+        </div>
 
         <div class="stats-grid">
           <div class="stat-card">
@@ -1738,7 +1769,6 @@
   <footer>
     <nav class="footer-nav" aria-label="Footer">
       <a href="#home">Home</a>
-      <a href="#story">Bristol Backyard Ultra</a>
       <a href="results/bristol-backyard-ultra-2026/">2026 Results</a>
       <a href="#waitlist">2027 Waitlist</a>
       <a href="#contact">Contact</a>
