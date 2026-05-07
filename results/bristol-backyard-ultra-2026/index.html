@@ -361,25 +361,52 @@
     .cta-card {
       text-align: center;
       background:
-        linear-gradient(135deg, rgba(9, 73, 60, 0.94), rgba(15, 91, 76, 0.9)),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(245, 245, 240, 0.92)),
         url("../../images/GRAVEL&GRITPREEVENTSHOOTBTSLAUINFOCUS(31).jpg") center/cover no-repeat;
-      color: var(--stone);
+      color: var(--slate-grey);
     }
 
-    .cta-card .section-heading h2,
+    .cta-card .section-heading h2 {
+      color: var(--slate-grey);
+    }
+
     .cta-card .section-heading .kicker {
-      color: var(--white);
+      color: var(--burnt-orange);
     }
 
     .cta-card p {
-      color: rgba(245, 245, 240, 0.92);
+      color: var(--slate-grey);
+      font-weight: 500;
+    }
+
+    .cta-card .button-primary {
+      background-color: #c6531b;
+      color: var(--white);
+    }
+
+    .cta-card .button-primary:hover {
+      background-color: #b94f18;
+    }
+
+    .cta-card .button-secondary {
+      background: rgba(255, 255, 255, 0.72);
+      border: 2px solid rgba(62, 62, 62, 0.78);
+      color: var(--slate-grey);
+      box-shadow: none;
+    }
+
+    .cta-card .button-secondary:hover {
+      background: var(--white);
+      border-color: var(--slate-grey);
+      color: var(--slate-grey);
     }
 
     footer {
       text-align: center;
       padding: 34px 20px 42px;
-      color: var(--muted);
+      color: var(--slate-grey);
       font-size: 0.95rem;
+      font-weight: 500;
     }
 
     @media (max-width: 820px) {

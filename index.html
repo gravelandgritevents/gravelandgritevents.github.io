@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
 
-  <title>Bristol Backyard Ultra 2026 | South West UK Backyard Ultra Race | Gravel & Grit</title>
+  <title>Gravel &amp; Grit Events | Grassroots Trail Running Events</title>
   <meta
     name="description"
-    content="The Bristol Backyard Ultra returns in 2026 at Blaise Castle Estate. A South West UK Backyard Ultra (Last One Standing) trail race — one 6.7km loop every hour until only one runner remains."
+    content="Inclusive, grassroots trail running events from Bristol and beyond. Home of the Bristol Backyard Ultra."
   />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -30,10 +30,10 @@
       "@context": "https://schema.org",
       "@type": "SportsEvent",
       "name": "Bristol Backyard Ultra 2026",
-      "description": "The Bristol Backyard Ultra returns in 2026 at Blaise Castle Estate. One 6.7km loop every hour until only one runner remains (Last One Standing).",
+      "description": "Inclusive, grassroots trail running events from Bristol and beyond. Home of the Bristol Backyard Ultra.",
       "startDate": "2026-05-02T10:00:00+01:00",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
+      "eventStatus": "https://schema.org/EventCompleted",
       "location": {
         "@type": "Place",
         "name": "Blaise Castle Estate",
@@ -54,23 +54,18 @@
         "https://gravelandgritevents.com/logo.jpeg"
       ],
       "url": "https://gravelandgritevents.com",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://gravelandgritevents.com/#waitlist",
-        "priceCurrency": "GBP",
-        "price": "80.00",
-        "availability": "https://schema.org/SoldOut",
-        "validFrom": "2025-01-01T00:00:00+00:00"
-      }
+      "sameAs": [
+        "https://www.instagram.com/gravelandgritevents/"
+      ]
     }
   </script>
 
   <style>
     :root {
-      --earthy-green: #09493c;
-      --earthy-green-2: #0f5b4c;
-      --burnt-orange: #d17c3a;
-      --burnt-orange-dark: #b8672c;
+      --earthy-green: #506B38;
+      --earthy-green-2: #5f7d43;
+      --burnt-orange: #D95E1F;
+      --burnt-orange-dark: #B94F18;
       --stone: #f5f5f0;
       --stone-dark: #ecece4;
       --slate-grey: #3e3e3e;
@@ -95,7 +90,7 @@
       padding: 0;
       font-family: "Inter", sans-serif;
       background:
-        radial-gradient(circle at top right, rgba(209, 124, 58, 0.08), transparent 20%),
+        radial-gradient(circle at top right, rgba(217, 94, 31, 0.08), transparent 20%),
         linear-gradient(to bottom, #f8f8f3 0%, var(--stone) 35%, #f7f7f1 100%);
       color: var(--slate-grey);
       line-height: 1.7;
@@ -145,7 +140,7 @@
     .hero {
       position: relative;
       background:
-        linear-gradient(135deg, rgba(9, 73, 60, 0.48), rgba(15, 91, 76, 0.34)),
+        linear-gradient(135deg, rgba(80, 107, 56, 0.48), rgba(95, 125, 67, 0.34)),
         url("images/GRAVEL&GRITPREEVENTSHOOTBTSLAUINFOCUS(31).jpg") center/cover no-repeat;
       color: var(--stone);
       overflow: hidden;
@@ -228,14 +223,14 @@
     }
 
     .button-primary {
-      background-color: var(--burnt-orange);
+      background-color: #C6531B;
       color: var(--white);
       box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
     }
 
     .button-primary:hover {
       transform: translateY(-2px);
-      background-color: var(--burnt-orange-dark);
+      background-color: #A84814;
     }
 
     .button-secondary {
@@ -267,7 +262,7 @@
       box-shadow: var(--shadow);
       padding: 28px 28px 26px;
       text-align: center;
-      border: 1px solid rgba(9, 73, 60, 0.06);
+      border: 1px solid rgba(80, 107, 56, 0.06);
     }
 
     .capacity-label {
@@ -275,7 +270,7 @@
       letter-spacing: 0.1em;
       font-size: 0.78rem;
       font-weight: 800;
-      color: var(--burnt-orange);
+      color: var(--burnt-orange-dark);
       margin-bottom: 8px;
     }
 
@@ -292,6 +287,38 @@
       max-width: 660px;
       color: var(--muted);
       font-size: 1.04rem;
+    }
+
+    .proof-card {
+      max-width: var(--max-width);
+      border-color: rgba(80, 107, 56, 0.12);
+    }
+
+    .proof-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .proof-stat-card {
+      border: 1px solid rgba(80, 107, 56, 0.1);
+      border-radius: 16px;
+      padding: 18px 14px;
+      background: linear-gradient(to bottom right, rgba(80, 107, 56, 0.06), rgba(217, 94, 31, 0.04));
+    }
+
+    .proof-stat-card strong {
+      display: block;
+      color: var(--earthy-green);
+      font-size: clamp(1.15rem, 2.4vw, 1.8rem);
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .proof-stat-card span {
+      color: var(--slate-grey);
+      font-weight: 700;
     }
 
 
@@ -324,7 +351,7 @@
     .waitlist-input {
       width: 100%;
       padding: 14px 16px;
-      border: 1px solid rgba(9, 73, 60, 0.15);
+      border: 1px solid rgba(80, 107, 56, 0.15);
       border-radius: 12px;
       font: inherit;
       font-size: 1rem;
@@ -335,7 +362,7 @@
     .waitlist-input:focus {
       outline: none;
       border-color: var(--burnt-orange);
-      box-shadow: 0 0 0 4px rgba(209, 124, 58, 0.12);
+      box-shadow: 0 0 0 4px rgba(217, 94, 31, 0.12);
     }
 
     .waitlist-submit {
@@ -347,7 +374,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(9, 73, 60, 0.92);
+      background: rgba(80, 107, 56, 0.92);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
@@ -367,11 +394,9 @@
       text-decoration: none;
       font-weight: 700;
       font-size: 0.96rem;
-      opacity: 0.95;
     }
 
     nav a:hover {
-      opacity: 1;
       color: var(--white);
     }
 
@@ -384,7 +409,7 @@
       max-width: var(--max-width);
       margin: 0 auto 28px;
       background: rgba(255, 255, 255, 0.86);
-      border: 1px solid rgba(9, 73, 60, 0.06);
+      border: 1px solid rgba(80, 107, 56, 0.06);
       border-radius: var(--radius);
       box-shadow: var(--shadow-soft);
       overflow: hidden;
@@ -408,7 +433,7 @@
       letter-spacing: 0.1em;
       font-size: 0.78rem;
       font-weight: 800;
-      color: var(--burnt-orange);
+      color: var(--burnt-orange-dark);
     }
 
     .section-heading h2 {
@@ -428,12 +453,96 @@
       margin-bottom: 0;
     }
 
-    #handbook .section-content p {
-      max-width: 760px;
-      margin-left: auto;
-      margin-right: auto;
+    .centered-copy {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      max-width: 760px !important;
       text-align: center;
+      color: var(--slate-grey);
     }
+
+    .split-content {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+      gap: 30px;
+      align-items: start;
+    }
+
+    .section-heading.align-left {
+      align-items: flex-start;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    .story-copy p {
+      font-size: 1.05rem;
+    }
+
+    .archive-actions {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .archive-card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-height: 150px;
+      padding: 22px;
+      border: 1px solid rgba(80, 107, 56, 0.1);
+      border-radius: 18px;
+      background: var(--white);
+      color: var(--slate-grey);
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    }
+
+    .archive-card strong {
+      color: var(--earthy-green);
+      font-size: 1.08rem;
+    }
+
+    .archive-card span {
+      color: var(--slate-grey);
+    }
+
+    a.archive-card:hover,
+    a.archive-card:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(80, 107, 56, 0.24);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .archive-placeholder {
+      background: linear-gradient(to bottom right, rgba(80, 107, 56, 0.05), rgba(245, 245, 240, 0.88));
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(245, 245, 240, 0.94));
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      margin: 24px 0 0;
+    }
+
+    .button-secondary.on-light {
+      background: var(--white);
+      border: 2px solid rgba(62, 62, 62, 0.72);
+      color: var(--slate-grey);
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+
+    .button-secondary.on-light:hover {
+      background: var(--stone);
+      border-color: var(--slate-grey);
+      color: var(--slate-grey);
+    }
+
 
     /* Course stats */
     .stats-grid {
@@ -445,8 +554,8 @@
     }
 
     .stat-card {
-      background: linear-gradient(to bottom right, rgba(9, 73, 60, 0.05), rgba(209, 124, 58, 0.04));
-      border: 1px solid rgba(9, 73, 60, 0.07);
+      background: linear-gradient(to bottom right, rgba(80, 107, 56, 0.05), rgba(217, 94, 31, 0.04));
+      border: 1px solid rgba(80, 107, 56, 0.07);
       border-radius: 16px;
       padding: 18px;
       text-align: center;
@@ -471,7 +580,7 @@
       height: 520px;
       border-radius: 18px;
       overflow: hidden;
-      border: 1px solid rgba(9, 73, 60, 0.08);
+      border: 1px solid rgba(80, 107, 56, 0.08);
       box-shadow: var(--shadow-soft);
       background: #e9efe9;
     }
@@ -499,7 +608,7 @@
 
     .faq-item {
       background: var(--white);
-      border: 1px solid rgba(9, 73, 60, 0.07);
+      border: 1px solid rgba(80, 107, 56, 0.07);
       border-radius: 16px;
       padding: 20px 20px 18px;
     }
@@ -527,7 +636,7 @@
       margin: 0 auto;
       text-align: center;
       background: var(--white);
-      border: 1px solid rgba(9, 73, 60, 0.07);
+      border: 1px solid rgba(80, 107, 56, 0.07);
       border-radius: 18px;
       padding: 30px 24px;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
@@ -553,7 +662,7 @@
     .benefits-list li {
       position: relative;
       background: var(--white);
-      border: 1px solid rgba(9, 73, 60, 0.07);
+      border: 1px solid rgba(80, 107, 56, 0.07);
       border-radius: 16px;
       padding: 18px 18px 18px 48px;
       line-height: 1.65;
@@ -570,7 +679,7 @@
       height: 12px;
       border-radius: 999px;
       background: var(--burnt-orange);
-      box-shadow: 0 0 0 6px rgba(209, 124, 58, 0.13);
+      box-shadow: 0 0 0 6px rgba(217, 94, 31, 0.13);
     }
 
     /* Official partner sections */
@@ -590,7 +699,7 @@
       align-items: center;
       justify-content: center;
       background: var(--white);
-      border: 1px solid rgba(9, 73, 60, 0.07);
+      border: 1px solid rgba(80, 107, 56, 0.07);
       border-radius: 20px;
       padding: 22px;
       min-height: 170px;
@@ -640,7 +749,7 @@
       flex-direction: column;
       height: 100%;
       background: var(--white);
-      border: 1px solid rgba(9, 73, 60, 0.07);
+      border: 1px solid rgba(80, 107, 56, 0.07);
       border-radius: 18px;
       padding: 22px 20px 20px;
       text-decoration: none;
@@ -652,7 +761,7 @@
     .event-partner-card:focus-visible {
       transform: translateY(-2px);
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-      border-color: rgba(9, 73, 60, 0.14);
+      border-color: rgba(80, 107, 56, 0.14);
     }
 
     .event-partner-logo-wrap {
@@ -663,7 +772,7 @@
       margin-bottom: 16px;
       padding: 12px;
       border-radius: 14px;
-      background: linear-gradient(to bottom right, rgba(9, 73, 60, 0.03), rgba(209, 124, 58, 0.03));
+      background: linear-gradient(to bottom right, rgba(80, 107, 56, 0.03), rgba(217, 94, 31, 0.03));
     }
 
     .event-partner-logo {
@@ -704,8 +813,9 @@
     footer {
       text-align: center;
       font-size: 0.92rem;
-      color: var(--muted);
+      color: var(--slate-grey);
       padding: 40px 20px 60px;
+      font-weight: 500;
     }
 
     /* Sticky ticket */
@@ -713,7 +823,7 @@
       position: fixed;
       bottom: 1.2rem;
       right: 1.2rem;
-      background-color: var(--burnt-orange);
+      background-color: #C6531B;
       color: var(--white);
       padding: 0.95rem 1.4rem;
       font-weight: 800;
@@ -733,8 +843,16 @@
     @media (max-width: 900px) {
       .partner-grid,
       .benefits-list,
-      .stats-grid {
+      .stats-grid,
+      .proof-stats,
+      .split-content,
+      .archive-actions {
         grid-template-columns: 1fr;
+      }
+
+      .section-heading.align-left {
+        align-items: center;
+        text-align: center;
       }
 
       .event-partners-grid {
@@ -822,18 +940,17 @@
 
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <header class="hero">
+  <header id="home" class="hero">
     <div class="hero-inner">
-      <div class="eyebrow">Founding Year · Sold Out</div>
-      <div class="hero-status-note">SOLD OUT · Founding Year</div>
+      <div class="eyebrow">Gravel &amp; Grit Events</div>
 
-      <h1>Bristol Backyard Ultra 2026</h1>
+      <h1>Grassroots Trail Events Built Around Community.</h1>
 
       <p class="subtitle">
-        The 2026 event is now sold out. Join the 2027 waitlist for early access to next year’s entries.
+        Inclusive, grassroots trail events from Bristol and beyond — built by runners, for runners.
       </p>
 
-      <div class="hero-meta">Saturday 2nd May 2026 · 10:00am Start · Bristol</div>
+      <div class="hero-meta">Home of the Bristol Backyard Ultra · Official Backyard Ultra event</div>
 
       <div class="hero-actions">
         <a
@@ -843,34 +960,108 @@
           Join the 2027 Waitlist
         </a>
 
-        <a href="#about" class="button-secondary">Learn More</a>
+        <a href="results/bristol-backyard-ultra-2026/" class="button-secondary">View 2026 Results</a>
       </div>
     </div>
   </header>
 
-  <div class="container capacity-band">
-    <div class="capacity-card">
-      <div class="capacity-label">Current Status</div>
-      <h2>SOLD OUT</h2>
-      <p>The 2026 Bristol Backyard Ultra is now full.</p>
-      <p>Join the 2027 waitlist below for early access.</p>
+  <div class="container capacity-band proof-band" aria-labelledby="proof-title">
+    <div class="capacity-card proof-card">
+      <div class="capacity-label">Delivered in 2026</div>
+      <h2 id="proof-title">The inaugural Bristol Backyard Ultra</h2>
+      <p>
+        A full first edition, a buzzing basecamp, and a field that kept coming back to the line until the final yards unfolded on Sunday.
+      </p>
+
+      <div class="proof-stats" aria-label="Bristol Backyard Ultra 2026 headline results">
+        <div class="proof-stat-card">
+          <strong>125</strong>
+          <span>entries sold</span>
+        </div>
+        <div class="proof-stat-card">
+          <strong>104</strong>
+          <span>starters</span>
+        </div>
+        <div class="proof-stat-card">
+          <strong>26 loops</strong>
+          <span>by the winner</span>
+        </div>
+        <div class="proof-stat-card">
+          <strong>Official</strong>
+          <span>Backyard Ultra event</span>
+        </div>
+        <div class="proof-stat-card">
+          <strong>Sunday midday</strong>
+          <span>final finish</span>
+        </div>
+        <div class="proof-stat-card">
+          <strong>BBC Radio Bristol</strong>
+          <span>coverage</span>
+        </div>
+      </div>
     </div>
   </div>
 
   <nav aria-label="Primary">
     <div class="nav-inner">
-      <a href="#about">About</a>
-      <a href="#course">Course</a>
-      <a href="#faq">FAQ</a>
+      <a href="#home">Home</a>
+      <a href="#about">Bristol Backyard Ultra</a>
       <a href="results/bristol-backyard-ultra-2026/">2026 Results</a>
-      <a href="#community">What You Get</a>
-      <a href="#partners">Partners</a>
-      <a href="#handbook">Handbook</a>
+      <a href="#waitlist">2027 Waitlist</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
   <main id="main-content" class="section-shell">
+    <section id="story" class="card-section story-section">
+      <div class="section-content split-content">
+        <div class="section-heading align-left">
+          <div class="kicker">Community first</div>
+          <h2>More than a race.</h2>
+        </div>
+
+        <div class="story-copy">
+          <p>
+            This was never just about who could run the furthest. It was about the basecamp buzz, the crews, the headtorches, the quiet moments between loops, and the 20–30 runners who came back on Sunday morning to see the final yards unfold.
+          </p>
+          <p>
+            Runners pushed their limits together, crews looked after each other, and the whole weekend kept the honest, supportive, grassroots feel we hoped Gravel &amp; Grit could stand for.
+          </p>
+          <p>
+            The 2026 event ran smoothly, with no major operational issues, positive council feedback, brilliant participant response, and a community that carried the energy well beyond race weekend.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="archive" class="card-section archive-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Event record</div>
+          <h2>2026 Event Archive</h2>
+        </div>
+
+        <p class="centered-copy">
+          The official Bristol Backyard Ultra 2026 results are live. Photo galleries, highlights, and a fuller race recap will follow once the event media is ready.
+        </p>
+
+        <div class="archive-actions">
+          <a href="results/bristol-backyard-ultra-2026/" class="archive-card">
+            <strong>View official results</strong>
+            <span>Full 2026 results table and CSV download.</span>
+          </a>
+          <div class="archive-card archive-placeholder" aria-label="Event photos coming soon">
+            <strong>Event photos coming soon</strong>
+            <span>Professional photo and video content has been captured and will be added here.</span>
+          </div>
+          <div class="archive-card archive-placeholder" aria-label="Race recap coming soon">
+            <strong>Race recap coming soon</strong>
+            <span>The full story from basecamp, the night loops, and the final yards is on the way.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="about" class="card-section">
       <div class="section-content">
         <div class="section-heading">
@@ -999,7 +1190,7 @@
 
           <div class="faq-item">
             <strong>Is this event compliant with UK Athletics rules?</strong>
-            Yes. This event is licenced by the TRA and will adhere to UK Athletics rules for trail running.
+            Yes. The 2026 event was licensed by the TRA and followed UK Athletics rules for trail running.
           </div>
 
           <div class="faq-item">
@@ -1008,8 +1199,8 @@
           </div>
 
           <div class="faq-item">
-            <strong>How do I enter?</strong>
-            Entry is via our official ticketing partner. Please visit the ticket link on this website for current availability and pricing.
+            <strong>How do I hear about the next event?</strong>
+            Join the 2027 waitlist for early access to Bristol Backyard Ultra entries and future Gravel &amp; Grit trail events.
           </div>
         </div>
       </div>
@@ -1024,8 +1215,8 @@
 
         <div class="instagram-card">
           <p>
-            Follow <strong>@gravelandgritevents</strong> for race updates, course previews,
-            recce runs, and behind-the-scenes build-up to race day.
+            Follow <strong>@gravelandgritevents</strong> for results, photos, race stories,
+            future event news, and the behind-the-scenes bits that make Gravel &amp; Grit feel like us.
           </p>
 
           <a
@@ -1043,21 +1234,17 @@
     <section id="community" class="card-section">
       <div class="section-content">
         <div class="section-heading">
-          <div class="kicker">Race Weekend</div>
-          <h2>What You’ll Get</h2>
+          <div class="kicker">What we build</div>
+          <h2>Runner-led, practical, and welcoming</h2>
         </div>
 
         <ul class="benefits-list">
-          <li>A professionally delivered Backyard Ultra, capped at 125 runners for a focused, well-supported founding year experience.</li>
-          <li>Clearly marked 6.7km course with visible, friendly marshals — no navigation stress, no confusion.</li>
-          <li>A large, organised basecamp with space for your own provisions and a calm 10am start.</li>
-          <li>Hot and cold drinking water plus a solid selection of practical runner foods throughout the event.</li>
-          <li>Plenty of toilets — no wasting precious minutes queuing between yards.</li>
-          <li>Optional free recce run before race day to preview the course and build confidence.</li>
-          <li>Thoughtful partner support, prizes, and product contributions to enhance the weekend experience.</li>
-          <li>On-site cafés, play park and ample parking — making it easy for crew and family to settle in.</li>
-          <li>A festival-style basecamp atmosphere including a dedicated “Crewless Crew” tent, decoration station and a few Backyard quirks.</li>
-          <li>A unique DNF token — or the Last One Standing prize.</li>
+          <li>Grassroots trail events with a proper community feel — serious enough to matter, relaxed enough to feel human.</li>
+          <li>Clear routes, calm organisation, and friendly volunteers so runners can focus on the challenge in front of them.</li>
+          <li>Basecamp energy that makes space for crews, supporters, first-timers, experienced ultra runners, and everyone in between.</li>
+          <li>Inclusive racing where personal goals matter as much as podiums, distances, and final results.</li>
+          <li>Honest communication before and after events, including official results, recaps, and practical updates.</li>
+          <li>Partnerships with local and like-minded brands who add something useful to race weekend.</li>
         </ul>
       </div>
     </section>
@@ -1082,10 +1269,10 @@
           <div class="partner-copy">
             <h3>Fir Tree Media</h3>
             <p>
-              We’re proud to partner with Fir Tree Media, who will be producing the official event aftermovie for the Bristol Backyard Ultra.
+              We’re proud to partner with Fir Tree Media, who captured the official photo and video story of the Bristol Backyard Ultra.
             </p>
             <p>
-              Their team will also be delivering social media content, marketing support, and on-the-day media coverage — capturing the grit, the atmosphere, and the stories that make this event special.
+              Their team helped capture the grit, the atmosphere, and the small human stories that made the first event special.
             </p>
 
             <a
@@ -1121,15 +1308,15 @@
           <div class="partner-copy">
             <h3>Up &amp; Running Bristol</h3>
             <p>
-              We’re delighted to partner with Up &amp; Running Bristol to offer all registered Bristol Backyard Ultra runners an exclusive <strong>15% off</strong> key race-day gear.
+              We were delighted to partner with Up &amp; Running Bristol to support Bristol Backyard Ultra runners with practical race-weekend kit advice and an exclusive event discount.
             </p>
 
             <p>
-              Their knowledgeable team share our passion for running and are fully briefed on the Backyard format — meaning they can help you dial in clothing, footwear, and fuelling for hour-after-hour consistency.
+              Their knowledgeable team share our passion for running and understood the Backyard format — helping runners think through clothing, footwear, and fuelling for hour-after-hour consistency.
             </p>
 
             <p>
-              To redeem your discount, visit the store, select your gear, and show your ticket confirmation email at the till.
+              We’re grateful for their support in helping runners arrive prepared and supported.
             </p>
 
             <p style="font-weight:700; margin-bottom:20px;">
@@ -1165,7 +1352,7 @@
         </div>
 
         <p class="event-partners-intro">
-          We’re grateful to the brands supporting Bristol Backyard Ultra 2026 with prizes, products, and race-weekend support.
+          We’re grateful to the brands who supported Bristol Backyard Ultra 2026 with prizes, products, and race-weekend support.
         </p>
 
         <div class="event-partners-grid">
@@ -1184,7 +1371,7 @@
               />
             </div>
             <h3>Salomon</h3>
-            <p>Supporting the event with a winner’s prize. The Salomon team will also be on hand through race weekend to offer demo opportunities for some of their footwear.</p>
+            <p>Supported the event with a winner’s prize and race-weekend footwear demo opportunities for runners.</p>
           </a>
 
           <a
@@ -1202,7 +1389,7 @@
               />
             </div>
             <h3>OOFOS</h3>
-            <p>Providing recovery-focused prize support to help one of our runner ups look after their tired legs and feet.</p>
+            <p>Provided recovery-focused prize support to help one of our runner ups look after their tired legs and feet.</p>
           </a>
 
           <a
@@ -1220,7 +1407,7 @@
               />
             </div>
             <h3>Tribo</h3>
-            <p>A Bristol-based drinks company supporting the weekend with a prize for one of our runner ups.</p>
+            <p>A Bristol-based drinks company that supported the weekend with a prize for one of our runner ups.</p>
           </a>
 
           <a
@@ -1256,7 +1443,7 @@
               />
             </div>
             <h3>TrueStart Coffee</h3>
-            <p>Helping fuel race weekend with coffee support at basecamp, and a prize for one of our runner ups.</p>
+            <p>Helped fuel race weekend with coffee support at basecamp, and a prize for one of our runner ups.</p>
           </a>
 
           <a
@@ -1274,62 +1461,26 @@
               />
             </div>
             <h3>Protein Rebel</h3>
-            <p>Supporting the event with a prize contribution, as well as offering 200 gels for runners to sample during the event.</p>
+            <p>Supported the event with a prize contribution, as well as 200 gels for runners to sample during the event.</p>
           </a>
         </div>
       </div>
     </section>
 
-    <section id="handbook" class="card-section">
+    <section id="waitlist" class="card-section cta-section">
       <div class="section-content">
         <div class="section-heading">
-          <div class="kicker">Race Day Info</div>
-          <h2>Race Handbook</h2>
+          <div class="kicker">What comes next</div>
+          <h2>Want to be on the next start line?</h2>
         </div>
 
-        <p>The Bristol Backyard Ultra Race Handbook is now available to download.</p>
-
-        <p>
-          It covers everything you need to know before race day, including registration, basecamp setup, mandatory kit, course marking, running at night, and parking.
+        <p class="centered-copy">
+          Join the 2027 waitlist for early access to Bristol Backyard Ultra entries and future Gravel &amp; Grit trail events.
         </p>
 
-        <p>Please read it before arriving on event day.</p>
-
-        <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:30px;">
-          <a
-            href="race-handbook.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="button-primary"
-          >
-            View Handbook
-          </a>
-
-          <a href="race-handbook.pdf" download class="button-primary">
-            Download Handbook
-          </a>
-
-          <a href="results/bristol-backyard-ultra-2026/" class="button-primary">
-            View 2026 Results
-          </a>
+        <div class="cta-actions">
+          <a href="results/bristol-backyard-ultra-2026/" class="button-secondary on-light">View 2026 Results</a>
         </div>
-      </div>
-    </section>
-
-    <section id="waitlist" class="card-section">
-      <div class="section-content">
-        <div class="section-heading">
-          <div class="kicker">Sold Out for 2026</div>
-          <h2>Join the 2027 Waitlist</h2>
-        </div>
-
-        <p>
-          The Bristol Backyard Ultra 2026 is now sold out.
-        </p>
-
-        <p>
-          Join the waitlist to get early access to 2027 entries and hear about future Gravel &amp; Grit events.
-        </p>
 
         <div class="waitlist-form-wrap">
           <form action="https://gravelandgritevents.us13.list-manage.com/subscribe/post?u=45362f8425ca47e31537b996b&amp;id=1cf3900049&amp;f_id=008834e5f0"
@@ -1352,7 +1503,7 @@
             </div>
 
             <button type="submit" class="button-primary waitlist-submit">
-              Join the Waitlist
+              Join the 2027 Waitlist
             </button>
           </form>
         </div>
