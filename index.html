@@ -525,7 +525,9 @@
 
     .cta-actions {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
+      gap: 14px;
       margin: 24px 0 0;
     }
 
@@ -818,8 +820,33 @@
       font-weight: 500;
     }
 
-    /* Sticky ticket */
-    .sticky-ticket {
+    footer p {
+      margin: 18px 0 0;
+    }
+
+    .footer-nav {
+      position: static;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 18px;
+      background: transparent;
+      border: 0;
+      backdrop-filter: none;
+    }
+
+    .footer-nav a {
+      color: var(--earthy-green);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .footer-nav a:hover {
+      color: var(--burnt-orange-dark);
+    }
+
+    /* Sticky waitlist */
+    .sticky-waitlist {
       position: fixed;
       bottom: 1.2rem;
       right: 1.2rem;
@@ -835,7 +862,7 @@
       transition: transform 0.2s ease;
     }
 
-    .sticky-ticket:hover {
+    .sticky-waitlist:hover {
       transform: translateY(-2px);
     }
 
@@ -900,13 +927,13 @@
         min-width: unset;
       }
 
-      .sticky-ticket {
+      .sticky-waitlist {
         left: 50%;
         right: auto;
         transform: translateX(-50%);
       }
 
-      .sticky-ticket:hover {
+      .sticky-waitlist:hover {
         transform: translateX(-50%) translateY(-2px);
       }
 
@@ -923,7 +950,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const heroButton = document.querySelector("header .button-primary");
-      const stickyButton = document.querySelector(".sticky-ticket");
+      const stickyButton = document.querySelector(".sticky-waitlist");
       if (!heroButton || !stickyButton || !("IntersectionObserver" in window)) return;
 
       const toggleStickyTicket = new IntersectionObserver(
@@ -1389,7 +1416,7 @@
               />
             </div>
             <h3>OOFOS</h3>
-            <p>Provided recovery-focused prize support to help one of our runner ups look after their tired legs and feet.</p>
+            <p>Provided recovery-focused prize support to help one of our runners-up look after their tired legs and feet.</p>
           </a>
 
           <a
@@ -1407,7 +1434,7 @@
               />
             </div>
             <h3>Tribo</h3>
-            <p>A Bristol-based drinks company that supported the weekend with a prize for one of our runner ups.</p>
+            <p>A Bristol-based drinks company that supported the weekend with a prize for one of our runners-up.</p>
           </a>
 
           <a
@@ -1443,7 +1470,7 @@
               />
             </div>
             <h3>TrueStart Coffee</h3>
-            <p>Helped fuel race weekend with coffee support at basecamp, and a prize for one of our runner ups.</p>
+            <p>Helped fuel race weekend with coffee support at basecamp, and a prize for one of our runners-up.</p>
           </a>
 
           <a
@@ -1479,10 +1506,11 @@
         </p>
 
         <div class="cta-actions">
+          <a href="#waitlist-form" class="button-primary">Join the 2027 Waitlist</a>
           <a href="results/bristol-backyard-ultra-2026/" class="button-secondary on-light">View 2026 Results</a>
         </div>
 
-        <div class="waitlist-form-wrap">
+        <div id="waitlist-form" class="waitlist-form-wrap">
           <form action="https://gravelandgritevents.us13.list-manage.com/subscribe/post?u=45362f8425ca47e31537b996b&amp;id=1cf3900049&amp;f_id=008834e5f0"
                 method="post"
                 target="_blank"
@@ -1525,12 +1553,19 @@
   </main>
 
   <footer>
-    &copy; 2026 Gravel &amp; Grit Events · Built with grit, community, and care.
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#home">Home</a>
+      <a href="#about">Bristol Backyard Ultra</a>
+      <a href="results/bristol-backyard-ultra-2026/">2026 Results</a>
+      <a href="#waitlist">2027 Waitlist</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p>&copy; 2026 Gravel &amp; Grit Events · Built with grit, community, and care.</p>
   </footer>
 
   <a
     href="#waitlist"
-    class="sticky-ticket"
+    class="sticky-waitlist"
   >
     Join the 2027 Waitlist
   </a>
