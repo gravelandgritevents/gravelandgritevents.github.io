@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bristol Backyard Ultra 2026 Results | Gravel &amp; Grit Events</title>
+  <meta
+    name="description"
+    content="Official results from the 2026 Bristol Backyard Ultra by Gravel &amp; Grit Events."
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --earthy-green: #09493c;
+      --earthy-green-2: #0f5b4c;
+      --burnt-orange: #d17c3a;
+      --burnt-orange-dark: #b8672c;
+      --stone: #f5f5f0;
+      --stone-dark: #ecece4;
+      --slate-grey: #3e3e3e;
+      --muted: #6f6f6f;
+      --white: #ffffff;
+      --shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+      --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.06);
+      --radius: 18px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(209, 124, 58, 0.08), transparent 20%),
+        linear-gradient(to bottom, #f8f8f3 0%, var(--stone) 35%, #f7f7f1 100%);
+      color: var(--slate-grey);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--burnt-orange);
+      outline-offset: 2px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: -48px;
+      z-index: 1100;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--white);
+      color: var(--earthy-green);
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    .hero {
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(9, 73, 60, 0.72), rgba(15, 91, 76, 0.44)),
+        url("../../images/GRAVEL&GRITPREEVENTSHOOTBTSLAUINFOCUS(31).jpg") center/cover no-repeat;
+      color: var(--stone);
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.12));
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 72px 20px 84px;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      color: rgba(245, 245, 240, 0.92);
+      font-size: 0.83rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(6px);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 5vw, 4.6rem);
+      line-height: 1.05;
+      color: var(--white);
+      text-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+      letter-spacing: -0.03em;
+    }
+
+    .hero .subtitle {
+      max-width: 760px;
+      margin: 18px auto 0;
+      color: rgba(245, 245, 240, 0.92);
+      font-size: clamp(1.05rem, 2vw, 1.22rem);
+    }
+
+    .hero-actions,
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .button-primary,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      transition: all 0.2s ease;
+      min-width: 180px;
+    }
+
+    .button-primary {
+      background-color: var(--burnt-orange);
+      color: var(--white);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+    }
+
+    .button-primary:hover {
+      transform: translateY(-2px);
+      background-color: var(--burnt-orange-dark);
+    }
+
+    .button-secondary {
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(6px);
+    }
+
+    .button-secondary:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(9, 73, 60, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 20px;
+    }
+
+    nav a {
+      color: var(--stone);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.96rem;
+      opacity: 0.95;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      color: var(--white);
+    }
+
+    .section-shell {
+      padding: 44px 20px 0;
+    }
+
+    section.card-section {
+      max-width: var(--max-width);
+      margin: 0 auto 28px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(9, 73, 60, 0.06);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .section-content {
+      padding: 42px 32px;
+    }
+
+    .section-heading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .section-heading .kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--burnt-orange);
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--earthy-green);
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .section-content p {
+      margin: 0 auto 18px;
+      max-width: 900px;
+    }
+
+    .intro-copy {
+      text-align: center;
+      font-size: 1.08rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .stat-card {
+      background: linear-gradient(to bottom right, rgba(9, 73, 60, 0.05), rgba(209, 124, 58, 0.04));
+      border: 1px solid rgba(9, 73, 60, 0.07);
+      border-radius: 16px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .stat-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--earthy-green);
+      font-size: 1.35rem;
+      line-height: 1.15;
+    }
+
+    .stat-card span {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .results-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .results-toolbar p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .spreadsheet-frame {
+      width: 100%;
+      min-height: 560px;
+      border: 1px solid rgba(9, 73, 60, 0.12);
+      border-radius: 16px;
+      background: var(--white);
+      box-shadow: var(--shadow-soft);
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .results-table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    .results-table th,
+    .results-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid rgba(9, 73, 60, 0.08);
+      text-align: left;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+
+    .results-table th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: var(--earthy-green);
+      color: var(--white);
+      font-weight: 800;
+    }
+
+    .results-table tbody tr:nth-child(even) {
+      background: rgba(9, 73, 60, 0.035);
+    }
+
+    .table-status {
+      padding: 26px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .cta-card {
+      text-align: center;
+      background:
+        linear-gradient(135deg, rgba(9, 73, 60, 0.94), rgba(15, 91, 76, 0.9)),
+        url("../../images/GRAVEL&GRITPREEVENTSHOOTBTSLAUINFOCUS(31).jpg") center/cover no-repeat;
+      color: var(--stone);
+    }
+
+    .cta-card .section-heading h2,
+    .cta-card .section-heading .kicker {
+      color: var(--white);
+    }
+
+    .cta-card p {
+      color: rgba(245, 245, 240, 0.92);
+    }
+
+    footer {
+      text-align: center;
+      padding: 34px 20px 42px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 820px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-inner {
+        padding: 56px 18px 66px;
+      }
+
+      .section-shell {
+        padding: 28px 14px 0;
+      }
+
+      .section-content {
+        padding: 30px 20px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .spreadsheet-frame {
+        min-height: 480px;
+      }
+
+      .button-primary,
+      .button-secondary {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Official results</div>
+      <h1>Bristol Backyard Ultra 2026 Results</h1>
+      <p class="subtitle">
+        The inaugural Bristol Backyard Ultra brought the community together at Blaise Castle Estate for a gritty, good-hearted weekend of trail running.
+      </p>
+      <div class="hero-actions">
+        <a href="#official-results" class="button-primary">View Results</a>
+        <a href="../../Bristol-Backyard-Ultra-2026-Results.csv" download class="button-secondary">Download CSV Results</a>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Primary">
+    <div class="nav-inner">
+      <a href="../../">Event Home</a>
+      <a href="#summary">Summary</a>
+      <a href="#official-results">Results Spreadsheet</a>
+      <a href="#next-event">2027 Waitlist</a>
+      <a href="../../#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main id="main-content" class="section-shell">
+    <section id="summary" class="card-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Race recap</div>
+          <h2>Inaugural event, huge effort</h2>
+        </div>
+        <p class="intro-copy">
+          Thank you to every runner, supporter, volunteer, partner and crew member who made the first Bristol Backyard Ultra feel so welcoming. With 125 entries sold and 110 runners toeing the line, the field kept rolling through the loops until the event wrapped up on Sunday morning.
+        </p>
+
+        <div class="stats-grid" aria-label="Bristol Backyard Ultra 2026 key statistics">
+          <div class="stat-card">
+            <strong>110</strong>
+            <span>starters</span>
+          </div>
+          <div class="stat-card">
+            <strong>26 loops</strong>
+            <span>completed by the winner</span>
+          </div>
+          <div class="stat-card">
+            <strong>Official</strong>
+            <span>Backyard Ultra event</span>
+          </div>
+          <div class="stat-card">
+            <strong>Sunday morning</strong>
+            <span>event finish</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="official-results" class="card-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Official spreadsheet</div>
+          <h2>Full results</h2>
+        </div>
+
+        <div class="results-toolbar">
+          <p>
+            View the official Bristol Backyard Ultra 2026 results below. On mobile, swipe sideways inside the table to see every column.
+          </p>
+          <a href="../../Bristol-Backyard-Ultra-2026-Results.csv" download class="button-primary">Download Official Results CSV</a>
+        </div>
+
+        <div
+          id="results-spreadsheet"
+          class="spreadsheet-frame"
+          role="region"
+          aria-label="Scrollable official Bristol Backyard Ultra 2026 results spreadsheet"
+          tabindex="0"
+        >
+          <p class="table-status">Loading the official results spreadsheet…</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="next-event" class="card-section cta-card">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Run with us next time</div>
+          <h2>Want to be on the next start line?</h2>
+        </div>
+        <p>
+          Join the 2027 waitlist for early access to the next Bristol Backyard Ultra entries and future Gravel &amp; Grit trail events.
+        </p>
+        <div class="button-row">
+          <a href="../../#waitlist" class="button-primary">Join the 2027 Waitlist</a>
+          <a href="../../" class="button-secondary">Back to Event Page</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Gravel &amp; Grit Events · Built with grit, community, and care.
+  </footer>
+
+  <script>
+    // Replace this one value if the official results move to another uploaded file or a Google Sheets published CSV URL.
+    const RESULTS_FILE_URL = "../../Bristol-Backyard-Ultra-2026-Results.csv";
+
+    function parseCsv(csvText) {
+      const rows = [];
+      let row = [];
+      let cell = "";
+      let insideQuotes = false;
+
+      for (let index = 0; index < csvText.length; index += 1) {
+        const character = csvText[index];
+        const nextCharacter = csvText[index + 1];
+
+        if (character === '"') {
+          if (insideQuotes && nextCharacter === '"') {
+            cell += '"';
+            index += 1;
+          } else {
+            insideQuotes = !insideQuotes;
+          }
+        } else if (character === "," && !insideQuotes) {
+          row.push(cell.trim());
+          cell = "";
+        } else if ((character === "\n" || character === "\r") && !insideQuotes) {
+          if (character === "\r" && nextCharacter === "\n") {
+            index += 1;
+          }
+          row.push(cell.trim());
+          rows.push(row);
+          row = [];
+          cell = "";
+        } else {
+          cell += character;
+        }
+      }
+
+      if (cell || row.length) {
+        row.push(cell.trim());
+        rows.push(row);
+      }
+
+      return rows.filter((csvRow) => csvRow.some((value) => value !== ""));
+    }
+
+    function createCell(tagName, value) {
+      const cell = document.createElement(tagName);
+      cell.textContent = value;
+      return cell;
+    }
+
+    function renderResultsTable(rows) {
+      const spreadsheet = document.getElementById("results-spreadsheet");
+      const table = document.createElement("table");
+      table.className = "results-table";
+
+      const headerRow = rows[0].map((heading, index) => {
+        if (heading.replace(/^\uFEFF/, "")) {
+          return heading.replace(/^\uFEFF/, "");
+        }
+        return `Column ${index + 1}`;
+      });
+
+      const thead = document.createElement("thead");
+      const header = document.createElement("tr");
+      headerRow.forEach((heading) => header.appendChild(createCell("th", heading)));
+      thead.appendChild(header);
+      table.appendChild(thead);
+
+      const tbody = document.createElement("tbody");
+      rows.slice(1).forEach((resultRow) => {
+        const tableRow = document.createElement("tr");
+        headerRow.forEach((_, index) => {
+          tableRow.appendChild(createCell("td", resultRow[index] || ""));
+        });
+        tbody.appendChild(tableRow);
+      });
+      table.appendChild(tbody);
+
+      spreadsheet.replaceChildren(table);
+    }
+
+    async function loadResults() {
+      const spreadsheet = document.getElementById("results-spreadsheet");
+
+      try {
+        const response = await fetch(RESULTS_FILE_URL);
+        if (!response.ok) {
+          throw new Error(`Unable to load results file: ${response.status}`);
+        }
+
+        const csvText = await response.text();
+        const rows = parseCsv(csvText);
+
+        if (!rows.length) {
+          throw new Error("The results file is empty.");
+        }
+
+        renderResultsTable(rows);
+      } catch (error) {
+        spreadsheet.innerHTML = `
+          <div class="table-status">
+            <p>We could not load the embedded results spreadsheet in this browser.</p>
+            <p><a href="${RESULTS_FILE_URL}" download>Download the official results CSV instead.</a></p>
+          </div>
+        `;
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadResults);
+  </script>
+</body>
+</html>
