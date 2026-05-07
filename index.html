@@ -62,8 +62,8 @@
 
   <style>
     :root {
-      --earthy-green: #506B38;
-      --earthy-green-2: #5f7d43;
+      --earthy-green: #09493c;
+      --earthy-green-2: #0f5b4c;
       --burnt-orange: #D95E1F;
       --burnt-orange-dark: #B94F18;
       --stone: #f5f5f0;
@@ -140,7 +140,7 @@
     .hero {
       position: relative;
       background:
-        linear-gradient(135deg, rgba(80, 107, 56, 0.48), rgba(95, 125, 67, 0.34)),
+        linear-gradient(135deg, rgba(9, 73, 60, 0.48), rgba(15, 91, 76, 0.34)),
         url("images/GRAVEL&GRITPREEVENTSHOOTBTSLAUINFOCUS(31).jpg") center/cover no-repeat;
       color: var(--stone);
       overflow: hidden;
@@ -262,7 +262,7 @@
       box-shadow: var(--shadow);
       padding: 28px 28px 26px;
       text-align: center;
-      border: 1px solid rgba(80, 107, 56, 0.06);
+      border: 1px solid rgba(9, 73, 60, 0.06);
     }
 
     .capacity-label {
@@ -291,7 +291,7 @@
 
     .proof-card {
       max-width: var(--max-width);
-      border-color: rgba(80, 107, 56, 0.12);
+      border-color: rgba(9, 73, 60, 0.12);
     }
 
     .proof-stats {
@@ -302,10 +302,10 @@
     }
 
     .proof-stat-card {
-      border: 1px solid rgba(80, 107, 56, 0.1);
+      border: 1px solid rgba(9, 73, 60, 0.1);
       border-radius: 16px;
       padding: 18px 14px;
-      background: linear-gradient(to bottom right, rgba(80, 107, 56, 0.06), rgba(217, 94, 31, 0.04));
+      background: linear-gradient(to bottom right, rgba(9, 73, 60, 0.06), rgba(217, 94, 31, 0.04));
     }
 
     .proof-stat-card strong {
@@ -351,7 +351,7 @@
     .waitlist-input {
       width: 100%;
       padding: 14px 16px;
-      border: 1px solid rgba(80, 107, 56, 0.15);
+      border: 1px solid rgba(9, 73, 60, 0.15);
       border-radius: 12px;
       font: inherit;
       font-size: 1rem;
@@ -374,7 +374,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(80, 107, 56, 0.92);
+      background: rgba(9, 73, 60, 0.92);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
@@ -402,21 +402,21 @@
 
     /* Sections */
     .section-shell {
-      padding: 44px 20px 0;
+      padding: 52px 20px 0;
     }
 
     section.card-section {
       max-width: var(--max-width);
-      margin: 0 auto 28px;
+      margin: 0 auto 36px;
       background: rgba(255, 255, 255, 0.86);
-      border: 1px solid rgba(80, 107, 56, 0.06);
+      border: 1px solid rgba(9, 73, 60, 0.06);
       border-radius: var(--radius);
       box-shadow: var(--shadow-soft);
       overflow: hidden;
     }
 
     .section-content {
-      padding: 42px 32px;
+      padding: 48px 36px;
     }
 
     .section-heading {
@@ -461,6 +461,270 @@
       color: var(--slate-grey);
     }
 
+
+    .section-intro {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      max-width: 700px !important;
+      text-align: center;
+      color: var(--slate-grey);
+      font-size: 1.04rem;
+    }
+
+    .atmosphere-section,
+    .recap-section {
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(245, 245, 240, 0.9)),
+        repeating-linear-gradient(45deg, rgba(9, 73, 60, 0.035) 0, rgba(9, 73, 60, 0.035) 1px, transparent 1px, transparent 14px);
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .media-tile {
+      position: relative;
+      min-height: 220px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(9, 73, 60, 0.12), rgba(217, 94, 31, 0.08));
+      border: 1px solid rgba(9, 73, 60, 0.12);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+      isolation: isolate;
+    }
+
+    .media-tile img {
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .media-tile:hover img {
+      transform: scale(1.025);
+    }
+
+    .media-tile::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.05) 58%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .media-tile-large {
+      grid-column: span 4;
+      min-height: 390px;
+    }
+
+    .media-tile-portrait {
+      grid-column: span 2;
+      min-height: 390px;
+    }
+
+    .media-tile-small {
+      grid-column: span 2;
+    }
+
+    .media-placeholder {
+      display: flex;
+      align-items: flex-end;
+      background:
+        linear-gradient(to top, rgba(36, 47, 31, 0.86), rgba(9, 73, 60, 0.42)),
+        radial-gradient(circle at 70% 24%, rgba(217, 94, 31, 0.22), transparent 30%),
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0, rgba(255, 255, 255, 0.08) 1px, transparent 1px, transparent 18px);
+    }
+
+    .media-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 16px;
+      z-index: 2;
+      color: var(--white);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.38);
+    }
+
+    .media-caption strong {
+      display: block;
+      font-size: 1.02rem;
+      line-height: 1.2;
+    }
+
+    .media-caption span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(245, 245, 240, 0.86);
+      font-size: 0.88rem;
+      line-height: 1.35;
+    }
+
+    .placeholder-label {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(245, 245, 240, 0.16);
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .video-placeholder {
+      margin-top: 16px;
+      padding: 22px;
+      border-radius: 18px;
+      border: 1px dashed rgba(9, 73, 60, 0.26);
+      background: rgba(255, 255, 255, 0.64);
+      color: var(--slate-grey);
+      text-align: center;
+    }
+
+    .video-placeholder strong {
+      display: block;
+      color: var(--earthy-green);
+      margin-bottom: 4px;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .testimonial-card {
+      position: relative;
+      min-height: 220px;
+      padding: 26px 22px 22px;
+      border-radius: 18px;
+      background: var(--white);
+      border: 1px solid rgba(9, 73, 60, 0.1);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    }
+
+    .testimonial-card::before {
+      content: "“";
+      position: absolute;
+      top: 10px;
+      right: 18px;
+      color: rgba(217, 94, 31, 0.22);
+      font-size: 4.5rem;
+      line-height: 1;
+      font-weight: 800;
+    }
+
+    .testimonial-card blockquote {
+      position: relative;
+      margin: 0 0 18px 0;
+      color: var(--slate-grey);
+      font-size: 1.02rem;
+      line-height: 1.62;
+    }
+
+    .testimonial-card figcaption {
+      color: var(--earthy-green);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .testimonial-card .placeholder-note {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--burnt-orange-dark);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .recap-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1.05fr);
+      gap: 30px;
+      align-items: start;
+      margin-top: 30px;
+    }
+
+    .recap-panel,
+    .timeline-panel {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(9, 73, 60, 0.1);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.035);
+    }
+
+    .recap-panel h3,
+    .timeline-panel h3 {
+      margin: 0 0 14px 0;
+      color: var(--earthy-green);
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .recap-stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .recap-stat {
+      padding: 16px;
+      border-radius: 14px;
+      background: linear-gradient(to bottom right, rgba(9, 73, 60, 0.07), rgba(217, 94, 31, 0.04));
+      border: 1px solid rgba(9, 73, 60, 0.08);
+    }
+
+    .recap-stat strong {
+      display: block;
+      color: var(--earthy-green);
+      font-size: 1.45rem;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .timeline-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline-list li {
+      position: relative;
+      padding-left: 26px;
+      line-height: 1.55;
+    }
+
+    .timeline-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--burnt-orange);
+      box-shadow: 0 0 0 5px rgba(217, 94, 31, 0.12);
+    }
+
+    .timeline-list strong {
+      display: block;
+      color: var(--earthy-green);
+      margin-bottom: 2px;
+    }
+
     .split-content {
       display: grid;
       grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
@@ -491,7 +755,7 @@
       gap: 8px;
       min-height: 150px;
       padding: 22px;
-      border: 1px solid rgba(80, 107, 56, 0.1);
+      border: 1px solid rgba(9, 73, 60, 0.1);
       border-radius: 18px;
       background: var(--white);
       color: var(--slate-grey);
@@ -511,12 +775,12 @@
     a.archive-card:hover,
     a.archive-card:focus-visible {
       transform: translateY(-2px);
-      border-color: rgba(80, 107, 56, 0.24);
+      border-color: rgba(9, 73, 60, 0.24);
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
     }
 
     .archive-placeholder {
-      background: linear-gradient(to bottom right, rgba(80, 107, 56, 0.05), rgba(245, 245, 240, 0.88));
+      background: linear-gradient(to bottom right, rgba(9, 73, 60, 0.05), rgba(245, 245, 240, 0.88));
     }
 
     .cta-section {
@@ -556,8 +820,8 @@
     }
 
     .stat-card {
-      background: linear-gradient(to bottom right, rgba(80, 107, 56, 0.05), rgba(217, 94, 31, 0.04));
-      border: 1px solid rgba(80, 107, 56, 0.07);
+      background: linear-gradient(to bottom right, rgba(9, 73, 60, 0.05), rgba(217, 94, 31, 0.04));
+      border: 1px solid rgba(9, 73, 60, 0.07);
       border-radius: 16px;
       padding: 18px;
       text-align: center;
@@ -582,7 +846,7 @@
       height: 520px;
       border-radius: 18px;
       overflow: hidden;
-      border: 1px solid rgba(80, 107, 56, 0.08);
+      border: 1px solid rgba(9, 73, 60, 0.08);
       box-shadow: var(--shadow-soft);
       background: #e9efe9;
     }
@@ -610,7 +874,7 @@
 
     .faq-item {
       background: var(--white);
-      border: 1px solid rgba(80, 107, 56, 0.07);
+      border: 1px solid rgba(9, 73, 60, 0.07);
       border-radius: 16px;
       padding: 20px 20px 18px;
     }
@@ -638,7 +902,7 @@
       margin: 0 auto;
       text-align: center;
       background: var(--white);
-      border: 1px solid rgba(80, 107, 56, 0.07);
+      border: 1px solid rgba(9, 73, 60, 0.07);
       border-radius: 18px;
       padding: 30px 24px;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
@@ -664,7 +928,7 @@
     .benefits-list li {
       position: relative;
       background: var(--white);
-      border: 1px solid rgba(80, 107, 56, 0.07);
+      border: 1px solid rgba(9, 73, 60, 0.07);
       border-radius: 16px;
       padding: 18px 18px 18px 48px;
       line-height: 1.65;
@@ -701,7 +965,7 @@
       align-items: center;
       justify-content: center;
       background: var(--white);
-      border: 1px solid rgba(80, 107, 56, 0.07);
+      border: 1px solid rgba(9, 73, 60, 0.07);
       border-radius: 20px;
       padding: 22px;
       min-height: 170px;
@@ -751,7 +1015,7 @@
       flex-direction: column;
       height: 100%;
       background: var(--white);
-      border: 1px solid rgba(80, 107, 56, 0.07);
+      border: 1px solid rgba(9, 73, 60, 0.07);
       border-radius: 18px;
       padding: 22px 20px 20px;
       text-decoration: none;
@@ -763,7 +1027,7 @@
     .event-partner-card:focus-visible {
       transform: translateY(-2px);
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-      border-color: rgba(80, 107, 56, 0.14);
+      border-color: rgba(9, 73, 60, 0.14);
     }
 
     .event-partner-logo-wrap {
@@ -774,7 +1038,7 @@
       margin-bottom: 16px;
       padding: 12px;
       border-radius: 14px;
-      background: linear-gradient(to bottom right, rgba(80, 107, 56, 0.03), rgba(217, 94, 31, 0.03));
+      background: linear-gradient(to bottom right, rgba(9, 73, 60, 0.03), rgba(217, 94, 31, 0.03));
     }
 
     .event-partner-logo {
@@ -873,8 +1137,22 @@
       .stats-grid,
       .proof-stats,
       .split-content,
-      .archive-actions {
+      .archive-actions,
+      .testimonial-grid,
+      .recap-layout {
         grid-template-columns: 1fr;
+      }
+
+      .media-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .media-tile,
+      .media-tile-large,
+      .media-tile-portrait,
+      .media-tile-small {
+        grid-column: span 1;
+        min-height: 260px;
       }
 
       .section-heading.align-left {
@@ -890,8 +1168,12 @@
         min-height: auto;
       }
 
+      .section-shell {
+        padding: 38px 14px 0;
+      }
+
       .section-content {
-        padding: 32px 22px;
+        padding: 34px 22px;
       }
 
       #route-map {
@@ -941,8 +1223,17 @@
         height: 340px;
       }
 
-      .event-partners-grid {
+      .event-partners-grid,
+      .media-grid,
+      .recap-stats {
         grid-template-columns: 1fr;
+      }
+
+      .media-tile,
+      .media-tile-large,
+      .media-tile-portrait,
+      .media-tile-small {
+        min-height: 230px;
       }
     }
   </style>
@@ -1057,6 +1348,163 @@
           <p>
             The 2026 event ran smoothly, with no major operational issues, positive council feedback, brilliant participant response, and a community that carried the energy well beyond race weekend.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="media" class="card-section atmosphere-section" aria-labelledby="media-title">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Atmosphere</div>
+          <h2 id="media-title">Scenes From The Weekend</h2>
+        </div>
+
+        <p class="section-intro">
+          A home for the headtorches, muddy shoes, basecamp quiet, crew energy, and finish-line emotion that made the first Bristol Backyard Ultra feel like Gravel &amp; Grit.
+        </p>
+
+        <div class="media-grid" aria-label="Bristol Backyard Ultra 2026 media placeholders">
+          <figure class="media-tile media-tile-large">
+            <img
+              src="images/GRAVEL&amp;GRITPREEVENTSHOOTBTSLAUINFOCUS(31).jpg"
+              alt="Gravel and Grit runner atmosphere on wooded trail"
+              width="1200"
+              height="800"
+              loading="lazy"
+            />
+            <figcaption class="media-caption">
+              <strong>Woodland miles</strong>
+              <span>Available Gravel &amp; Grit atmosphere image. Replace with final 2026 race photography when ready.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="media-tile media-tile-portrait media-placeholder">
+            <figcaption class="media-caption">
+              <span class="placeholder-label">Placeholder</span>
+              <strong>Headtorches and night loops</strong>
+              <span>Reserved for low-light race imagery from Saturday night.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="media-tile media-tile-small media-placeholder">
+            <figcaption class="media-caption">
+              <span class="placeholder-label">Placeholder</span>
+              <strong>Sunrise at basecamp</strong>
+              <span>For early-morning atmosphere and runners returning to the line.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="media-tile media-tile-small media-placeholder">
+            <figcaption class="media-caption">
+              <span class="placeholder-label">Placeholder</span>
+              <strong>Crews, cups, chairs, and care</strong>
+              <span>For support crews and the small human details between loops.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="media-tile media-tile-small media-placeholder">
+            <figcaption class="media-caption">
+              <span class="placeholder-label">Placeholder</span>
+              <strong>Muddy shoes and tired smiles</strong>
+              <span>For close-up details that make the weekend feel real.</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="video-placeholder" aria-label="Highlight video placeholder">
+          <strong>Highlight video space</strong>
+          <span>Future home for a lightweight embedded recap film or linked highlight video — no stock footage used.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="card-section testimonials-section" aria-labelledby="testimonials-title">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Social proof</div>
+          <h2 id="testimonials-title">What runners said</h2>
+        </div>
+
+        <p class="section-intro">
+          Real participant and community quotes will sit here once approved. Until then, these cards are intentionally marked as placeholders rather than invented testimonials.
+        </p>
+
+        <div class="testimonial-grid">
+          <figure class="testimonial-card">
+            <span class="placeholder-note">Placeholder quote</span>
+            <blockquote>
+              Replace with a real runner quote about the basecamp atmosphere, support, or what it felt like to come back to the line each hour.
+            </blockquote>
+            <figcaption>Participant quote to add</figcaption>
+          </figure>
+
+          <figure class="testimonial-card">
+            <span class="placeholder-note">Placeholder quote</span>
+            <blockquote>
+              Replace with a real crew, volunteer, partner, or spectator quote that captures the community side of the weekend.
+            </blockquote>
+            <figcaption>Community quote to add</figcaption>
+          </figure>
+
+          <figure class="testimonial-card">
+            <span class="placeholder-note">Placeholder quote</span>
+            <blockquote>
+              Replace with a real reflection from a first-timer, final-hours runner, or returning supporter looking ahead to 2027.
+            </blockquote>
+            <figcaption>Race story quote to add</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="recap" class="card-section recap-section" aria-labelledby="recap-title">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Race story</div>
+          <h2 id="recap-title">2026 Race Recap</h2>
+        </div>
+
+        <p class="section-intro">
+          Full recap coming soon. This structure is ready for the complete story from the first bell through the night loops, Sunday morning, final runners, and community moments.
+        </p>
+
+        <div class="recap-layout">
+          <div class="recap-panel">
+            <h3>Recap framework</h3>
+            <p>
+              The full article will bring together the event narrative, selected photography, highlight video, final-runner detail, and the small moments that defined the inaugural Bristol Backyard Ultra.
+            </p>
+
+            <div class="recap-stats" aria-label="Recap key stats placeholders and confirmed event statistics">
+              <div class="recap-stat">
+                <strong>104</strong>
+                <span>starters</span>
+              </div>
+              <div class="recap-stat">
+                <strong>26</strong>
+                <span>winner loops</span>
+              </div>
+              <div class="recap-stat">
+                <strong>Media</strong>
+                <span>gallery to add</span>
+              </div>
+              <div class="recap-stat">
+                <strong>Stories</strong>
+                <span>quotes to add</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-panel">
+            <h3>Story timeline to complete</h3>
+            <ul class="timeline-list">
+              <li><strong>Before the first bell</strong>Registration, basecamp setup, crews settling in, and the start-line mood.</li>
+              <li><strong>Into the rhythm</strong>Early loops, course conditions, and the field learning the shape of the hour.</li>
+              <li><strong>Through the night</strong>Headtorches, quiet miles, support crews, and the atmosphere after dark.</li>
+              <li><strong>Sunday and the final yards</strong>The last runners, returning supporters, and the closing moments of the inaugural race.</li>
+              <li><strong>Community moments</strong>Volunteers, partners, spectators, and the details that made the weekend feel human.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
