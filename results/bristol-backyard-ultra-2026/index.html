@@ -27,6 +27,7 @@
       --burnt-orange-dark: #b8672c;
       --stone: #f5f5f0;
       --stone-dark: #ecece4;
+      --stone-warm: #efeee5;
       --slate-grey: #3e3e3e;
       --muted: #6f6f6f;
       --white: #ffffff;
@@ -358,6 +359,174 @@
       color: var(--muted);
     }
 
+
+    .section-shell::before {
+      content: "";
+      display: block;
+      width: min(150px, 40vw);
+      height: 1px;
+      margin: 0 auto 28px;
+      background: linear-gradient(90deg, transparent, rgba(9, 73, 60, 0.18), transparent);
+    }
+
+    .section-intro,
+    .centered-copy {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      max-width: 760px !important;
+      text-align: center;
+      color: var(--slate-grey);
+      font-size: 1.04rem;
+    }
+
+    .recap-section {
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(245, 245, 240, 0.92)),
+        repeating-linear-gradient(45deg, rgba(9, 73, 60, 0.03) 0, rgba(9, 73, 60, 0.03) 1px, transparent 1px, transparent 14px);
+    }
+
+    .stories-section {
+      background: linear-gradient(135deg, rgba(239, 238, 229, 0.9), rgba(255, 255, 255, 0.92));
+    }
+
+    .stories-section .section-heading {
+      margin-bottom: 18px;
+    }
+
+    .testimonial-carousel {
+      position: relative;
+      margin-top: 24px;
+    }
+
+    .testimonial-carousel-hint {
+      display: none;
+      margin: 0;
+      color: var(--earthy-green);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .testimonial-grid:focus-visible {
+      outline: 3px solid var(--burnt-orange);
+      outline-offset: 5px;
+      border-radius: 16px;
+    }
+
+    .testimonial-card {
+      position: relative;
+      min-height: 188px;
+      margin: 0;
+      padding: 24px 20px 20px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(9, 73, 60, 0.1);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    }
+
+    .testimonial-card::before {
+      content: "“";
+      position: absolute;
+      top: 10px;
+      right: 18px;
+      color: rgba(209, 124, 58, 0.22);
+      font-size: 4.5rem;
+      line-height: 1;
+      font-weight: 800;
+    }
+
+    .testimonial-card blockquote {
+      position: relative;
+      margin: 0 0 18px;
+      color: var(--slate-grey);
+      font-size: 1rem;
+      line-height: 1.58;
+    }
+
+    .testimonial-card figcaption,
+    .testimonial-card .runner-name {
+      color: var(--earthy-green);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .testimonial-dots {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 14px 20px 0 0;
+    }
+
+    .testimonial-dot {
+      width: 7px;
+      height: 7px;
+      border: 0;
+      border-radius: 999px;
+      padding: 0;
+      background: rgba(9, 73, 60, 0.24);
+      transition: width 0.2s ease, background-color 0.2s ease;
+    }
+
+    .testimonial-dot.is-active {
+      width: 22px;
+      background: var(--burnt-orange);
+    }
+
+    .media-section {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(239, 238, 229, 0.78));
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-top: 24px;
+    }
+
+    .media-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 230px;
+      padding: 22px;
+      border-radius: 18px;
+      background:
+        linear-gradient(to top, rgba(9, 73, 60, 0.86), rgba(9, 73, 60, 0.1)),
+        url("../../images/GRAVEL&GRITPREEVENTSHOOTBTSLAUINFOCUS(31).jpg") center/cover no-repeat;
+      color: var(--white);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .media-note {
+      padding: 22px;
+      border-radius: 18px;
+      background: rgba(9, 73, 60, 0.06);
+      border: 1px solid rgba(9, 73, 60, 0.09);
+    }
+
+    .media-card strong,
+    .media-note strong {
+      display: block;
+      margin-bottom: 8px;
+      color: inherit;
+      font-size: 1.12rem;
+      line-height: 1.2;
+    }
+
+    .media-card span,
+    .media-note span {
+      display: block;
+      line-height: 1.55;
+    }
+
     .cta-card {
       text-align: center;
       background:
@@ -416,30 +585,215 @@
     }
 
     @media (max-width: 640px) {
+      body {
+        line-height: 1.62;
+      }
+
       .hero-inner {
-        padding: 56px 18px 66px;
+        padding: 42px 18px 48px;
+      }
+
+      .eyebrow {
+        margin-bottom: 10px;
+        padding: 7px 12px;
+        font-size: 0.76rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 11vw, 3.05rem);
+      }
+
+      .hero .subtitle {
+        margin-top: 14px;
+        font-size: 1rem;
+        line-height: 1.55;
+      }
+
+      .hero-actions,
+      .button-row {
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .nav-inner {
+        padding: 9px 12px 10px;
+        gap: 5px 12px;
+        justify-content: center;
+      }
+
+      nav a {
+        font-size: 0.86rem;
+        line-height: 1.25;
       }
 
       .section-shell {
-        padding: 28px 14px 0;
+        padding: 22px 12px 0;
+      }
+
+      .section-shell::before {
+        margin-bottom: 20px;
+      }
+
+      section.card-section {
+        margin-bottom: 18px;
+        border-radius: 16px;
       }
 
       .section-content {
-        padding: 30px 20px;
+        padding: 24px 18px;
+      }
+
+      .section-heading {
+        gap: 6px;
+        margin-bottom: 16px;
+      }
+
+      .section-heading .kicker {
+        font-size: 0.72rem;
+      }
+
+      .section-heading h2 {
+        font-size: clamp(1.55rem, 8vw, 2.05rem);
+      }
+
+      .section-content p {
+        margin-bottom: 14px;
+      }
+
+      .intro-copy,
+      .section-intro,
+      .centered-copy {
+        font-size: 0.98rem;
+        line-height: 1.58;
       }
 
       .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .stat-card {
+        padding: 14px 10px;
+        border-radius: 14px;
+      }
+
+      .stat-card strong {
+        margin-bottom: 3px;
+        font-size: 1.25rem;
+      }
+
+      .stat-card span {
+        font-size: 0.88rem;
+      }
+
+      .stories-section .section-content {
+        padding: 24px 0 22px 18px;
+      }
+
+      .stories-section .section-heading,
+      .stories-section .section-intro {
+        padding-right: 18px;
+      }
+
+      .testimonial-carousel {
+        margin-top: 18px;
+      }
+
+      .testimonial-carousel::after {
+        content: "";
+        position: absolute;
+        top: 31px;
+        right: 0;
+        bottom: 24px;
+        width: 38px;
+        pointer-events: none;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(247, 247, 241, 0.95));
+      }
+
+      .testimonial-carousel-hint {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+
+      .testimonial-carousel-hint::after {
+        content: "→";
+        color: var(--burnt-orange);
+        font-size: 1.1rem;
+        line-height: 1;
+      }
+
+      .testimonial-grid {
+        display: flex;
+        gap: 12px;
+        padding: 2px calc((100vw - min(84vw, 320px)) / 2) 8px calc((100vw - min(84vw, 320px)) / 2 - 18px);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 0;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .testimonial-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .testimonial-card {
+        flex: 0 0 min(84vw, 320px);
+        max-width: min(84vw, 320px);
+        min-height: 150px;
+        padding: 20px 17px 17px;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+      }
+
+      .testimonial-card blockquote {
+        margin-bottom: 14px;
+        font-size: 0.95rem;
+        line-height: 1.52;
+      }
+
+      .testimonial-dots {
+        display: flex;
+      }
+
+      .media-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .media-card {
+        min-height: 176px;
+        padding: 18px;
+      }
+
+      .media-note {
+        padding: 18px;
+      }
+
+      .results-toolbar {
+        gap: 12px;
+        margin-bottom: 14px;
       }
 
       .spreadsheet-frame {
-        min-height: 480px;
+        min-height: 420px;
+        border-radius: 14px;
       }
 
       .button-primary,
       .button-secondary {
         width: 100%;
         min-width: 0;
+        padding: 12px 18px;
+      }
+
+      footer {
+        padding: 22px 18px 30px;
       }
     }
   </style>
@@ -465,21 +819,22 @@
     <div class="nav-inner">
       <a href="../../">Event Home</a>
       <a href="#summary">Summary</a>
-      <a href="#official-results">Results Spreadsheet</a>
+      <a href="#stories">Runner Stories</a>
+      <a href="#media">Media</a>
+      <a href="#official-results">Results</a>
       <a href="#next-event">2027 Waitlist</a>
-      <a href="../../#contact">Contact</a>
     </div>
   </nav>
 
   <main id="main-content" class="section-shell">
-    <section id="summary" class="card-section">
+    <section id="summary" class="card-section recap-section">
       <div class="section-content">
         <div class="section-heading">
           <div class="kicker">Race recap</div>
           <h2>Inaugural event, huge effort</h2>
         </div>
         <p class="intro-copy">
-          Thank you to every runner, supporter, volunteer, partner and crew member who made Bristol's first Backyard Ultra feel so incredibly special. We are overwhelmed with the wonderful messages and heartfelt feedback. You are the reason we do this.  
+          Thank you to every runner, supporter, volunteer, partner and crew member who made Bristol's first Backyard Ultra feel so incredibly special. We are overwhelmed with the wonderful messages and heartfelt feedback. You are the reason we do this.
         </p>
 
         <div class="stats-grid" aria-label="Bristol Backyard Ultra 2026 key statistics">
@@ -498,6 +853,74 @@
           <div class="stat-card">
             <strong>3</strong>
             <span>reaching 100 miles</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories" class="card-section stories-section" aria-labelledby="stories-title">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Runner stories</div>
+          <h2 id="stories-title">What the field felt</h2>
+        </div>
+
+        <p class="section-intro">
+          The result sheet tells one part of the story. The real magic was the encouragement, the crewless crew, and everyone willing each other through one more loop.
+        </p>
+
+        <div class="testimonial-carousel">
+          <p class="testimonial-carousel-hint" aria-hidden="true">Swipe for more runner stories</p>
+          <div class="testimonial-grid" role="list" aria-label="Runner testimonials" tabindex="0">
+            <figure class="testimonial-card" role="listitem">
+              <blockquote>Great vibes — beast of a course.</blockquote>
+              <figcaption>Dan D.</figcaption>
+            </figure>
+            <figure class="testimonial-card" role="listitem">
+              <blockquote>Just a massive thank you to the organisers and volunteers, it's the best running event experience I've ever had!</blockquote>
+              <figcaption>Gary D.</figcaption>
+            </figure>
+            <figure class="testimonial-card" role="listitem">
+              <blockquote>Had an absolute blast!</blockquote>
+              <figcaption>Alex K.</figcaption>
+            </figure>
+            <figure class="testimonial-card" role="listitem">
+              <blockquote>The organisation, the course and whole vibe was so good and I've got the bug now for Backyard Ultras.</blockquote>
+              <figcaption>Callum B.</figcaption>
+            </figure>
+            <figure class="testimonial-card" role="listitem">
+              <blockquote>That feeling of “one more” being encouraged by everyone participating and spectating. The Crewless Crew was such a nice touch.</blockquote>
+              <figcaption>Deane A.</figcaption>
+            </figure>
+            <figure class="testimonial-card" role="listitem">
+              <blockquote>A great event which is far more inclusive than people might think. It's a great way to have lots of people together.</blockquote>
+              <figcaption>Ash T.</figcaption>
+            </figure>
+          </div>
+          <div class="testimonial-dots" aria-label="Testimonial carousel pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="media" class="card-section media-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Photos &amp; film</div>
+          <h2>Moments from basecamp</h2>
+        </div>
+
+        <p class="centered-copy">
+          Fir Tree Media captured the weekend story. Official photos and documentary content will be added as soon as they are ready.
+        </p>
+
+        <div class="media-grid">
+          <div class="media-card">
+            <strong>Race weekend gallery coming soon</strong>
+            <span>From first whistles to final yards through Blaise Castle Estate.</span>
+          </div>
+          <div class="media-note">
+            <strong>Keep checking back</strong>
+            <span>For now, use this page as the official archive for results, community notes, and links to the next start line.</span>
           </div>
         </div>
       </div>
@@ -659,7 +1082,54 @@
       }
     }
 
-    document.addEventListener("DOMContentLoaded", loadResults);
+    function setupTestimonialCarousel() {
+      const carousel = document.querySelector(".testimonial-grid");
+      const dotsContainer = document.querySelector(".testimonial-dots");
+      if (!carousel || !dotsContainer) return;
+
+      const cards = Array.from(carousel.querySelectorAll(".testimonial-card"));
+      if (!cards.length) return;
+
+      const dots = cards.map((card, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "testimonial-dot";
+        dot.setAttribute("aria-label", `Show testimonial ${index + 1}`);
+        dot.addEventListener("click", () => {
+          card.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+        });
+        dotsContainer.appendChild(dot);
+        return dot;
+      });
+
+      function setActiveDot(activeIndex) {
+        dots.forEach((dot, index) => {
+          dot.classList.toggle("is-active", index === activeIndex);
+          dot.setAttribute("aria-current", index === activeIndex ? "true" : "false");
+        });
+      }
+
+      function updateActiveDot() {
+        const carouselCenter = carousel.scrollLeft + carousel.clientWidth / 2;
+        const nearestIndex = cards.reduce((bestIndex, card, index) => {
+          const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+          const bestCard = cards[bestIndex];
+          const bestDistance = Math.abs(bestCard.offsetLeft + bestCard.offsetWidth / 2 - carouselCenter);
+          return Math.abs(cardCenter - carouselCenter) < bestDistance ? index : bestIndex;
+        }, 0);
+        setActiveDot(nearestIndex);
+      }
+
+      carousel.addEventListener("scroll", () => window.requestAnimationFrame(updateActiveDot), { passive: true });
+      window.addEventListener("resize", updateActiveDot);
+      setActiveDot(0);
+      updateActiveDot();
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      loadResults();
+      setupTestimonialCarousel();
+    });
   </script>
 </body>
 </html>
