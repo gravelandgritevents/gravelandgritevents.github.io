@@ -499,11 +499,23 @@
       margin-bottom: 22px;
     }
 
+    .testimonial-carousel {
+      position: relative;
+      margin-top: 24px;
+    }
+
+    .testimonial-carousel-hint {
+      display: none;
+      margin: 0;
+      color: var(--earthy-green);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
     .testimonial-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
-      margin-top: 24px;
     }
 
     .testimonial-card {
@@ -539,6 +551,12 @@
       color: var(--earthy-green);
       font-weight: 800;
       font-size: 0.9rem;
+    }
+
+    .testimonial-grid:focus-visible {
+      outline: 3px solid var(--burnt-orange);
+      outline-offset: 5px;
+      border-radius: 16px;
     }
 
     .testimonial-card .placeholder-note {
@@ -1154,10 +1172,38 @@
         font-size: 0.98rem;
       }
 
+      .testimonial-carousel {
+        margin-top: 20px;
+      }
+
+      .testimonial-carousel::after {
+        content: "";
+        position: absolute;
+        top: 32px;
+        right: 0;
+        bottom: 12px;
+        width: 42px;
+        pointer-events: none;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0), var(--white));
+      }
+
+      .testimonial-carousel-hint {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .testimonial-carousel-hint::after {
+        content: "→";
+        color: var(--burnt-orange);
+        font-size: 1.1rem;
+        line-height: 1;
+      }
+
       .testimonial-grid {
         display: flex;
         gap: 14px;
-        margin-top: 20px;
         padding: 2px 20px 12px 0;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -1172,11 +1218,12 @@
       }
 
       .testimonial-card {
-        flex: 0 0 calc((100% - 14px) / 1.1);
-        max-width: calc((100% - 14px) / 1.1);
+        flex: 0 0 min(82vw, 330px);
+        max-width: min(82vw, 330px);
         min-height: 180px;
         padding: 22px 18px 18px;
         scroll-snap-align: start;
+        scroll-snap-stop: always;
       }
 
       .testimonial-card blockquote {
@@ -1284,69 +1331,72 @@
           Without this community, we'd just be some tents in a field. You are the reason we do this!
         </p>
 
-        <div class="testimonial-grid">
-          <figure class="testimonial-card">
-            <span class="placeholder-note">Dan D.</span>
-            <blockquote>
-              Great vibes - beast of a course.
-            </blockquote>
-          </figure>
+        <div class="testimonial-carousel">
+          <p class="testimonial-carousel-hint" aria-hidden="true">Swipe for more runner stories</p>
+          <div class="testimonial-grid" role="list" aria-label="Runner testimonials" tabindex="0">
+            <figure class="testimonial-card" role="listitem">
+              <span class="placeholder-note">Dan D.</span>
+              <blockquote>
+                Great vibes - beast of a course.
+              </blockquote>
+            </figure>
 
-          <figure class="testimonial-card">
-            <span class="placeholder-note">Gary D.</span>
-            <blockquote>
-              Just a massive thank you to the organisers and volunteers, it's the best running event experience I've ever had!
-            </blockquote>
-          </figure>
+            <figure class="testimonial-card" role="listitem">
+              <span class="placeholder-note">Gary D.</span>
+              <blockquote>
+                Just a massive thank you to the organisers and volunteers, it's the best running event experience I've ever had!
+              </blockquote>
+            </figure>
 
-          <figure class="testimonial-card">
-            <span class="placeholder-note">Alex K.</span>
-            <blockquote>
-              Had an absolute blast!
-            </blockquote>
-          </figure>
+            <figure class="testimonial-card" role="listitem">
+              <span class="placeholder-note">Alex K.</span>
+              <blockquote>
+                Had an absolute blast!
+              </blockquote>
+            </figure>
 
-          <figure class="testimonial-card">
-            <span class="placeholder-note">Callum B.</span>
-            <blockquote>
-              First ever proper race/event that I've paid for and it was epic. The organisation, the course and whole vibe was so good and I've got the bug now for Backyard Ultras. Genuinely thank you.
-            </blockquote>
-          </figure>
+            <figure class="testimonial-card" role="listitem">
+              <span class="placeholder-note">Callum B.</span>
+              <blockquote>
+                First ever proper race/event that I've paid for and it was epic. The organisation, the course and whole vibe was so good and I've got the bug now for Backyard Ultras. Genuinely thank you.
+              </blockquote>
+            </figure>
 
-          <figure class="testimonial-card">
-            <span class="placeholder-note">Deane A.</span>
-            <blockquote>
-              Just that feeling of 'one more' being encouraged by everyone participating and spectating. The 'Crewless Crew' was such a nice touch as well.
-            </blockquote>
-          </figure>
+            <figure class="testimonial-card" role="listitem">
+              <span class="placeholder-note">Deane A.</span>
+              <blockquote>
+                Just that feeling of 'one more' being encouraged by everyone participating and spectating. The 'Crewless Crew' was such a nice touch as well.
+              </blockquote>
+            </figure>
 
-          <figure class="testimonial-card">
-            <span class="placeholder-note">Ash T.</span>
-            <blockquote>
-              A great event which is far more inclusive than people might think. We (Bristol Trail Runners) had a great day. It's a great way to have lots of people together as you see each other every hour!
-            </blockquote>
-          </figure>
+            <figure class="testimonial-card" role="listitem">
+              <span class="placeholder-note">Ash T.</span>
+              <blockquote>
+                A great event which is far more inclusive than people might think. We (Bristol Trail Runners) had a great day. It's a great way to have lots of people together as you see each other every hour!
+              </blockquote>
+            </figure>
 
-          <figure class="testimonial-card">
-            <span class="placeholder-note">Josh M.</span>
-            <blockquote>
-              I loved the camaraderie and the energy back at base camp. However nothing beats the feeling of pitting myself against something truly challenging backed by a genuine and supportive community of like-minded (crazy!) friends.
-            </blockquote>
-          </figure>
+            <figure class="testimonial-card" role="listitem">
+              <span class="placeholder-note">Josh M.</span>
+              <blockquote>
+                I loved the camaraderie and the energy back at base camp. However nothing beats the feeling of pitting myself against something truly challenging backed by a genuine and supportive community of like-minded (crazy!) friends.
+              </blockquote>
+            </figure>
 
-          <figure class="testimonial-card">
-            <span class="placeholder-note">Jeff M.</span>
-            <blockquote>
-              Thank you for organising the event, it had a brilliant atmosphere, everyone was friendly and encouraging, and the route through the Blaise Castle Estate was amazing!
-            </blockquote>
-          </figure>
+            <figure class="testimonial-card" role="listitem">
+              <span class="placeholder-note">Jeff M.</span>
+              <blockquote>
+                Thank you for organising the event, it had a brilliant atmosphere, everyone was friendly and encouraging, and the route through the Blaise Castle Estate was amazing!
+              </blockquote>
+            </figure>
 
-          <figure class="testimonial-card">
-            <span class="placeholder-note">Steffan C.</span>
-            <blockquote>
-              My friend and I were both new to Ultra running and felt like we wouldn't be judged for not being good enough. This allowed us both to achieve things we never thought possible.
-            </blockquote>
-          </figure>
+            <figure class="testimonial-card" role="listitem">
+              <span class="placeholder-note">Steffan C.</span>
+              <blockquote>
+                My friend and I were both new to Ultra running and felt like we wouldn't be judged for not being good enough. This allowed us both to achieve things we never thought possible.
+              </blockquote>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
