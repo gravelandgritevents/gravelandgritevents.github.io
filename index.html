@@ -789,6 +789,15 @@
     }
 
     /* FAQ */
+    .faq-carousel {
+      position: relative;
+    }
+
+    .faq-carousel-hint,
+    .faq-carousel-dots {
+      display: none;
+    }
+
     .faq-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -1139,6 +1148,10 @@
       .sticky-waitlist {
         left: 50%;
         right: auto;
+        bottom: calc(0.9rem + env(safe-area-inset-bottom));
+        width: max-content;
+        max-width: calc(100vw - 32px);
+        text-align: center;
         transform: translateX(-50%);
       }
 
@@ -1231,6 +1244,112 @@
         line-height: 1.56;
       }
 
+      #faq .section-content {
+        padding: 30px 0;
+      }
+
+      #faq .section-heading {
+        margin-bottom: 18px;
+        padding: 0 20px;
+      }
+
+      .faq-carousel {
+        margin-top: 18px;
+      }
+
+      .faq-carousel::after {
+        content: "";
+        position: absolute;
+        top: 32px;
+        right: 0;
+        bottom: 34px;
+        width: 42px;
+        pointer-events: none;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0), var(--white));
+      }
+
+      .faq-carousel-hint {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 20px 12px;
+        color: var(--earthy-green);
+        font-size: 0.86rem;
+        font-weight: 800;
+      }
+
+      .faq-carousel-hint::after {
+        content: "→";
+        color: var(--burnt-orange);
+        font-size: 1.1rem;
+        line-height: 1;
+      }
+
+      .faq-grid {
+        display: flex;
+        gap: 14px;
+        padding: 2px calc((100vw - min(82vw, 330px)) / 2) 10px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 0;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .faq-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .faq-item {
+        flex: 0 0 min(82vw, 330px);
+        max-width: min(82vw, 330px);
+        padding: 18px 17px 16px;
+        line-height: 1.54;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+      }
+
+      .faq-item strong {
+        margin-bottom: 7px;
+        font-size: 0.98rem;
+        line-height: 1.3;
+      }
+
+      .faq-grid:focus-visible {
+        outline: 3px solid var(--burnt-orange);
+        outline-offset: 5px;
+        border-radius: 16px;
+      }
+
+      .faq-carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 7px;
+        padding: 4px 20px 0;
+      }
+
+      .faq-carousel-dot {
+        width: 7px;
+        height: 7px;
+        padding: 0;
+        border: 0;
+        border-radius: 999px;
+        background: rgba(80, 107, 56, 0.28);
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.2s ease, width 0.2s ease;
+      }
+
+      .faq-carousel-dot.is-active {
+        width: 18px;
+        background: var(--burnt-orange);
+      }
+
+      .faq-carousel-dot:focus-visible {
+        outline: 2px solid var(--burnt-orange-dark);
+        outline-offset: 3px;
+      }
+
     }
   </style>
 
@@ -1238,16 +1357,93 @@
     document.addEventListener("DOMContentLoaded", function () {
       const heroButton = document.querySelector("header .button-primary");
       const stickyButton = document.querySelector(".sticky-waitlist");
-      if (!heroButton || !stickyButton || !("IntersectionObserver" in window)) return;
+      const waitlistSection = document.querySelector("#waitlist");
 
-      const toggleStickyTicket = new IntersectionObserver(
-        ([entry]) => {
-          stickyButton.style.display = entry.isIntersecting ? "none" : "block";
-        },
-        { rootMargin: "-20px 0px 0px 0px", threshold: 0 }
-      );
+      if (heroButton && stickyButton && "IntersectionObserver" in window) {
+        const stickyState = { heroVisible: true, waitlistVisible: false };
 
-      toggleStickyTicket.observe(heroButton);
+        const updateStickyButton = () => {
+          stickyButton.style.display = stickyState.heroVisible || stickyState.waitlistVisible ? "none" : "block";
+        };
+
+        const heroObserver = new IntersectionObserver(
+          ([entry]) => {
+            stickyState.heroVisible = entry.isIntersecting;
+            updateStickyButton();
+          },
+          { rootMargin: "-20px 0px 0px 0px", threshold: 0 }
+        );
+
+        heroObserver.observe(heroButton);
+
+        if (waitlistSection) {
+          const waitlistObserver = new IntersectionObserver(
+            ([entry]) => {
+              stickyState.waitlistVisible = entry.isIntersecting;
+              updateStickyButton();
+            },
+            { rootMargin: "0px 0px -20% 0px", threshold: 0 }
+          );
+
+          waitlistObserver.observe(waitlistSection);
+        }
+      }
+
+      const faqCarousel = document.querySelector('[data-carousel="faq"]');
+      if (!faqCarousel) return;
+
+      const faqScroller = faqCarousel.querySelector(".faq-grid");
+      const faqItems = Array.from(faqCarousel.querySelectorAll(".faq-item"));
+      const faqDots = faqCarousel.querySelector(".faq-carousel-dots");
+      if (!faqScroller || !faqItems.length || !faqDots) return;
+
+      const dots = faqItems.map((item, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "faq-carousel-dot";
+        dot.setAttribute("aria-label", `Show FAQ ${index + 1} of ${faqItems.length}`);
+        dot.addEventListener("click", () => {
+          const left = item.offsetLeft - ((faqScroller.clientWidth - item.clientWidth) / 2);
+          faqScroller.scrollTo({ left, behavior: "smooth" });
+        });
+        faqDots.appendChild(dot);
+        return dot;
+      });
+
+      let activeIndex = 0;
+      let scrollFrame = null;
+
+      const setActiveDot = (nextIndex) => {
+        if (nextIndex === activeIndex && dots[nextIndex].classList.contains("is-active")) return;
+        dots[activeIndex].classList.remove("is-active");
+        dots[activeIndex].removeAttribute("aria-current");
+        activeIndex = nextIndex;
+        dots[activeIndex].classList.add("is-active");
+        dots[activeIndex].setAttribute("aria-current", "true");
+      };
+
+      const updateActiveDot = () => {
+        const scrollerCenter = faqScroller.scrollLeft + (faqScroller.clientWidth / 2);
+        const closestIndex = faqItems.reduce((closest, item, index) => {
+          const itemCenter = item.offsetLeft + (item.offsetWidth / 2);
+          const itemDistance = Math.abs(itemCenter - scrollerCenter);
+          const closestItem = faqItems[closest];
+          const closestCenter = closestItem.offsetLeft + (closestItem.offsetWidth / 2);
+          const closestDistance = Math.abs(closestCenter - scrollerCenter);
+          return itemDistance < closestDistance ? index : closest;
+        }, 0);
+
+        setActiveDot(closestIndex);
+        scrollFrame = null;
+      };
+
+      faqScroller.addEventListener("scroll", () => {
+        if (scrollFrame) return;
+        scrollFrame = window.requestAnimationFrame(updateActiveDot);
+      }, { passive: true });
+
+      window.addEventListener("resize", updateActiveDot);
+      setActiveDot(0);
     });
   </script>
 </head>
@@ -1485,66 +1681,70 @@
           <h2>Frequently Asked Questions</h2>
         </div>
 
-        <div class="faq-grid">
-          <div class="faq-item">
+        <div class="faq-carousel" data-carousel="faq">
+          <p class="faq-carousel-hint" aria-hidden="true">Swipe for more FAQs</p>
+          <div class="faq-grid" role="list" aria-label="Frequently asked questions" tabindex="0">
+            <div class="faq-item" role="listitem">
             <strong>What is a Backyard Ultra?</strong>
             A Backyard Ultra (also known as “Last One Standing”) is a unique endurance running format. Runners complete a 6.7km (4.167 mile) loop every hour, on the hour. You must finish each loop within the hour to be allowed to continue to the next one. The event continues until only one runner remains who completes a loop on their own.
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item" role="listitem">
             <strong>Is this Backyard Ultra suitable for beginners?</strong>
             Yes — absolutely. While some runners will aim to go deep into the event, many participants come with the goal of completing just a few loops. The Backyard Ultra format is uniquely beginner-friendly because you choose when to stop. There is no minimum distance requirement beyond completing a single loop, and no pressure to continue beyond what feels right for you.
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item" role="listitem">
             <strong>Is this an official Backyard Ultra event?</strong>
             Yes. This event follows the official Backyard Ultra (Last One Standing) format: a 6.7km loop, run every hour on the hour, until one runner remains. Timing, distances, and rules align with the internationally recognised Backyard Ultra standard.
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item" role="listitem">
             <strong>Where is the event held?</strong>
             The event takes place at Blaise Castle Estate in Bristol, South West England. The estate offers a varied and scenic setting, combining woodland trails, open fields, gentle climbs, and flatter runnable sections.
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item" role="listitem">
             <strong>What is the course like?</strong>
             The looped course includes a mix of terrain: short hills, long flatter sections, woodland trails, and open fields. Runners can expect both single-track paths and wider, more open trail sections. The variety keeps the course interesting while remaining runnable and manageable across multiple loops.
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item" role="listitem">
             <strong>Do I have to keep running until there is one person left?</strong>
             No. You are free to stop after any completed loop. Many runners treat a Backyard Ultra as a personal challenge rather than a competition. Once you decide to stop, your result is recorded as the number of full loops completed.
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item" role="listitem">
             <strong>Is this a competitive race?</strong>
             While there is technically one winner, the event is community-focused and runner-led. The atmosphere is supportive rather than aggressive, with runners encouraging each other as the hours pass. Many participants value the shared experience as much as the physical challenge.
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item" role="listitem">
             <strong>What kind of runners take part?</strong>
             Backyard Ultras attract a wide range of runners — from those new to ultra-distance running, to experienced endurance athletes aiming for long distances. You do not need to be an elite runner to take part; pacing, patience, and consistency matter far more than speed.
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item" role="listitem">
             <strong>Is there a time limit?</strong>
             There is no fixed time limit. The event continues until only one runner completes a solo loop. Some runners may finish within a few hours, while others may continue overnight and beyond.
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item" role="listitem">
             <strong>Is this event compliant with UK Athletics rules?</strong>
             Yes. The 2026 event was licensed by the TRA and followed UK Athletics rules for trail running.
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item" role="listitem">
             <strong>What is the minimum age?</strong>
             As the event complies with UK Athletics rules for trail running, participants must be 20 or older on the day of the event.
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item" role="listitem">
             <strong>How do I hear about the next event?</strong>
             Join the 2027 waitlist for early access to Bristol Backyard Ultra entries and future Gravel &amp; Grit trail events.
           </div>
+          </div>
+          <div class="faq-carousel-dots" aria-label="FAQ carousel pagination"></div>
         </div>
       </div>
     </section>
