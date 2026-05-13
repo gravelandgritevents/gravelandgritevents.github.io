@@ -6,7 +6,7 @@
   <title>Bristol Backyard Ultra 2027 | Gravel &amp; Grit Events</title>
   <meta
     name="description"
-    content="Bristol Backyard Ultra 2027 returns to Blaise Castle Estate, Bristol on Saturday 1 May 2027. Official Backyard Ultra event with limited places and waitlist-first entry access."
+    content="Bristol Backyard Ultra returns to Blaise Castle Estate, Bristol on Saturday 1 May 2027 for a gritty, community-led Backyard Ultra on woodland trails."
   />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://www.gravelandgritevents.com/" />
@@ -280,60 +280,6 @@
       background: var(--earthy-green-2);
     }
 
-    /* Announcement banner */
-    .announcement-banner {
-      position: relative;
-      z-index: 4;
-      background:
-        linear-gradient(135deg, rgba(217, 94, 31, 0.98), rgba(185, 79, 24, 0.96)),
-        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 14px);
-      color: var(--white);
-      box-shadow: 0 10px 28px rgba(9, 35, 30, 0.18);
-    }
-
-    .announcement-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 18px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
-    }
-
-    .announcement-copy {
-      display: grid;
-      gap: 2px;
-    }
-
-    .announcement-label {
-      color: rgba(255, 255, 255, 0.86);
-      font-size: 0.78rem;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .announcement-text {
-      margin: 0;
-      color: var(--white);
-      font-size: clamp(1.05rem, 2.2vw, 1.35rem);
-      font-weight: 800;
-      line-height: 1.35;
-    }
-
-    .announcement-button {
-      flex: 0 0 auto;
-      background: var(--earthy-green);
-      color: var(--white);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 0 9px 20px rgba(0, 0, 0, 0.18);
-    }
-
-    .announcement-button:hover {
-      background: var(--earthy-green-2);
-    }
-
     /* Capacity */
     .capacity-band {
       position: relative;
@@ -451,43 +397,6 @@
       color: rgba(245, 245, 240, 0.9);
     }
 
-    .waitlist-form-wrap {
-      max-width: 560px;
-      margin: 28px auto 0;
-    }
-
-    .waitlist-form {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .waitlist-label {
-      font-weight: 700;
-      color: var(--earthy-green);
-      text-align: left;
-    }
-
-    .waitlist-input {
-      width: 100%;
-      padding: 14px 16px;
-      border: 1px solid rgba(9, 73, 60, 0.15);
-      border-radius: 12px;
-      font: inherit;
-      font-size: 1rem;
-      background: #fff;
-      color: var(--slate-grey);
-    }
-
-    .waitlist-input:focus {
-      outline: none;
-      border-color: var(--burnt-orange);
-      box-shadow: 0 0 0 4px rgba(217, 94, 31, 0.12);
-    }
-
-    .waitlist-submit {
-      width: 100%;
-    }
 
     /* Nav */
     nav {
@@ -945,17 +854,6 @@
       background: linear-gradient(to bottom right, rgba(9, 73, 60, 0.05), rgba(245, 245, 240, 0.88));
     }
 
-    .cta-section {
-      background: linear-gradient(135deg, rgba(9, 73, 60, 0.055), rgba(245, 245, 240, 0.94));
-    }
-
-    .cta-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-      margin: 24px 0 0;
-    }
 
     .button-secondary.on-light {
       background: var(--white);
@@ -979,9 +877,6 @@
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(245, 245, 240, 0.58));
     }
 
-    section.cta-section {
-      background: linear-gradient(135deg, rgba(9, 73, 60, 0.055), rgba(245, 245, 240, 0.94));
-    }
 
     .story-section,
     #course,
@@ -1358,28 +1253,6 @@
       color: var(--burnt-orange-dark);
     }
 
-    /* Sticky waitlist */
-    .sticky-waitlist {
-      position: fixed;
-      bottom: 1rem;
-      right: 1rem;
-      background-color: rgba(198, 83, 27, 0.95);
-      color: var(--white);
-      padding: 0.72rem 1.05rem;
-      font-weight: 800;
-      text-decoration: none;
-      border-radius: 999px;
-      box-shadow: 0 7px 16px rgba(0, 0, 0, 0.18);
-      z-index: 1000;
-      display: none;
-      font-size: 0.92rem;
-      line-height: 1.2;
-      transition: transform 0.2s ease;
-    }
-
-    .sticky-waitlist:hover {
-      transform: translateY(-2px);
-    }
 
     /* Responsive */
     @media (max-width: 900px) {
@@ -1462,17 +1335,6 @@
         margin-top: 28px;
       }
 
-      .announcement-inner {
-        align-items: stretch;
-        flex-direction: column;
-        gap: 14px;
-        padding: 17px 18px 18px;
-        text-align: center;
-      }
-
-      .announcement-button {
-        width: 100%;
-      }
 
       .capacity-band {
         margin: 22px auto 0;
@@ -1552,21 +1414,6 @@
         min-width: unset;
       }
 
-      .sticky-waitlist {
-        left: 50%;
-        right: auto;
-        bottom: calc(0.75rem + env(safe-area-inset-bottom));
-        width: max-content;
-        max-width: calc(100vw - 28px);
-        padding: 0.66rem 0.95rem;
-        text-align: center;
-        transform: translateX(-50%);
-        font-size: 0.86rem;
-      }
-
-      .sticky-waitlist:hover {
-        transform: translateX(-50%) translateY(-2px);
-      }
 
       #route-map {
         height: 340px;
@@ -1810,58 +1657,17 @@
         box-shadow: 0 5px 16px rgba(0, 0, 0, 0.04);
       }
 
-      .cta-actions {
-        gap: 10px;
-        margin-top: 20px;
-      }
 
       .footer-nav {
         display: none;
       }
 
-      footer {
-        padding-bottom: 72px;
-      }
 
     }
   </style>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const heroButton = document.querySelector("header .button-primary");
-      const stickyButton = document.querySelector(".sticky-waitlist");
-      const waitlistSection = document.querySelector("#waitlist");
-
-      if (heroButton && stickyButton && "IntersectionObserver" in window) {
-        const stickyState = { heroVisible: true, waitlistVisible: false };
-
-        const updateStickyButton = () => {
-          stickyButton.style.display = stickyState.heroVisible || stickyState.waitlistVisible ? "none" : "block";
-        };
-
-        const heroObserver = new IntersectionObserver(
-          ([entry]) => {
-            stickyState.heroVisible = entry.isIntersecting;
-            updateStickyButton();
-          },
-          { rootMargin: "-20px 0px 0px 0px", threshold: 0 }
-        );
-
-        heroObserver.observe(heroButton);
-
-        if (waitlistSection) {
-          const waitlistObserver = new IntersectionObserver(
-            ([entry]) => {
-              stickyState.waitlistVisible = entry.isIntersecting;
-              updateStickyButton();
-            },
-            { rootMargin: "0px 0px -20% 0px", threshold: 0 }
-          );
-
-          waitlistObserver.observe(waitlistSection);
-        }
-      }
-
       const faqCarousel = document.querySelector('[data-carousel="faq"]');
       if (!faqCarousel) return;
 
@@ -1935,18 +1741,14 @@
       <p class="subtitle">
         A gritty, hilly, community-first Backyard Ultra built around woodland trails, basecamp energy, and one more loop.
       </p>
-      <p class="subtitle hero-supporting">
-        Official Backyard Ultra event. Limited places available. 2026 sold out. Join the 2027 waitlist for early access.
-      </p>
-
       <div class="hero-meta">Built by runners, for runners</div>
 
       <div class="hero-actions">
         <a
-          href="#waitlist"
+          href="#contact"
           class="button-primary"
         >
-          Join the 2027 Waitlist
+          Get in Touch
         </a>
 
         <a href="results/bristol-backyard-ultra-2026/" class="button-secondary">View 2026 Results</a>
@@ -1954,122 +1756,17 @@
     </div>
   </header>
 
-  <section class="announcement-banner" aria-labelledby="date-announcement-title">
-    <div class="announcement-inner">
-      <div class="announcement-copy">
-        <div id="date-announcement-title" class="announcement-label">2027 date confirmed</div>
-        <p class="announcement-text">
-          Bristol Backyard Ultra returns to Blaise Castle Estate on Saturday 1st May 2027.
-        </p>
-      </div>
-      <a href="#waitlist" class="button-primary announcement-button">Join the Waitlist</a>
-    </div>
-  </section>
-
   <nav aria-label="Primary">
     <div class="nav-inner">
-      <a href="#event-2027">2027 Event</a>
       <a href="#course">The Course</a>
       <a href="#rules">Rules</a>
       <a href="#faq">FAQ</a>
       <a href="#archive">Results</a>
-      <a href="#waitlist">Waitlist</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
   <main id="main-content" class="section-shell">
-    <section id="event-2027" class="card-section event-section">
-      <div class="section-content">
-        <div class="section-heading">
-          <div class="kicker">Returning in 2027</div>
-          <h2>Bristol Backyard Ultra 2027</h2>
-        </div>
-
-        <p class="section-intro">
-          We’re back at Blaise Castle Estate on Saturday 1 May 2027 for the next edition of Bristol Backyard Ultra.
-        </p>
-
-        <p class="centered-copy">
-          The format is simple: one 4.167-mile loop, every hour, on the hour, until only one runner remains. But the weekend is much more than the rules. Expect a gritty trail loop, a welcoming basecamp, supportive volunteers, and a community of runners all finding out how many times they can go again.
-        </p>
-
-        <p class="centered-copy">
-          2026 sold out, and the 2027 waitlist is already growing. Entries will be offered to the waitlist first, and capacity is limited to protect the course, atmosphere, and runner experience.
-        </p>
-
-        <div class="cta-actions">
-          <a href="#waitlist" class="button-primary">Join the 2027 Waitlist</a>
-        </div>
-
-        <div class="event-details-grid" aria-label="2027 event details">
-          <div class="event-detail-card">
-            <strong>Date</strong>
-            <span>Saturday 1 May 2027</span>
-          </div>
-          <div class="event-detail-card">
-            <strong>Location</strong>
-            <span>Blaise Castle Estate, Bristol</span>
-          </div>
-          <div class="event-detail-card">
-            <strong>Format</strong>
-            <span>Official Backyard Ultra</span>
-          </div>
-          <div class="event-detail-card">
-            <strong>Distance</strong>
-            <span>4.167 miles / 6.7km every hour</span>
-          </div>
-          <div class="event-detail-card">
-            <strong>Places</strong>
-            <span>Limited capacity</span>
-          </div>
-          <div class="event-detail-card">
-            <strong>Access</strong>
-            <span>Waitlist first</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="waitlist" class="card-section cta-section">
-      <div class="section-content">
-        <div class="section-heading">
-          <div class="kicker">Waitlist first</div>
-          <h2>Want to be on the 2027 start line?</h2>
-        </div>
-
-        <p class="centered-copy">
-          2026 sold out. Join the 2027 waitlist for early access to Bristol Backyard Ultra entries and future Gravel &amp; Grit trail events.
-        </p>
-
-        <div id="waitlist-form" class="waitlist-form-wrap">
-          <form action="https://gravelandgritevents.us13.list-manage.com/subscribe/post?u=45362f8425ca47e31537b996b&amp;id=1cf3900049&amp;f_id=008834e5f0"
-                method="post"
-                target="_blank"
-                class="waitlist-form">
-
-            <label for="mce-EMAIL" class="waitlist-label">Email address</label>
-            <input type="email"
-                   name="EMAIL"
-                   id="mce-EMAIL"
-                   class="waitlist-input"
-                   placeholder="Enter your email address"
-                   required>
-
-            <input type="hidden" name="tags" value="7209489">
-
-            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-              <input type="text" name="b_45362f8425ca47e31537b996b_1cf3900049" tabindex="-1" value="">
-            </div>
-
-            <button type="submit" class="button-primary waitlist-submit">
-              Join the 2027 Waitlist
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-
     <div class="container capacity-band proof-band" aria-labelledby="proof-title">
       <div class="capacity-card proof-card">
         <div class="capacity-label">First edition highlights</div>
@@ -2078,11 +1775,8 @@
           Our first Bristol Backyard Ultra brought 104 runners to the start line, with runners completing anything from 2 loops to a winning total of 26. The weekend had everything we hoped for: grit, support, night loops, tired legs, big smiles, and a basecamp full of people willing each other on.
         </p>
         <p>
-          2026 sold out. 2027 is expected to move faster.
+          2026 sold out, but what stayed with us most was the atmosphere: runners, crews, volunteers, and families looking after each other loop after loop.
         </p>
-        <div class="cta-actions">
-          <a href="#waitlist" class="button-primary">Join the 2027 Waitlist</a>
-        </div>
       </div>
     </div>
 
@@ -2420,7 +2114,7 @@
 
           <div class="faq-item" role="listitem">
             <strong>How do I hear about the next event?</strong>
-            Join the 2027 waitlist for early access. Entries will be offered to the waitlist first, and capacity is limited to protect the course, atmosphere, and runner experience.
+            Follow Gravel &amp; Grit on Instagram or get in touch by email for future event updates, race stories, and the behind-the-scenes bits from our community.
           </div>
           </div>
           <div class="faq-carousel-dots" aria-label="FAQ carousel pagination"></div>
@@ -2716,23 +2410,15 @@
 
   <footer>
     <nav class="footer-nav" aria-label="Footer">
-      <a href="#event-2027">2027 Event</a>
       <a href="#course">The Course</a>
       <a href="#rules">Rules</a>
       <a href="#faq">FAQ</a>
       <a href="#archive">Results</a>
-      <a href="#waitlist">Waitlist</a>
       <a href="#contact">Contact</a>
     </nav>
     <p>&copy; 2026 Gravel &amp; Grit Events · Built with grit, community, and care.</p>
   </footer>
 
-  <a
-    href="#waitlist"
-    class="sticky-waitlist"
-  >
-    Join the 2027 Waitlist
-  </a>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
