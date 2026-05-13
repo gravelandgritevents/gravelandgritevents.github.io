@@ -6,7 +6,7 @@
   <title>Bristol Backyard Ultra 2027 | Gravel &amp; Grit Events</title>
   <meta
     name="description"
-    content="Bristol Backyard Ultra 2027 returns to Blaise Castle Estate, Bristol on Sunday 2 May 2027. Official Backyard Ultra event with limited places and waitlist-first entry access."
+    content="Bristol Backyard Ultra 2027 returns to Blaise Castle Estate, Bristol on Saturday 1 May 2027. Official Backyard Ultra event with limited places and waitlist-first entry access."
   />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://www.gravelandgritevents.com/" />
@@ -32,7 +32,7 @@
       "@type": "SportsEvent",
       "name": "Bristol Backyard Ultra 2027",
       "description": "A gritty, hilly, community-first Backyard Ultra at Blaise Castle Estate, Bristol.",
-      "startDate": "2027-05-02T10:00:00+01:00",
+      "startDate": "2027-05-01T10:00:00+01:00",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "eventStatus": "https://schema.org/EventScheduled",
       "location": {
@@ -277,6 +277,60 @@
     }
 
     .hero .button-secondary:hover {
+      background: var(--earthy-green-2);
+    }
+
+    /* Announcement banner */
+    .announcement-banner {
+      position: relative;
+      z-index: 4;
+      background:
+        linear-gradient(135deg, rgba(217, 94, 31, 0.98), rgba(185, 79, 24, 0.96)),
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 14px);
+      color: var(--white);
+      box-shadow: 0 10px 28px rgba(9, 35, 30, 0.18);
+    }
+
+    .announcement-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .announcement-copy {
+      display: grid;
+      gap: 2px;
+    }
+
+    .announcement-label {
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .announcement-text {
+      margin: 0;
+      color: var(--white);
+      font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .announcement-button {
+      flex: 0 0 auto;
+      background: var(--earthy-green);
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 9px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    .announcement-button:hover {
       background: var(--earthy-green-2);
     }
 
@@ -1408,6 +1462,18 @@
         margin-top: 28px;
       }
 
+      .announcement-inner {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 14px;
+        padding: 17px 18px 18px;
+        text-align: center;
+      }
+
+      .announcement-button {
+        width: 100%;
+      }
+
       .capacity-band {
         margin: 22px auto 0;
         padding-inline: 14px;
@@ -1864,7 +1930,7 @@
       <h1>Bristol Backyard Ultra 2027</h1>
 
       <p class="subtitle hero-supporting">
-        Sunday 2 May 2027 · Blaise Castle Estate, Bristol
+        Saturday 1 May 2027 · Blaise Castle Estate, Bristol
       </p>
       <p class="subtitle">
         A gritty, hilly, community-first Backyard Ultra built around woodland trails, basecamp energy, and one more loop.
@@ -1888,6 +1954,18 @@
     </div>
   </header>
 
+  <section class="announcement-banner" aria-labelledby="date-announcement-title">
+    <div class="announcement-inner">
+      <div class="announcement-copy">
+        <div id="date-announcement-title" class="announcement-label">2027 date confirmed</div>
+        <p class="announcement-text">
+          Bristol Backyard Ultra returns to Blaise Castle Estate on Saturday 1st May 2027.
+        </p>
+      </div>
+      <a href="#waitlist" class="button-primary announcement-button">Join the Waitlist</a>
+    </div>
+  </section>
+
   <nav aria-label="Primary">
     <div class="nav-inner">
       <a href="#event-2027">2027 Event</a>
@@ -1909,7 +1987,7 @@
         </div>
 
         <p class="section-intro">
-          We’re back at Blaise Castle Estate on Sunday 2 May 2027 for the next edition of Bristol Backyard Ultra.
+          We’re back at Blaise Castle Estate on Saturday 1 May 2027 for the next edition of Bristol Backyard Ultra.
         </p>
 
         <p class="centered-copy">
@@ -1927,7 +2005,7 @@
         <div class="event-details-grid" aria-label="2027 event details">
           <div class="event-detail-card">
             <strong>Date</strong>
-            <span>Sunday 2 May 2027</span>
+            <span>Saturday 1 May 2027</span>
           </div>
           <div class="event-detail-card">
             <strong>Location</strong>
