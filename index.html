@@ -6,7 +6,7 @@
   <title>Bristol Backyard Ultra 2027 | Gravel &amp; Grit Events</title>
   <meta
     name="description"
-    content="Bristol Backyard Ultra returns to Blaise Castle Estate, Bristol on Saturday 1 May 2027 for a gritty, community-led Backyard Ultra on woodland trails."
+    content="Bristol Backyard Ultra returns to Blaise Castle Estate, Bristol on Saturday 1st May 2027 at 10:00am for a gritty, community-led Backyard Ultra on woodland trails."
   />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://www.gravelandgritevents.com/" />
@@ -415,8 +415,9 @@
       display: flex;
       flex-wrap: nowrap;
       justify-content: center;
-      gap: 8px 26px;
+      gap: 8px 30px;
       overflow-x: auto;
+      text-align: center;
       scrollbar-width: none;
     }
 
@@ -996,6 +997,16 @@
       text-align: center;
     }
 
+    .proof-waitlist {
+      margin-top: 28px;
+      padding-top: 26px;
+      border-top: 1px solid rgba(9, 73, 60, 0.1);
+    }
+
+    .proof-waitlist .section-heading {
+      margin-bottom: 16px;
+    }
+
     .waitlist-card p {
       margin-left: auto;
       margin-right: auto;
@@ -1461,7 +1472,7 @@
       }
 
       .nav-inner {
-        justify-content: flex-start;
+        justify-content: center;
         padding: 10px 14px;
         gap: 0 18px;
       }
@@ -1803,7 +1814,8 @@
       <h1>Bristol Backyard Ultra 2027</h1>
 
       <p class="subtitle hero-supporting">
-        Saturday 1 May 2027 · Blaise Castle Estate, Bristol
+        Saturday 1st May 2027 · 10:00am<br />
+        Blaise Castle Estate, Bristol
       </p>
       <p class="subtitle">
         A gritty, hilly, community-first Backyard Ultra built around woodland trails, basecamp energy, and one more loop.
@@ -1844,6 +1856,30 @@
         <p>
           2026 sold out, but what stayed with us most was the atmosphere: runners, crews, volunteers, and families looking after each other loop after loop.
         </p>
+
+        <div id="waitlist" class="waitlist-card proof-waitlist" aria-labelledby="waitlist-title">
+          <div class="section-heading">
+            <div class="kicker">Be first to hear about 2027</div>
+            <h2 id="waitlist-title">Join the Bristol Backyard Ultra 2027 waitlist</h2>
+          </div>
+
+          <p>
+            2026 sold out. Join the waitlist for early access to entries and future Gravel &amp; Grit events.
+          </p>
+
+          <form class="waitlist-form" action="mailto:info@gravelandgritevents.com" method="post" enctype="text/plain">
+            <label for="waitlist-email">Email address</label>
+            <input
+              id="waitlist-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="Email address"
+              required
+            />
+            <button type="submit" class="button-primary">Join the Waitlist</button>
+          </form>
+        </div>
       </div>
     </div>
 
@@ -1937,34 +1973,6 @@
       </div>
     </section>
 
-
-    <section id="waitlist" class="card-section waitlist-section" aria-labelledby="waitlist-title">
-      <div class="section-content">
-        <div class="waitlist-card">
-          <div class="section-heading">
-            <div class="kicker">Be first to hear about 2027</div>
-            <h2 id="waitlist-title">Join the Bristol Backyard Ultra 2027 waitlist</h2>
-          </div>
-
-          <p>
-            2026 sold out. Join the waitlist for early access to entries and future Gravel &amp; Grit events.
-          </p>
-
-          <form class="waitlist-form" action="mailto:info@gravelandgritevents.com" method="post" enctype="text/plain">
-            <label for="waitlist-email">Email address</label>
-            <input
-              id="waitlist-email"
-              name="email"
-              type="email"
-              autocomplete="email"
-              placeholder="Email address"
-              required
-            />
-            <button type="submit" class="button-primary">Join the Waitlist</button>
-          </form>
-        </div>
-      </div>
-    </section>
 
 
     <section id="testimonials" class="card-section testimonials-section" aria-labelledby="testimonials-title">
@@ -2068,10 +2076,6 @@
           <div class="archive-card archive-placeholder" aria-label="Event photos coming soon">
             <strong>Event photos coming soon</strong>
             <span>Professional photo and video content has been captured and will be added here.</span>
-          </div>
-          <div class="archive-card archive-placeholder" aria-label="Race recap coming soon">
-            <strong>Race recap coming soon</strong>
-            <span>The full story from basecamp, the night loops, and the final yards is on the way.</span>
           </div>
         </div>
       </div>
