@@ -843,6 +843,50 @@
       border-color: rgba(9, 73, 60, 0.1);
     }
 
+
+    .storytelling-visual {
+      margin: 28px auto;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--stone-dark);
+    }
+
+    .storytelling-visual img {
+      width: 100%;
+      height: clamp(240px, 48vw, 430px);
+      object-fit: cover;
+    }
+
+    .storytelling-visual--format {
+      margin-top: 26px;
+      margin-bottom: 0;
+    }
+
+    .storytelling-visual--format img {
+      height: clamp(230px, 42vw, 360px);
+      object-position: center 52%;
+    }
+
+    .storytelling-visual--course {
+      max-width: 860px;
+      margin-bottom: 30px;
+    }
+
+    .storytelling-visual--course img {
+      height: clamp(260px, 54vw, 480px);
+      object-position: center 45%;
+    }
+
+    .storytelling-visual--community {
+      margin-bottom: 30px;
+    }
+
+    .storytelling-visual--community img {
+      height: clamp(240px, 50vw, 430px);
+      object-position: center 46%;
+    }
+
     /* Course stats */
     .stats-grid {
       display: grid;
@@ -1311,6 +1355,21 @@
         padding: 15px 16px;
       }
 
+      .storytelling-visual {
+        margin-top: 22px;
+        margin-bottom: 24px;
+        border-radius: 18px;
+      }
+
+      .storytelling-visual img,
+      .storytelling-visual--format img,
+      .storytelling-visual--course img,
+      .storytelling-visual--community img {
+        height: 62vw;
+        min-height: 220px;
+        max-height: 320px;
+      }
+
       .section-intro,
       .event-partners-intro {
         margin-bottom: 20px;
@@ -1764,6 +1823,15 @@
           <p>
             The last runner standing is the only finisher of the event. Everyone else is a Did Not Finish (DNF). Originating in America, this community-focused format has well and truly landed in Bristol - we can't wait to see you on our start line.
           </p>
+
+          <figure class="storytelling-visual storytelling-visual--format" aria-label="Runners gathered at the start line">
+            <img
+              src="images/Start-line"
+              alt="Runners gathered at the Bristol Backyard Ultra start line before a loop."
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
         </div>
       </div>
     </section>
@@ -1884,6 +1952,15 @@
           <div class="kicker">Blaise Castle Estate</div>
           <h2>The Course</h2>
         </div>
+
+        <figure class="storytelling-visual storytelling-visual--course" aria-label="Runners on the Blaise Castle Estate course">
+          <img
+            src="images/Runners-and-castle"
+            alt="Runners moving through Blaise Castle Estate with the castle visible in the landscape."
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
 
         <div class="course-copy">
           <p>
@@ -2041,6 +2118,15 @@
           <div class="kicker">What we build</div>
           <h2>Runner-led, practical, and welcoming</h2>
         </div>
+
+        <figure class="storytelling-visual storytelling-visual--community" aria-label="Crewless Crew support at basecamp">
+          <img
+            src="images/Crewless-Crew"
+            alt="Crewless Crew volunteers supporting runners at Bristol Backyard Ultra basecamp."
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
 
         <ul class="benefits-list">
           <li>Grassroots trail events with a proper community feel — serious enough to matter, relaxed enough to feel human.</li>
