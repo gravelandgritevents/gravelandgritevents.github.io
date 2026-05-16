@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <title>Bristol Backyard Ultra 2026 Gallery | Gravel &amp; Grit Events</title>
+  <meta
+    name="description"
+    content="The official Bristol Backyard Ultra 2026 event gallery: 26 yards of rain, mud, headtorches, sunrise finishes and one unforgettable Gravel & Grit weekend."
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://www.gravelandgritevents.com/gallery.html" />
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --earthy-green: #09493c;
+      --earthy-green-2: #0f5b4c;
+      --burnt-orange: #D95E1F;
+      --burnt-orange-dark: #B94F18;
+      --stone: #f5f5f0;
+      --stone-dark: #ecece4;
+      --slate-grey: #3e3e3e;
+      --muted: #6f6f6f;
+      --white: #ffffff;
+      --shadow: 0 18px 42px rgba(9, 35, 30, 0.11);
+      --shadow-soft: 0 8px 22px rgba(9, 35, 30, 0.055);
+      --shadow-hairline: 0 1px 0 rgba(9, 73, 60, 0.06);
+      --radius: 18px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(217, 94, 31, 0.08), transparent 20%),
+        linear-gradient(to bottom, #f8f8f3 0%, var(--stone) 35%, #f7f7f1 100%);
+      color: var(--slate-grey);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--burnt-orange);
+      outline-offset: 2px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: -48px;
+      z-index: 1100;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.86);
+      color: var(--earthy-green);
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    .gallery-hero {
+      position: relative;
+      min-height: 68vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(135deg, rgba(4, 25, 22, 0.76), rgba(9, 73, 60, 0.48) 50%, rgba(0, 0, 0, 0.44)),
+        url("images/GRAVEL&GRITPREEVENTSHOOTBTSLAUINFOCUS(31).jpg") center/cover no-repeat;
+      color: var(--stone);
+      overflow: hidden;
+    }
+
+    .gallery-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.42) 76%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.24));
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 92px 20px 104px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 22px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.085);
+      color: rgba(245, 245, 240, 0.82);
+      font-size: 0.83rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(6px);
+    }
+
+    .gallery-hero h1 {
+      margin: 0;
+      color: var(--white);
+      font-size: clamp(3rem, 7.2vw, 5.7rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      text-shadow: 0 7px 24px rgba(0, 0, 0, 0.46);
+    }
+
+    .gallery-hero .subtitle {
+      max-width: 720px;
+      margin: 26px auto 0;
+      color: rgba(245, 245, 240, 0.88);
+      font-size: clamp(1.06rem, 2vw, 1.28rem);
+      line-height: 1.58;
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button-primary,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 180px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      transition: all 0.2s ease;
+    }
+
+    .button-primary {
+      background-color: #C6531B;
+      color: var(--white);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+    }
+
+    .button-primary:hover {
+      transform: translateY(-2px);
+      background-color: #A84814;
+    }
+
+    .button-secondary {
+      background: rgba(9, 73, 60, 0.94);
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 9px 22px rgba(0, 0, 0, 0.24);
+      backdrop-filter: blur(6px);
+    }
+
+    .button-secondary:hover {
+      transform: translateY(-2px);
+      background: var(--earthy-green-2);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(9, 73, 60, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      gap: 8px 30px;
+      overflow-x: auto;
+      text-align: center;
+      scrollbar-width: none;
+    }
+
+    .nav-inner::-webkit-scrollbar {
+      display: none;
+    }
+
+    nav a {
+      color: var(--stone);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.96rem;
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+      color: var(--white);
+    }
+
+    nav a[aria-current="page"] {
+      border-bottom: 2px solid var(--burnt-orange);
+    }
+
+    .section-shell {
+      padding: 48px 20px 0;
+    }
+
+    .gallery-card {
+      max-width: calc(var(--max-width) + 120px);
+      margin: 0 auto 34px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(9, 73, 60, 0.07);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-hairline);
+      overflow: hidden;
+    }
+
+    .gallery-intro {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 42px 28px 26px;
+      text-align: center;
+    }
+
+    .gallery-intro .kicker {
+      margin-bottom: 8px;
+      color: var(--burnt-orange-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .gallery-intro h2 {
+      margin: 0;
+      color: var(--earthy-green);
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .gallery-intro p {
+      margin: 16px auto 0;
+      color: var(--slate-grey);
+      font-size: 1.04rem;
+      line-height: 1.76;
+    }
+
+    .picflow-wrap {
+      padding: 8px 28px 42px;
+    }
+
+    picflow-gallery {
+      display: block;
+      width: 100%;
+      min-height: 520px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    footer {
+      padding: 38px 20px 58px;
+      color: var(--slate-grey);
+      font-size: 0.92rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .footer-nav {
+      position: static;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 18px;
+      background: transparent;
+      border: 0;
+      backdrop-filter: none;
+    }
+
+    .footer-nav a {
+      color: var(--earthy-green);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .footer-nav a:hover {
+      color: var(--burnt-orange-dark);
+    }
+
+    footer p {
+      margin: 18px 0 0;
+    }
+
+    @media (max-width: 760px) {
+      .gallery-hero {
+        min-height: auto;
+        background-position: 48% center;
+      }
+
+      .hero-inner {
+        padding: 66px 18px 76px;
+      }
+
+      .eyebrow {
+        margin-bottom: 20px;
+        font-size: 0.74rem;
+      }
+
+      .gallery-hero h1 {
+        font-size: clamp(2.8rem, 14vw, 4.5rem);
+      }
+
+      .gallery-hero .subtitle {
+        max-width: 22rem;
+        margin-top: 22px;
+        font-size: 0.98rem;
+      }
+
+      .hero-actions {
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      .button-primary,
+      .button-secondary {
+        width: 100%;
+        min-width: unset;
+      }
+
+      .nav-inner {
+        justify-content: center;
+        padding: 10px 14px;
+        gap: 0 18px;
+      }
+
+      nav a {
+        font-size: 0.86rem;
+        line-height: 1.25;
+      }
+
+      .section-shell {
+        padding: 24px 10px 0;
+      }
+
+      .gallery-card {
+        margin-bottom: 20px;
+        border-radius: 16px;
+      }
+
+      .gallery-intro {
+        padding: 28px 18px 18px;
+      }
+
+      .gallery-intro h2 {
+        font-size: clamp(1.62rem, 9vw, 2.12rem);
+      }
+
+      .gallery-intro p {
+        font-size: 0.98rem;
+        line-height: 1.72;
+      }
+
+      .picflow-wrap {
+        padding: 2px 10px 28px;
+      }
+
+      picflow-gallery {
+        min-height: 420px;
+        border-radius: 14px;
+      }
+
+      .footer-nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header id="home" class="gallery-hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Gravel &amp; Grit Events</div>
+      <h1>Bristol Backyard Ultra 2026 Gallery</h1>
+      <p class="subtitle">
+        The inaugural year. 26 yards. Rain, mud, headtorches, sunrise finishes, and one unforgettable weekend.
+      </p>
+      <div class="hero-actions">
+        <a href="index.html#waitlist" class="button-primary">Join the 2027 Waiting List</a>
+        <a href="https://firtreemedia.picflow.com/KX1hpPigB4JDEPzJ" class="button-secondary">Download Photos</a>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Primary">
+    <div class="nav-inner">
+      <a href="index.html#course">The Course</a>
+      <a href="index.html#rules">Rules</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#archive">Results</a>
+      <a href="gallery.html" aria-current="page">Gallery</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main id="main-content" class="section-shell">
+    <section class="gallery-card" aria-labelledby="gallery-title">
+      <div class="gallery-intro">
+        <div class="kicker">Official 2026 photos</div>
+        <h2 id="gallery-title">Moments from the first Bristol Backyard Ultra</h2>
+        <p>
+          Browse the full Fir Tree Media gallery below, or use the download link above to save your favourites from a weekend built on grit, kindness and stubborn forward motion.
+        </p>
+      </div>
+
+      <div class="picflow-wrap">
+<script>
+if(!window.picflow){
+  window.picflow=!0;
+  var s=document.createElement("script");
+  s.src="https://picflow.com/embed/main.js";
+  s.type='module';
+  s.defer=true;
+  document.head.appendChild(s);
+}
+</script>
+
+<picflow-gallery
+id="gal_KX1hpPigB4JDEPzJ"
+tenant="tnt_1bSEyOnSNpEMYGBT"
+lightbox="#000000E6"
+downloads="true"
+no-padding="true"
+no-background="true"
+show-cover="true">
+
+  <p style="font-size:12px;color:#999;font-family:sans-serif">
+    Client gallery powered by
+    <a href="https://picflow.com">Picflow</a>
+  </p>
+</picflow-gallery>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html#course">The Course</a>
+      <a href="index.html#rules">Rules</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#archive">Results</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <p>&copy; 2026 Gravel &amp; Grit Events · Built with grit, community, and care.</p>
+  </footer>
+</body>
+</html>
