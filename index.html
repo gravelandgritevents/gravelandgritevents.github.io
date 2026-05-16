@@ -800,8 +800,16 @@
     .split-content {
       display: grid;
       grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
-      gap: 42px;
+      gap: clamp(56px, 7vw, 84px);
       align-items: start;
+    }
+
+    #story .section-content {
+      padding: clamp(44px, 5vw, 64px) clamp(34px, 5vw, 56px);
+    }
+
+    #story .story-copy p {
+      padding-left: 26px;
     }
 
     .section-heading.align-left {
@@ -1368,6 +1376,15 @@
         padding: 32px 22px;
       }
 
+      #story .section-content {
+        gap: 30px;
+        padding: 38px 28px;
+      }
+
+      #story .story-copy p {
+        padding-left: 22px;
+      }
+
       #route-map {
         height: 420px;
       }
@@ -1431,6 +1448,15 @@
 
       .section-content {
         padding: 26px 17px;
+      }
+
+      #story .section-content {
+        gap: 24px;
+        padding: 30px 18px;
+      }
+
+      #story .story-copy p {
+        padding-left: 18px;
       }
 
       .section-heading {
