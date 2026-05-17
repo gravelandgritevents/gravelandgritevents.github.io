@@ -6,7 +6,7 @@
   <title>Bristol Backyard Ultra 2027 | Gravel &amp; Grit Events</title>
   <meta
     name="description"
-    content="Bristol Backyard Ultra returns to Blaise Castle Estate, Bristol on Saturday 1st May 2027 at 10:00am for a gritty, community-led Backyard Ultra on woodland trails."
+    content="Bristol Backyard Ultra returns to Blaise Castle Estate, Bristol on Saturday 1st May 2027 at 10:00am. General release entries are now live for this gritty, community-led Backyard Ultra on woodland trails."
   />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://www.gravelandgritevents.com/" />
@@ -55,6 +55,11 @@
         "https://www.gravelandgritevents.com/logo.jpeg"
       ],
       "url": "https://www.gravelandgritevents.com/",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27",
+        "availability": "https://schema.org/InStock"
+      },
       "sameAs": [
         "https://www.instagram.com/gravelandgritevents/"
       ]
@@ -993,76 +998,48 @@
     }
 
 
-    /* Waitlist */
-    .waitlist-section {
+    /* Entry CTA */
+    .entry-section {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(245, 245, 240, 0.72));
       border-color: rgba(9, 73, 60, 0.1);
     }
 
-    .waitlist-card {
+    .entry-card {
       max-width: 720px;
       margin: 0 auto;
       text-align: center;
     }
 
-    .proof-waitlist {
+    .proof-entry {
       margin-top: 28px;
       padding-top: 26px;
       border-top: 1px solid rgba(9, 73, 60, 0.1);
     }
 
-    .proof-waitlist .section-heading {
+    .proof-entry .section-heading {
       margin-bottom: 16px;
     }
 
-    .waitlist-card p {
+    .entry-card p {
       margin-left: auto;
       margin-right: auto;
       max-width: 560px;
       color: var(--slate-grey);
     }
 
-    .waitlist-form {
+    .entry-actions {
       display: flex;
+      flex-wrap: wrap;
       gap: 12px;
       justify-content: center;
       max-width: 560px;
       margin: 26px auto 0;
     }
 
-    .waitlist-form label {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    .waitlist-form input[type="email"] {
-      flex: 1 1 auto;
-      min-width: 0;
-      padding: 14px 16px;
-      border: 1px solid rgba(9, 73, 60, 0.18);
-      border-radius: 999px;
-      background: var(--white);
-      color: var(--slate-grey);
-      font: inherit;
-      box-shadow: var(--shadow-hairline);
-    }
-
-    .waitlist-form input[type="email"]:focus {
-      outline: 3px solid rgba(217, 94, 31, 0.28);
-      border-color: rgba(217, 94, 31, 0.56);
-    }
-
-    .waitlist-form .button-primary {
-      border: 0;
-      cursor: pointer;
-      font: inherit;
+    .entry-actions .button-primary,
+    .entry-actions .button-secondary {
+      flex: 1 1 220px;
+      justify-content: center;
     }
 
     /* FAQ */
@@ -1533,8 +1510,13 @@
         min-width: unset;
       }
 
-      .waitlist-form {
+      .entry-actions {
         flex-direction: column;
+      }
+
+      .entry-actions .button-primary,
+      .entry-actions .button-secondary {
+        width: 100%;
       }
 
 
@@ -1879,10 +1861,12 @@
 
       <div class="hero-actions">
         <a
-          href="#waitlist"
+          href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27"
+          target="_blank"
+          rel="noopener noreferrer"
           class="button-primary"
         >
-          Join the 2027 Waitlist
+          Enter Bristol Backyard Ultra 2027
         </a>
 
         <a href="results/bristol-backyard-ultra-2026/" class="button-secondary">View Results</a>
@@ -1892,6 +1876,7 @@
 
   <nav aria-label="Primary">
     <div class="nav-inner">
+      <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
       <a href="#course">The Course</a>
       <a href="#rules">Rules</a>
       <a href="#faq">FAQ</a>
@@ -1910,35 +1895,30 @@
           What an event! Our founding year saw 104 runners on the start line, PBs smashed and a community we won't forget. Every one of our participants was incredible, from 2 loops to 26. Check out our official results for more details.
         </p>
         <p>
-          2026 sold out, but what stayed with us most was the atmosphere: runners, crews, volunteers, and families looking after each other loop after loop.
+          2026 filled with runners, crews, volunteers, and families looking after each other loop after loop — and 2027 entries are now open for the next gritty chapter.
         </p>
 
-        <div id="waitlist" class="waitlist-card proof-waitlist" aria-labelledby="waitlist-title">
+        <div id="entry" class="entry-card proof-entry" aria-labelledby="entry-title">
           <div class="section-heading">
-            <div class="kicker">Be first to hear about 2027</div>
-            <h2 id="waitlist-title">Join the Bristol Backyard Ultra 2027 waitlist</h2>
+            <div class="kicker">Tickets Now Live</div>
+            <h2 id="entry-title">Enter Bristol Backyard Ultra 2027</h2>
           </div>
 
           <p>
-            2026 sold out. Join the waitlist for early access to entries and future Gravel &amp; Grit events.
+            General release entries are open now through RaceNation. Secure your place on the Blaise Castle Estate start line and get ready for one more lap.
           </p>
 
-          <form class="waitlist-form" action="https://gravelandgritevents.us13.list-manage.com/subscribe/post?u=45362f8425ca47e31537b996b&amp;id=1cf3900049&amp;f_id=008834e5f0" method="post" target="_blank">
-            <label for="mce-EMAIL">Email address</label>
-            <input
-              id="mce-EMAIL"
-              name="EMAIL"
-              type="email"
-              autocomplete="email"
-              placeholder="Email address"
-              required
-            />
-            <input type="hidden" name="tags" value="7209489">
-            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-              <input type="text" name="b_45362f8425ca47e31537b996b_1cf3900049" tabindex="-1" value="">
-            </div>
-            <button type="submit" class="button-primary">Join the Waitlist</button>
-          </form>
+          <div class="entry-actions">
+            <a
+              href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button-primary"
+            >
+              Secure Your Place
+            </a>
+            <a href="#faq" class="button-secondary">Read the FAQ</a>
+          </div>
         </div>
       </div>
     </div>
@@ -2613,6 +2593,7 @@
 
   <footer>
     <nav class="footer-nav" aria-label="Footer">
+      <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
       <a href="#course">The Course</a>
       <a href="#rules">Rules</a>
       <a href="#faq">FAQ</a>
