@@ -483,6 +483,26 @@
       line-height: 1.35;
     }
 
+    .contact-fallback {
+      max-width: 720px;
+      margin: 22px auto 0;
+      padding: 18px 20px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: rgba(245, 245, 240, 0.94);
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.55;
+    }
+
+    .contact-fallback a {
+      color: var(--white);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     footer {
       padding: 38px 20px 58px;
       color: var(--slate-grey);
@@ -596,7 +616,7 @@
         Work with a grassroots trail running event where useful products, local support, honest storytelling, and community atmosphere actually reach the people they are meant for.
       </p>
       <div class="hero-actions">
-        <a href="mailto:info@gravelandgritevents.com?subject=Partnership%20enquiry" class="button-primary">Start a Partnership Enquiry</a>
+        <a href="#partner-contact-details" class="button-primary">Start a Partnership Enquiry</a>
         <a href="#ways-to-work" class="button-secondary">Explore Ways to Work Together</a>
       </div>
     </div>
@@ -605,13 +625,11 @@
   <nav aria-label="Primary">
     <div class="nav-inner">
       <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
-      <a href="index.html#course">The Course</a>
-      <a href="index.html#rules">Rules</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#archive">Results</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="race-info.html">Race Info</a>
+      <a href="faq.html">FAQ</a>
+      <a href="archive-2026.html">2026 Archive</a>
       <a href="partners.html" aria-current="page">Partners</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#partner-contact-details">Contact</a>
     </div>
   </nav>
 
@@ -814,7 +832,7 @@
       </div>
     </section>
 
-    <section class="card-section cta-section" aria-labelledby="partner-cta-title">
+    <section id="partner-contact-details" class="card-section cta-section" aria-labelledby="partner-cta-title">
       <div class="section-content">
         <div class="section-heading">
           <div class="kicker">Start the conversation</div>
@@ -833,6 +851,11 @@
           <a href="mailto:info@gravelandgritevents.com?subject=Partnership%20enquiry" class="button-primary">Email a Partnership Enquiry</a>
           <a href="index.html" class="button-secondary">Back to Event Page</a>
         </div>
+        <p class="contact-fallback">
+          If the email button does not open, email
+          <a href="mailto:info@gravelandgritevents.com">info@gravelandgritevents.com</a>
+          with the subject line <strong>Partnership enquiry</strong>.
+        </p>
       </div>
     </section>
   </main>
@@ -840,13 +863,11 @@
   <footer>
     <nav class="footer-nav" aria-label="Footer">
       <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
-      <a href="index.html#course">The Course</a>
-      <a href="index.html#rules">Rules</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#archive">Results</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="race-info.html">Race Info</a>
+      <a href="faq.html">FAQ</a>
+      <a href="archive-2026.html">2026 Archive</a>
       <a href="partners.html" aria-current="page">Partners</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#partner-contact-details">Contact</a>
     </nav>
     <p>&copy; 2026 Gravel &amp; Grit Events · Built with grit, community, and care.</p>
   </footer>

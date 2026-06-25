@@ -2,29 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-
   <title>Bristol Backyard Ultra 2027 | Gravel &amp; Grit Events</title>
   <meta
     name="description"
-    content="Bristol Backyard Ultra returns to Blaise Castle Estate, Bristol on Saturday 1st May 2027 at 10:00am. General release entries are now live for this gritty, community-led Backyard Ultra on woodland trails."
+    content="Bristol Backyard Ultra returns to Blaise Castle Estate, Bristol on Saturday 1st May 2027. Enter the 2027 Backyard Ultra, explore race information, FAQs, results, gallery and partnership opportunities."
   />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://www.gravelandgritevents.com/" />
-
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json">
     {
@@ -51,18 +40,14 @@
         "name": "Gravel & Grit Events",
         "url": "https://www.gravelandgritevents.com/"
       },
-      "image": [
-        "https://www.gravelandgritevents.com/logo.jpeg"
-      ],
+      "image": ["https://www.gravelandgritevents.com/logo.jpeg"],
       "url": "https://www.gravelandgritevents.com/",
       "offers": {
         "@type": "Offer",
         "url": "https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27",
         "availability": "https://schema.org/InStock"
       },
-      "sameAs": [
-        "https://www.instagram.com/gravelandgritevents/"
-      ]
+      "sameAs": ["https://www.instagram.com/gravelandgritevents/"]
     }
   </script>
 
@@ -84,17 +69,10 @@
       --max-width: 1120px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      padding: 0;
       font-family: "Inter", sans-serif;
       background:
         radial-gradient(circle at top right, rgba(217, 94, 31, 0.08), transparent 20%),
@@ -103,20 +81,9 @@
       line-height: 1.7;
     }
 
-    a {
-      color: inherit;
-    }
-
-    a:focus-visible,
-    button:focus-visible {
-      outline: 3px solid var(--burnt-orange);
-      outline-offset: 2px;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--burnt-orange); outline-offset: 2px; }
+    img { max-width: 100%; display: block; }
 
     .skip-link {
       position: absolute;
@@ -132,18 +99,8 @@
       box-shadow: var(--shadow-soft);
     }
 
-    .skip-link:focus {
-      top: 12px;
-    }
+    .skip-link:focus { top: 12px; }
 
-    .container {
-      width: 100%;
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Hero */
     .hero {
       position: relative;
       background:
@@ -166,10 +123,10 @@
     .hero-inner {
       position: relative;
       z-index: 2;
-      text-align: center;
-      padding: 86px 20px 98px;
-      max-width: 880px;
+      max-width: 900px;
       margin: 0 auto;
+      padding: 86px 20px 98px;
+      text-align: center;
     }
 
     .eyebrow {
@@ -188,28 +145,19 @@
 
     .hero h1 {
       margin: 0;
+      color: var(--white);
       font-size: clamp(3.05rem, 7.2vw, 5.75rem);
       line-height: 0.96;
-      color: var(--white);
-      text-shadow: 0 7px 24px rgba(0, 0, 0, 0.46);
       letter-spacing: -0.03em;
+      text-shadow: 0 7px 24px rgba(0, 0, 0, 0.46);
     }
 
     .hero .subtitle {
-      max-width: 640px;
+      max-width: 680px;
       margin: 24px auto 0;
-      color: rgba(245, 245, 240, 0.78);
+      color: rgba(245, 245, 240, 0.86);
       font-size: clamp(1rem, 1.8vw, 1.16rem);
-      line-height: 1.58;
-    }
-
-    .hero .subtitle + .subtitle {
-      margin-top: 6px;
-    }
-
-    .hero .hero-supporting {
-      max-width: 720px;
-      color: rgba(245, 245, 240, 0.9);
+      line-height: 1.6;
       font-weight: 700;
     }
 
@@ -222,32 +170,31 @@
       border-top: 1px solid rgba(245, 245, 240, 0.18);
       border-bottom: 1px solid rgba(245, 245, 240, 0.12);
       font-size: 0.9rem;
-      color: rgba(245, 245, 240, 0.76);
+      color: rgba(245, 245, 240, 0.82);
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
 
-    .hero-actions {
+    .hero-actions, .entry-actions, .card-actions {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin-top: 34px;
+      margin-top: 30px;
     }
 
-    .button-primary,
-    .button-secondary {
+    .button-primary, .button-secondary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      min-width: 180px;
       padding: 14px 24px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: 800;
       letter-spacing: 0.01em;
       transition: all 0.2s ease;
-      min-width: 180px;
     }
 
     .button-primary {
@@ -256,154 +203,18 @@
       box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
     }
 
-    .button-primary:hover {
-      transform: translateY(-2px);
-      background-color: #A84814;
-    }
+    .button-primary:hover { transform: translateY(-2px); background-color: #A84814; }
 
     .button-secondary {
-      background: rgba(255, 255, 255, 0.9);
-      color: var(--earthy-green);
-      border: 1px solid rgba(255, 255, 255, 0.36);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+      background: rgba(9, 73, 60, 0.94);
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 9px 22px rgba(0, 0, 0, 0.18);
       backdrop-filter: blur(6px);
     }
 
-    .button-secondary:hover {
-      transform: translateY(-2px);
-      background: var(--white);
-    }
+    .button-secondary:hover { transform: translateY(-2px); background: var(--earthy-green-2); }
 
-    .hero .button-secondary {
-      background: rgba(9, 73, 60, 0.94);
-      color: var(--white);
-      border-color: rgba(255, 255, 255, 0.28);
-      box-shadow: 0 9px 22px rgba(0, 0, 0, 0.24);
-    }
-
-    .hero .button-secondary:hover {
-      background: var(--earthy-green-2);
-    }
-
-    /* Capacity */
-    .capacity-band {
-      position: relative;
-      z-index: 3;
-      margin: 36px auto 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    .capacity-card {
-      max-width: 900px;
-      margin: 0 auto;
-      background: var(--white);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      padding: 28px 28px 26px;
-      text-align: center;
-      border: 1px solid rgba(9, 73, 60, 0.06);
-    }
-
-    .capacity-label {
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-size: 0.78rem;
-      font-weight: 800;
-      color: var(--burnt-orange-dark);
-      margin-bottom: 8px;
-    }
-
-    .capacity-card h2 {
-      margin: 0;
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      line-height: 1.05;
-      color: var(--earthy-green);
-      letter-spacing: -0.03em;
-    }
-
-    .capacity-card p {
-      margin: 10px auto 0;
-      max-width: 660px;
-      color: var(--muted);
-      font-size: 1.04rem;
-    }
-
-    .proof-card {
-      max-width: var(--max-width);
-      border-color: rgba(9, 73, 60, 0.12);
-    }
-
-    .event-details-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin: 30px auto 0;
-      max-width: 940px;
-    }
-
-    .event-detail-card {
-      padding: 18px;
-      border: 1px solid rgba(9, 73, 60, 0.1);
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 5px 16px rgba(0, 0, 0, 0.035);
-    }
-
-    .event-detail-card strong {
-      display: block;
-      margin-bottom: 5px;
-      color: var(--earthy-green);
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .event-detail-card span {
-      color: var(--slate-grey);
-      font-weight: 700;
-    }
-
-    .proof-stats {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .proof-stat-card {
-      border: 1px solid rgba(9, 73, 60, 0.1);
-      border-radius: 16px;
-      padding: 18px 14px;
-      background: linear-gradient(to bottom right, rgba(9, 73, 60, 0.06), rgba(217, 94, 31, 0.04));
-    }
-
-    .proof-stat-card strong {
-      display: block;
-      color: var(--earthy-green);
-      font-size: clamp(1.15rem, 2.4vw, 1.8rem);
-      line-height: 1.1;
-      margin-bottom: 6px;
-    }
-
-    .proof-stat-card span {
-      color: var(--slate-grey);
-      font-weight: 700;
-    }
-
-
-    .hero-status-note {
-      margin-top: 10px;
-      font-size: 0.88rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(245, 245, 240, 0.9);
-    }
-
-
-    /* Nav */
     nav {
       position: sticky;
       top: 0;
@@ -426,10 +237,7 @@
       scrollbar-width: none;
     }
 
-    .nav-inner::-webkit-scrollbar {
-      display: none;
-    }
-
+    .nav-inner::-webkit-scrollbar { display: none; }
     nav a {
       color: var(--stone);
       text-decoration: none;
@@ -438,900 +246,190 @@
       white-space: nowrap;
       flex: 0 0 auto;
     }
+    nav a:hover, nav a[aria-current="page"] { color: var(--white); }
+    nav a[aria-current="page"] { border-bottom: 2px solid var(--burnt-orange); }
 
-    nav a:hover {
-      color: var(--white);
-    }
-
-    /* Sections */
-    .section-shell {
-      padding: 48px 20px 0;
-    }
-
-    section.card-section {
+    .section-shell { padding: 48px 20px 0; }
+    .card-section {
       max-width: var(--max-width);
-      margin: 0 auto 32px;
+      margin: 0 auto 34px;
+      border-radius: var(--radius);
       background: rgba(255, 255, 255, 0.78);
       border: 1px solid rgba(9, 73, 60, 0.07);
-      border-radius: var(--radius);
       box-shadow: var(--shadow-hairline);
       overflow: hidden;
     }
 
-    .section-content {
-      padding: 42px 34px;
-    }
-
+    .section-content { padding: 46px 34px; }
     .section-heading {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
+      max-width: 780px;
+      margin: 0 auto 28px;
       text-align: center;
-      margin-bottom: 24px;
     }
 
-    .section-heading .kicker {
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+    .kicker {
+      margin-bottom: 8px;
+      color: var(--burnt-orange-dark);
       font-size: 0.78rem;
       font-weight: 800;
-      color: var(--burnt-orange-dark);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
 
     .section-heading h2 {
       margin: 0;
       color: var(--earthy-green);
-      font-size: clamp(1.8rem, 3vw, 2.7rem);
-      line-height: 1.1;
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      line-height: 1.08;
       letter-spacing: -0.03em;
     }
 
-    .section-content p {
-      margin: 0 0 22px 0;
-      max-width: 900px;
-      line-height: 1.82;
-    }
-
-    .section-content p:last-child {
-      margin-bottom: 0;
-    }
-
-    .course-copy {
-      max-width: 780px;
-      margin: 0 auto 28px;
-    }
-
-    .course-copy p,
-    .story-copy p,
-    .partner-copy p {
-      max-width: none;
-      text-align: left;
-    }
-
-    .course-copy p,
-    .story-copy p {
-      padding: 18px 20px;
-      border-left: 3px solid rgba(217, 94, 31, 0.45);
-      border-radius: 0 14px 14px 0;
-      background: rgba(245, 245, 240, 0.62);
-    }
-
-    .course-pullquote {
-      margin: 0 0 22px;
-      padding: 18px 20px;
-      border-left: 3px solid var(--burnt-orange);
-      border-radius: 0 14px 14px 0;
-      background: rgba(9, 73, 60, 0.08);
-      color: var(--earthy-green);
-      font-size: clamp(1.12rem, 2vw, 1.34rem);
-      font-weight: 800;
-      line-height: 1.4;
-    }
-
-    .course-copy p:last-child {
-      margin-bottom: 0;
-    }
-
-    .centered-copy {
-      margin-left: auto !important;
-      margin-right: auto !important;
-      max-width: 760px !important;
-      text-align: center;
-      color: var(--slate-grey);
-    }
-
-
     .section-intro {
-      margin-left: auto !important;
-      margin-right: auto !important;
-      max-width: 700px !important;
+      max-width: 760px;
+      margin: 0 auto 28px;
       text-align: center;
-      color: var(--slate-grey);
       font-size: 1.04rem;
+      line-height: 1.72;
     }
 
-    /* Rules */
-    .rules-section {
-      background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(245, 245, 240, 0.74)),
-        repeating-linear-gradient(45deg, rgba(9, 73, 60, 0.03) 0, rgba(9, 73, 60, 0.03) 1px, transparent 1px, transparent 14px);
-    }
-
-    .rules-intro {
-      max-width: 720px !important;
-      margin: 0 auto 26px !important;
-      text-align: center;
-      color: var(--earthy-green);
-      font-size: clamp(1.08rem, 2vw, 1.28rem);
-      font-weight: 800;
-      line-height: 1.5 !important;
-    }
-
-    .rules-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin: 0 auto 26px;
-      max-width: 920px;
-    }
-
-    .rule-card {
-      position: relative;
-      padding: 18px 18px 18px 48px;
-      border: 1px solid rgba(9, 73, 60, 0.09);
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.86);
-      box-shadow: 0 5px 16px rgba(0, 0, 0, 0.035);
-      line-height: 1.58;
-    }
-
-    .rule-card::before {
-      content: "";
-      position: absolute;
-      left: 18px;
-      top: 22px;
-      width: 11px;
-      height: 11px;
-      border-radius: 999px;
-      background: var(--burnt-orange);
-      box-shadow: 0 0 0 6px rgba(217, 94, 31, 0.12);
-    }
-
-    .rule-card strong {
-      display: block;
-      margin-bottom: 5px;
-      color: var(--earthy-green);
-      font-size: 1rem;
-      line-height: 1.25;
-    }
-
-    .rules-actions {
-      display: flex;
-      justify-content: center;
-      margin-top: 4px;
-    }
-
-    .recap-section {
-      background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(245, 245, 240, 0.9)),
-        repeating-linear-gradient(45deg, rgba(80, 107, 56, 0.035) 0, rgba(80, 107, 56, 0.035) 1px, transparent 1px, transparent 14px);
-    }
-
-    .testimonials-section .section-content {
-      padding: 42px 32px;
-    }
-
-    .testimonials-section .section-heading {
-      margin-bottom: 22px;
-    }
-
-    .testimonial-carousel {
-      position: relative;
-      max-width: 1000px;
-      margin: 24px auto 0;
-    }
-
-    .testimonial-carousel-hint {
-      display: none;
-      margin: 0;
-      color: var(--earthy-green);
-      font-size: 0.86rem;
-      font-weight: 800;
-    }
-
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
+    .entry-card {
+      max-width: 900px;
       margin: 0 auto;
+      padding: 34px 28px;
+      border-radius: 24px;
+      background: var(--white);
+      border: 1px solid rgba(9, 73, 60, 0.08);
+      box-shadow: var(--shadow);
+      text-align: center;
     }
 
-    .testimonial-card {
-      position: relative;
-      min-height: 188px;
-      margin: 0;
-      padding: 24px 20px 20px;
+    .proof-grid, .teaser-grid, .testimonial-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .proof-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .teaser-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .testimonial-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .proof-card, .teaser-card, .testimonial-card {
+      background: var(--white);
+      border: 1px solid rgba(9, 73, 60, 0.08);
       border-radius: 18px;
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid rgba(9, 73, 60, 0.1);
+      padding: 22px 20px;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
     }
 
-    .testimonial-card::before {
-      content: "“";
-      position: absolute;
-      top: 10px;
-      right: 18px;
-      color: rgba(209, 124, 58, 0.22);
-      font-size: 4.5rem;
+    .proof-card strong {
+      display: block;
+      color: var(--earthy-green);
+      font-size: clamp(1.7rem, 3.8vw, 2.7rem);
       line-height: 1;
-      font-weight: 800;
+      letter-spacing: -0.04em;
     }
 
-    .testimonial-card blockquote {
-      position: relative;
-      margin: 0 0 18px;
+    .proof-card span {
+      display: block;
+      margin-top: 10px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .teaser-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 230px;
+      text-decoration: none;
       color: var(--slate-grey);
-      font-size: 1rem;
-      line-height: 1.58;
     }
 
-    .testimonial-card figcaption,
-    .testimonial-card .runner-name {
+    .teaser-card h3, .testimonial-card h3 {
+      margin: 0 0 10px;
       color: var(--earthy-green);
-      font-weight: 800;
-      font-size: 0.9rem;
-    }
-
-    .testimonial-dots {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin: 14px 0 0;
-    }
-
-    .testimonial-dot {
-      width: 7px;
-      height: 7px;
-      border: 0;
-      border-radius: 999px;
-      padding: 0;
-      background: rgba(9, 73, 60, 0.24);
-      transition: width 0.2s ease, background-color 0.2s ease;
-    }
-
-    .testimonial-dot.is-active {
-      width: 22px;
-      background: var(--burnt-orange);
-    }
-
-    .testimonial-grid:focus-visible {
-      outline: 3px solid var(--burnt-orange);
-      outline-offset: 5px;
-      border-radius: 16px;
-    }
-
-    .testimonial-card .placeholder-note {
-      display: inline-block;
-      margin-bottom: 12px;
-      color: var(--burnt-orange-dark);
-      font-size: 0.74rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .recap-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1.05fr);
-      gap: 34px;
-      align-items: start;
-      margin-top: 30px;
-    }
-
-    .recap-panel,
-    .timeline-panel {
-      background: rgba(255, 255, 255, 0.82);
-      border: 1px solid rgba(80, 107, 56, 0.1);
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.035);
-    }
-
-    .recap-panel h3,
-    .timeline-panel h3 {
-      margin: 0 0 14px 0;
-      color: var(--earthy-green);
-      font-size: 1.25rem;
+      font-size: 1.18rem;
       line-height: 1.2;
     }
 
-    .recap-stats {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .recap-stat {
-      padding: 16px;
-      border-radius: 14px;
-      background: linear-gradient(to bottom right, rgba(80, 107, 56, 0.07), rgba(217, 94, 31, 0.04));
-      border: 1px solid rgba(80, 107, 56, 0.08);
-    }
-
-    .recap-stat strong {
-      display: block;
-      color: var(--earthy-green);
-      font-size: 1.45rem;
-      line-height: 1.1;
-      margin-bottom: 4px;
-    }
-
-    .timeline-list {
-      list-style: none;
+    .teaser-card p, .testimonial-card p {
       margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 14px;
+      line-height: 1.62;
     }
 
-    .timeline-list li {
-      position: relative;
-      padding-left: 26px;
-      line-height: 1.55;
+    .teaser-card strong {
+      margin-top: auto;
+      color: var(--burnt-orange-dark);
+      font-size: 0.9rem;
+      font-weight: 800;
     }
 
-    .timeline-list li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.55em;
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: var(--burnt-orange);
-      box-shadow: 0 0 0 5px rgba(217, 94, 31, 0.12);
-    }
-
-    .timeline-list strong {
-      display: block;
-      color: var(--earthy-green);
-      margin-bottom: 2px;
-    }
-
-    .split-content {
-      display: grid;
-      grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
-      gap: clamp(56px, 7vw, 84px);
-      align-items: start;
-    }
-
-    #story .section-content {
-      padding: clamp(44px, 5vw, 64px) clamp(34px, 5vw, 56px);
-    }
-
-    #story .story-copy p {
-      padding-left: 26px;
-    }
-
-    .section-heading.align-left {
-      align-items: flex-start;
-      text-align: left;
-      margin-bottom: 0;
-    }
-
-    .story-copy p {
-      font-size: 1.05rem;
-    }
-
-    .archive-actions {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 28px;
-    }
-
-    .archive-card {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      min-height: 140px;
-      padding: 20px;
-      border: 1px solid rgba(9, 73, 60, 0.1);
-      border-radius: 18px;
-      background: var(--white);
-      color: var(--slate-grey);
-      text-decoration: none;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
-    }
-
-    .archive-card strong {
-      color: var(--earthy-green);
-      font-size: 1.08rem;
-    }
-
-    .archive-card span {
-      color: var(--slate-grey);
-    }
-
-    a.archive-card:hover,
-    a.archive-card:focus-visible {
+    .teaser-card:hover, .teaser-card:focus-visible {
       transform: translateY(-2px);
-      border-color: rgba(9, 73, 60, 0.24);
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      border-color: rgba(9, 73, 60, 0.18);
     }
 
-    .archive-placeholder {
-      background: linear-gradient(to bottom right, rgba(9, 73, 60, 0.05), rgba(245, 245, 240, 0.88));
+    .split-feature {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 32px;
+      align-items: center;
     }
 
-
-    .button-secondary.on-light {
-      background: var(--white);
-      border: 2px solid rgba(62, 62, 62, 0.72);
-      color: var(--slate-grey);
-      box-shadow: none;
-      backdrop-filter: none;
-    }
-
-    .button-secondary.on-light:hover {
-      background: var(--stone);
-      border-color: var(--slate-grey);
-      color: var(--slate-grey);
-    }
-
-    section.card-section:nth-of-type(2n) {
-      background: rgba(239, 240, 229, 0.64);
-    }
-
-    section.card-section:nth-of-type(3n) {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(245, 245, 240, 0.58));
-    }
-
-
-    .story-section,
-    #course,
-    #community {
-      border-color: rgba(9, 73, 60, 0.1);
-    }
-
-
-    .storytelling-visual {
-      margin: 28px auto;
+    .feature-image {
       border-radius: 22px;
       overflow: hidden;
       box-shadow: var(--shadow);
       background: var(--stone-dark);
     }
 
-    .storytelling-visual img {
+    .feature-image img {
       width: 100%;
-      height: clamp(240px, 48vw, 430px);
+      height: clamp(260px, 42vw, 430px);
       object-fit: cover;
     }
 
-    .storytelling-visual--format {
-      margin-top: 26px;
-      margin-bottom: 0;
+    .feature-copy p {
+      margin: 0 0 18px;
+      line-height: 1.76;
     }
 
-    .storytelling-visual--format img {
-      height: clamp(230px, 42vw, 360px);
-      object-position: center 52%;
-    }
-
-    .storytelling-visual--course {
-      max-width: 860px;
-      margin-bottom: 30px;
-    }
-
-    .storytelling-visual--course img {
-      height: clamp(260px, 54vw, 480px);
-      object-position: center 45%;
-    }
-
-    .storytelling-visual--community {
-      margin-bottom: 30px;
-    }
-
-    .storytelling-visual--community img {
-      height: clamp(240px, 50vw, 430px);
-      object-position: center 46%;
-    }
-
-    /* Course stats */
-    .stats-grid {
+    .mini-faq {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 24px;
-      margin-bottom: 26px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
     }
 
-    .stat-card {
-      background: linear-gradient(to bottom right, rgba(9, 73, 60, 0.05), rgba(217, 94, 31, 0.04));
-      border: 1px solid rgba(9, 73, 60, 0.07);
+    .mini-faq article {
+      padding: 18px;
       border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-    }
-
-    .stat-card strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--earthy-green);
-      font-size: 0.95rem;
-    }
-
-    /* Route map */
-    .route-map-shell {
-      margin-top: 36px;
-    }
-
-    #route-map {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      height: 520px;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(9, 73, 60, 0.08);
-      box-shadow: var(--shadow-soft);
-      background: #e9efe9;
-    }
-
-    .leaflet-container,
-    .leaflet-control-container,
-    .leaflet-top,
-    .leaflet-bottom {
-      z-index: 1 !important;
-    }
-
-    .route-map-note {
-      margin-top: 12px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-
-    /* Entry CTA */
-    .entry-section {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(245, 245, 240, 0.72));
-      border-color: rgba(9, 73, 60, 0.1);
-    }
-
-    .entry-card {
-      max-width: 720px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .proof-entry {
-      margin-top: 28px;
-      padding-top: 26px;
-      border-top: 1px solid rgba(9, 73, 60, 0.1);
-    }
-
-    .proof-entry .section-heading {
-      margin-bottom: 16px;
-    }
-
-    .entry-card p {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 560px;
-      color: var(--slate-grey);
-    }
-
-    .entry-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      max-width: 560px;
-      margin: 26px auto 0;
-    }
-
-    .entry-actions .button-primary,
-    .entry-actions .button-secondary {
-      flex: 1 1 220px;
-      justify-content: center;
-    }
-
-    /* FAQ */
-    .faq-carousel {
-      position: relative;
-    }
-
-    .faq-carousel-hint,
-    .faq-carousel-dots {
-      display: none;
-    }
-
-    .faq-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-
-    .faq-item {
       background: var(--white);
-      border: 1px solid rgba(9, 73, 60, 0.07);
-      border-radius: 16px;
-      padding: 18px 18px 16px;
-      line-height: 1.68;
+      border: 1px solid rgba(9, 73, 60, 0.08);
     }
 
-    .faq-item h3 {
-      margin: 0 0 10px;
+    .mini-faq h3 {
+      margin: 0 0 8px;
       color: var(--earthy-green);
-      font-family: "Poppins", sans-serif;
       font-size: 1rem;
-      line-height: 1.35;
     }
 
-    .faq-item p {
-      margin: 0 0 10px;
+    .mini-faq p { margin: 0; line-height: 1.55; }
+
+    .final-cta {
+      background:
+        linear-gradient(135deg, rgba(9, 73, 60, 0.94), rgba(15, 91, 76, 0.9)),
+        url("images/Crewless-Crew") center/cover no-repeat;
+      color: var(--stone);
     }
 
-    .faq-item p:last-child,
-    .faq-item ul:last-child {
-      margin-bottom: 0;
-    }
+    .final-cta h2, .final-cta .kicker { color: var(--white); }
+    .final-cta .section-intro { color: rgba(245, 245, 240, 0.9); }
 
-    .faq-item ul {
-      margin: 0 0 12px;
-      padding-left: 1.15rem;
-    }
-
-    .faq-item li + li {
-      margin-top: 4px;
-    }
-
-    /* Instagram */
-    .instagram-section {
-      padding: 8px 0 0;
-    }
-
-    .instagram-wrapper {
-      display: flex;
-      justify-content: center;
-      padding: 10px 0 6px;
-    }
-
-    .instagram-card {
-      max-width: 720px;
-      margin: 0 auto;
-      text-align: center;
-      background: var(--white);
-      border: 1px solid rgba(9, 73, 60, 0.07);
-      border-radius: 18px;
-      padding: 26px 22px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
-    }
-
-    .instagram-card p {
-      margin: 0 0 22px 0;
-      max-width: 560px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Benefits */
-    .benefits-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px 24px;
-    }
-
-    .benefits-list li {
-      position: relative;
-      background: var(--white);
-      border: 1px solid rgba(9, 73, 60, 0.07);
-      border-radius: 16px;
-      padding: 17px 17px 17px 46px;
-      line-height: 1.72;
-      font-weight: 500;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-    }
-
-    .benefits-list li::before {
-      content: "";
-      position: absolute;
-      left: 18px;
-      top: 22px;
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      background: var(--burnt-orange);
-      box-shadow: 0 0 0 6px rgba(217, 94, 31, 0.13);
-    }
-
-    /* Official partner sections */
-    .partner-section {
-      background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.7), rgba(239, 240, 229, 0.72));
-    }
-
-    .partner-grid {
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 30px;
-      align-items: center;
-    }
-
-    .partner-logo-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--white);
-      border: 1px solid rgba(9, 73, 60, 0.07);
-      border-radius: 20px;
-      padding: 20px;
-      min-height: 170px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-    }
-
-    .partner-logo {
-      max-width: 210px;
-      max-height: 110px;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-    }
-
-    .partner-copy h3 {
-      margin: 0 0 10px 0;
-      color: var(--earthy-green);
-      font-size: 1.7rem;
-      line-height: 1.1;
-    }
-
-    .partner-copy p {
-      margin-bottom: 14px;
-      color: var(--slate-grey);
-    }
-
-    .partner-copy p:last-of-type {
-      margin-bottom: 20px;
-    }
-
-    /* Event partners grid */
-    .event-partners-intro {
-      max-width: 680px;
-      margin: 0 auto 28px;
-      text-align: center;
-      line-height: 1.65;
-    }
-
-    .partner-enquiry-card {
-      max-width: 760px;
-      margin: 0 auto 28px;
-      padding: 24px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.82);
-      border: 1px solid rgba(9, 73, 60, 0.08);
-      box-shadow: var(--shadow-soft);
-      text-align: center;
-    }
-
-    .partner-enquiry-card h3 {
-      margin: 0 0 10px;
-      color: var(--earthy-green);
-      font-size: 1.35rem;
-      line-height: 1.2;
-    }
-
-    .partner-enquiry-card p {
-      max-width: 620px;
-      margin: 0 auto 18px;
-      line-height: 1.65;
-    }
-
-    .event-partners-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 10px;
-    }
-
-    .event-partner-card {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      background: var(--white);
-      border: 1px solid rgba(9, 73, 60, 0.07);
-      border-radius: 18px;
-      padding: 20px 18px 18px;
-      text-decoration: none;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    }
-
-    .event-partner-card:hover,
-    .event-partner-card:focus-visible {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-      border-color: rgba(9, 73, 60, 0.14);
-    }
-
-    .event-partner-logo-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 110px;
-      margin-bottom: 16px;
-      padding: 12px;
-      border-radius: 14px;
-      background: linear-gradient(to bottom right, rgba(9, 73, 60, 0.03), rgba(217, 94, 31, 0.03));
-    }
-
-    .event-partner-logo {
-      width: auto;
-      max-width: 100%;
-      max-height: 60px;
-      object-fit: contain;
-    }
-
-    .event-partner-card h3 {
-      margin: 0 0 10px 0;
-      color: var(--earthy-green);
-      font-size: 1.12rem;
-      line-height: 1.2;
-      text-align: center;
-    }
-
-    .event-partner-card p {
-      margin: 0;
-      font-size: 0.95rem;
-      line-height: 1.55;
-      text-align: center;
-      color: var(--slate-grey);
-    }
-
-    .location-link {
-      color: inherit;
-      text-decoration: underline;
-    }
-
-    /* Contact */
-    #contact .section-heading {
-      margin-bottom: 22px;
-    }
-
-    .contact-card {
-      max-width: 620px;
-      margin: 0 auto;
-      padding: 4px 0 0;
-      text-align: center;
-    }
-
-    .contact-card p {
-      max-width: none;
-      margin: 0 auto 10px;
-    }
-
-    .contact-card p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Footer */
     footer {
       text-align: center;
       font-size: 0.92rem;
       color: var(--slate-grey);
       padding: 38px 20px 58px;
       font-weight: 500;
-    }
-
-    footer p {
-      margin: 18px 0 0;
     }
 
     .footer-nav {
@@ -1351,559 +449,48 @@
       text-decoration: none;
     }
 
-    .footer-nav a:hover {
-      color: var(--burnt-orange-dark);
-    }
+    .footer-nav a:hover { color: var(--burnt-orange-dark); }
+    footer p { margin: 18px 0 0; }
 
-
-    /* Responsive */
     @media (max-width: 900px) {
-      .partner-grid,
-      .benefits-list,
-      .rules-grid,
-      .stats-grid,
-      .proof-stats,
-      .event-details-grid,
-      .split-content,
-      .archive-actions,
-      .recap-layout {
+      .proof-grid, .teaser-grid, .testimonial-grid, .split-feature {
         grid-template-columns: 1fr;
-      }
-
-
-      .section-heading.align-left {
-        align-items: center;
-        text-align: center;
-      }
-
-      .event-partners-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .partner-logo-wrap {
-        min-height: auto;
-      }
-
-      .section-shell {
-        padding: 34px 14px 0;
-      }
-
-      section.card-section {
-        margin-bottom: 30px;
-      }
-
-      .section-content {
-        padding: 32px 22px;
-      }
-
-      #story .section-content {
-        gap: 30px;
-        padding: 38px 28px;
-      }
-
-      #story .story-copy p {
-        padding-left: 22px;
-      }
-
-      #route-map {
-        height: 420px;
       }
     }
 
     @media (max-width: 640px) {
-      .hero {
-        background-position: 48% center;
-      }
-
-      .hero-inner {
-        padding: 62px 18px 72px;
-      }
-
-      .eyebrow {
-        margin-bottom: 20px;
-        font-size: 0.74rem;
-      }
-
-      .hero h1 {
-        font-size: clamp(3.3rem, 17vw, 4.8rem);
-        max-width: 8ch;
-        margin-inline: auto;
-      }
-
-      .hero .subtitle {
-        max-width: 20rem;
-        margin-top: 22px;
-        font-size: 0.98rem;
-      }
-
-      .hero-meta {
-        margin-top: 20px;
-        font-size: 0.76rem;
-      }
-
-      .hero-actions {
-        gap: 10px;
-        margin-top: 28px;
-      }
-
-
-      .capacity-band {
-        margin: 22px auto 0;
-        padding-inline: 14px;
-      }
-
-      .capacity-card {
-        padding: 21px 18px;
-        border-radius: 20px;
-      }
-
-      .section-shell {
-        padding: 24px 10px 0;
-      }
-
-      section.card-section {
-        margin-bottom: 20px;
-        border-radius: 16px;
-      }
-
-      .section-content {
-        padding: 26px 17px;
-      }
-
-      #story .section-content {
-        gap: 24px;
-        padding: 30px 18px;
-      }
-
-      #story .story-copy p {
-        padding-left: 18px;
-      }
-
-      .section-heading {
-        margin-bottom: 18px;
-      }
-
-      .section-heading h2 {
-        font-size: clamp(1.62rem, 9vw, 2.12rem);
-      }
-
-      .section-content p {
-        line-height: 1.78;
-        margin-bottom: 20px;
-      }
-
-      .course-copy p,
-      .story-copy p {
-        padding: 15px 16px;
-      }
-
-      .storytelling-visual {
-        margin-top: 22px;
-        margin-bottom: 24px;
-        border-radius: 18px;
-      }
-
-      .storytelling-visual img,
-      .storytelling-visual--format img,
-      .storytelling-visual--course img,
-      .storytelling-visual--community img {
-        height: 62vw;
-        min-height: 220px;
-        max-height: 320px;
-      }
-
-      .section-intro,
-      .event-partners-intro {
-        margin-bottom: 20px;
-      }
-
-      .nav-inner {
-        justify-content: center;
-        padding: 10px 14px;
-        gap: 0 18px;
-      }
-
-      nav a {
-        font-size: 0.86rem;
-        line-height: 1.25;
-      }
-
-      .button-primary,
-      .button-secondary {
-        width: 100%;
-        min-width: unset;
-      }
-
-      .entry-actions {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        max-width: 320px;
-      }
-
-      .entry-actions .button-primary,
-      .entry-actions .button-secondary {
-        flex: 0 1 auto;
-        width: 100%;
-        max-width: 320px;
-        min-height: 0;
-        padding: 14px 22px;
-        border-radius: 999px;
-        line-height: 1.2;
-        text-align: center;
-      }
-
-
-      #route-map {
-        height: 340px;
-      }
-
-      .event-partners-grid,
-      .recap-stats {
-        grid-template-columns: 1fr;
-      }
-
-      .testimonials-section .section-content {
-        padding: 28px 0 26px;
-      }
-
-      .testimonials-section .section-heading,
-      .testimonials-section .section-intro {
-        padding-inline: 18px;
-      }
-
-      .testimonials-section .section-heading {
-        margin-bottom: 14px;
-      }
-
-      .testimonials-section .section-intro {
-        font-size: 0.98rem;
-        margin-bottom: 0;
-      }
-
-      .testimonial-carousel {
-        margin-top: 14px;
-      }
-
-      .testimonial-carousel::after {
-        content: "";
-        position: absolute;
-        top: 32px;
-        right: 0;
-        bottom: 24px;
-        width: 38px;
-        pointer-events: none;
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0), var(--white));
-      }
-
-      .testimonial-carousel-hint {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        width: min(84vw, 320px);
-        margin: 0 auto 10px;
-        text-align: center;
-      }
-
-      .testimonial-carousel-hint::after {
-        content: "→";
-        color: var(--burnt-orange);
-        font-size: 1.1rem;
-        line-height: 1;
-      }
-
-      .testimonial-grid {
-        display: flex;
-        gap: 12px;
-        padding: 2px calc((100vw - min(84vw, 320px)) / 2) 8px;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-padding-left: calc((100vw - min(84vw, 320px)) / 2);
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .testimonial-grid::-webkit-scrollbar {
-        display: none;
-      }
-
-      .testimonial-card {
-        flex: 0 0 min(84vw, 320px);
-        max-width: min(84vw, 320px);
-        min-height: 150px;
-        padding: 20px 17px 17px;
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
-      }
-
-      .testimonial-card blockquote {
-        margin-bottom: 14px;
-        font-size: 0.95rem;
-        line-height: 1.52;
-      }
-
-      .testimonial-dots {
-        display: flex;
-      }
-
-      #faq .section-content {
-        padding: 28px 0 26px;
-      }
-
-      #faq .section-heading {
-        margin-bottom: 10px;
-        padding: 0 18px;
-      }
-
-      .faq-carousel {
-        margin-top: 0;
-      }
-
-      .faq-carousel::after {
-        content: "";
-        position: absolute;
-        top: 32px;
-        right: 0;
-        bottom: 34px;
-        width: 42px;
-        pointer-events: none;
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0), var(--white));
-      }
-
-      .faq-carousel-hint {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        width: min(82vw, 330px);
-        margin: 0 auto 10px;
-        color: var(--earthy-green);
-        font-size: 0.84rem;
-        font-weight: 800;
-        text-align: center;
-      }
-
-      .faq-carousel-hint::after {
-        content: "→";
-        color: var(--burnt-orange);
-        font-size: 1.1rem;
-        line-height: 1;
-      }
-
-      .faq-grid {
-        display: flex;
-        gap: 14px;
-        padding: 2px calc((100vw - min(82vw, 330px)) / 2) 8px;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-padding-left: calc((100vw - min(82vw, 330px)) / 2);
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .faq-grid::-webkit-scrollbar {
-        display: none;
-      }
-
-      .faq-item {
-        flex: 0 0 min(82vw, 330px);
-        max-width: min(82vw, 330px);
-        padding: 18px 17px 16px;
-        line-height: 1.54;
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
-      }
-
-      .faq-item h3 {
-        margin-bottom: 8px;
-        font-size: 0.98rem;
-        line-height: 1.3;
-      }
-
-      .faq-item p {
-        margin-bottom: 9px;
-      }
-
-      .faq-item ul {
-        margin-bottom: 10px;
-      }
-
-      .faq-grid:focus-visible {
-        outline: 3px solid var(--burnt-orange);
-        outline-offset: 5px;
-        border-radius: 16px;
-      }
-
-      .faq-carousel-dots {
-        display: flex;
-        justify-content: center;
-        gap: 7px;
-        padding: 6px 18px 0;
-      }
-
-      .faq-carousel-dot {
-        width: 7px;
-        height: 7px;
-        padding: 0;
-        border: 0;
-        border-radius: 999px;
-        background: rgba(80, 107, 56, 0.28);
-        cursor: pointer;
-        transition: background-color 0.2s ease, transform 0.2s ease, width 0.2s ease;
-      }
-
-      .faq-carousel-dot.is-active {
-        width: 18px;
-        background: var(--burnt-orange);
-      }
-
-      .faq-carousel-dot:focus-visible {
-        outline: 2px solid var(--burnt-orange-dark);
-        outline-offset: 3px;
-      }
-
-      .proof-stats,
-      .event-details-grid,
-      .stats-grid,
-      .rules-grid,
-      .recap-layout,
-      .archive-actions,
-      .event-partners-grid,
-      .benefits-list,
-      .partner-grid {
-        gap: 14px;
-      }
-
-      .course-copy,
-      .event-details-grid,
-      .stats-grid,
-      .route-map-shell,
-      .archive-actions,
-      .recap-layout,
-      .proof-stats {
-        margin-top: 22px;
-        margin-bottom: 22px;
-      }
-
-      .recap-panel,
-      .timeline-panel,
-      .rule-card,
-      .archive-card,
-      .event-detail-card,
-      .stat-card,
-      .faq-item,
-      .testimonial-card,
-      .event-partner-card,
-      .benefits-list li,
-      .instagram-card,
-      .partner-logo-wrap {
-        border-color: rgba(9, 73, 60, 0.09);
-        box-shadow: 0 5px 16px rgba(0, 0, 0, 0.04);
-      }
-
-
-      .footer-nav {
-        display: none;
-      }
-
-
+      .hero { background-position: 48% center; }
+      .hero-inner { padding: 62px 18px 72px; }
+      .hero h1 { font-size: clamp(3.25rem, 16vw, 4.7rem); }
+      .nav-inner { justify-content: center; padding: 10px 14px; gap: 0 18px; }
+      nav a { font-size: 0.86rem; line-height: 1.25; }
+      .section-shell { padding: 24px 10px 0; }
+      .section-content { padding: 30px 18px; }
+      .mini-faq { grid-template-columns: 1fr; }
+      .button-primary, .button-secondary { width: 100%; min-width: unset; }
+      .footer-nav { display: none; }
     }
   </style>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const faqCarousel = document.querySelector('[data-carousel="faq"]');
-      if (!faqCarousel) return;
-
-      const faqScroller = faqCarousel.querySelector(".faq-grid");
-      const faqItems = Array.from(faqCarousel.querySelectorAll(".faq-item"));
-      const faqDots = faqCarousel.querySelector(".faq-carousel-dots");
-      if (!faqScroller || !faqItems.length || !faqDots) return;
-
-      const dots = faqItems.map((item, index) => {
-        const dot = document.createElement("button");
-        dot.type = "button";
-        dot.className = "faq-carousel-dot";
-        dot.setAttribute("aria-label", `Show FAQ ${index + 1} of ${faqItems.length}`);
-        dot.addEventListener("click", () => {
-          const left = item.offsetLeft - ((faqScroller.clientWidth - item.clientWidth) / 2);
-          faqScroller.scrollTo({ left, behavior: "smooth" });
-        });
-        faqDots.appendChild(dot);
-        return dot;
-      });
-
-      let activeIndex = 0;
-      let scrollFrame = null;
-
-      const setActiveDot = (nextIndex) => {
-        if (nextIndex === activeIndex && dots[nextIndex].classList.contains("is-active")) return;
-        dots[activeIndex].classList.remove("is-active");
-        dots[activeIndex].removeAttribute("aria-current");
-        activeIndex = nextIndex;
-        dots[activeIndex].classList.add("is-active");
-        dots[activeIndex].setAttribute("aria-current", "true");
-      };
-
-      const updateActiveDot = () => {
-        const scrollerCenter = faqScroller.scrollLeft + (faqScroller.clientWidth / 2);
-        const closestIndex = faqItems.reduce((closest, item, index) => {
-          const itemCenter = item.offsetLeft + (item.offsetWidth / 2);
-          const itemDistance = Math.abs(itemCenter - scrollerCenter);
-          const closestItem = faqItems[closest];
-          const closestCenter = closestItem.offsetLeft + (closestItem.offsetWidth / 2);
-          const closestDistance = Math.abs(closestCenter - scrollerCenter);
-          return itemDistance < closestDistance ? index : closest;
-        }, 0);
-
-        setActiveDot(closestIndex);
-        scrollFrame = null;
-      };
-
-      faqScroller.addEventListener("scroll", () => {
-        if (scrollFrame) return;
-        scrollFrame = window.requestAnimationFrame(updateActiveDot);
-      }, { passive: true });
-
-      window.addEventListener("resize", updateActiveDot);
-      setActiveDot(0);
-    });
-  </script>
 </head>
 
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header id="home" class="hero">
     <div class="hero-inner">
       <div class="eyebrow">Gravel &amp; Grit Events</div>
-
       <h1>Bristol Backyard Ultra 2027</h1>
-
-      <p class="subtitle hero-supporting">
-        Saturday 1st May 2027 · 10:00am<br />
+      <p class="subtitle">
+        Saturday 1st May 2027 &middot; 10:00am<br />
         Blaise Castle Estate, Bristol
       </p>
       <p class="subtitle">
-        Grassroots trail events built around community
-      <p>
-        Official Backyard Ultra event
+        A gritty, community-first Backyard Ultra built by runners, for runners.
       </p>
-      <div class="hero-meta">Built by runners, for runners</div>
-
+      <div class="hero-meta">One loop, every hour, until only one runner remains</div>
       <div class="hero-actions">
-        <a
-          href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button-primary"
-        >
-          Enter Bristol Backyard Ultra 2027
-        </a>
-
-        <a href="results/bristol-backyard-ultra-2026/" class="button-secondary">View Results</a>
+        <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer" class="button-primary">Enter Bristol Backyard Ultra 2027</a>
+        <a href="race-info.html" class="button-secondary">Read Race Info</a>
       </div>
     </div>
   </header>
@@ -1911,731 +498,213 @@
   <nav aria-label="Primary">
     <div class="nav-inner">
       <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
-      <a href="#course">The Course</a>
-      <a href="#rules">Rules</a>
-      <a href="#faq">FAQ</a>
-      <a href="#archive">Results</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="race-info.html">Race Info</a>
+      <a href="faq.html">FAQ</a>
+      <a href="archive-2026.html">2026 Archive</a>
       <a href="partners.html">Partners</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
   <main id="main-content" class="section-shell">
-    <div class="container capacity-band proof-band" aria-labelledby="proof-title">
-      <div class="capacity-card proof-card">
-        <div class="capacity-label">First edition highlights</div>
-        <h2 id="proof-title">What happened in 2026</h2>
-        <p>
-          What an event! Our founding year saw 104 runners on the start line, PBs smashed and a community we won't forget. Every one of our participants was incredible, from 2 loops to 26. Check out our official results for more details.
-        </p>
-        <p>
-          2026 filled with runners, crews, volunteers, and families looking after each other loop after loop — and 2027 entries are now open for the next gritty chapter.
-        </p>
-
-        <div id="entry" class="entry-card proof-entry" aria-labelledby="entry-title">
-          <div class="section-heading">
-            <div class="kicker">Tickets Now Live</div>
-            <h2 id="entry-title">Enter Bristol Backyard Ultra 2027</h2>
-          </div>
-
+    <section class="card-section">
+      <div class="section-content">
+        <div class="entry-card">
+          <div class="kicker">Tickets Now Live</div>
+          <h2>Enter Bristol Backyard Ultra 2027</h2>
           <p>
-            General release entries are open now through RaceNation. Secure your place on the Blaise Castle Estate start line and get ready for one more lap.
+            General release entries are open now through RaceNation. Over 130 of 150 tickets sold in the first two months, so secure your place on the Blaise Castle Estate start line.
           </p>
-
           <div class="entry-actions">
-            <a
-              href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button-primary"
-            >
-              Secure Your Place
-            </a>
-            <a href="#faq" class="button-secondary">Read the FAQ</a>
+            <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer" class="button-primary">Secure Your Place</a>
+            <a href="faq.html" class="button-secondary">Read the FAQ</a>
           </div>
-        </div>
-      </div>
-    </div>
-
-    
-    <section id="story" class="card-section story-section">
-      <div class="section-content split-content">
-        <div class="section-heading align-left">
-          <div class="kicker">What on earth is a Backyard Ultra?</div>
-          <h2>The Format</h2>
-        </div>
-
-        <div class="story-copy">
-          <p>
-            A Backyard Ultra is a space where you can test your limits and see what you're made of. The format is simple: run a 4.167-mile (6.7km) loop, on the hour, every hour, until you can't go again. A Backyard Ultra is, by nature, beginner-friendly as you only run the number of loops that you want to.
-          <p>
-            The format is accessible - the course is gritty.
-          <p>
-            The last runner standing is the only finisher of the event. Everyone else is a Did Not Finish (DNF). Originating in America, this community-focused format has well and truly landed in Bristol - we can't wait to see you on our start line.
-          </p>
-
-          <figure class="storytelling-visual storytelling-visual--format" aria-label="Runners gathered at the start line">
-            <img
-              src="images/Start-line"
-              alt="Runners gathered at the Bristol Backyard Ultra start line before a loop."
-              loading="lazy"
-              decoding="async"
-            />
-          </figure>
         </div>
       </div>
     </section>
 
-    <section id="rules" class="card-section rules-section">
+    <section class="card-section">
       <div class="section-content">
         <div class="section-heading">
-          <div class="kicker">How it works</div>
-          <h2>Backyard Ultra Rules</h2>
+          <div class="kicker">First edition highlights</div>
+          <h2>What happened in 2026</h2>
         </div>
-
-        <p class="rules-intro">
-          Simple format. Brutal honesty. One loop, every hour, until only one runner remains.
+        <p class="section-intro">
+          Our founding year brought together runners, crews, volunteers, families and local partners for a weekend that proved Bristol was ready for its own Backyard Ultra.
         </p>
-
-        <div class="rules-grid" role="list" aria-label="Backyard Ultra rules summary">
-          <div class="rule-card" role="listitem">
-            <strong>One measured loop</strong>
-            The course is 4.167 miles / 6.7056 km. Same loop, same distance, every time.
+        <div class="proof-grid">
+          <div class="proof-card">
+            <strong>104</strong>
+            <span>runners on the first start line</span>
           </div>
-          <div class="rule-card" role="listitem">
-            <strong>The bell owns the clock</strong>
-            A fresh loop starts every hour, on the hour. You need to be in the start corral when it goes.
+          <div class="proof-card">
+            <strong>300+</strong>
+            <span>runners and spectators across the weekend</span>
           </div>
-          <div class="rule-card" role="listitem">
-            <strong>No late starts</strong>
-            If you miss the bell, that is your day done. No slipping out a few seconds behind.
+          <div class="proof-card">
+            <strong>26</strong>
+            <span>yards completed by the inaugural winner</span>
           </div>
-          <div class="rule-card" role="listitem">
-            <strong>Beat the hour</strong>
-            A loop only counts if you finish it within that hour and make it back ready for the next one.
-          </div>
-          <div class="rule-card" role="listitem">
-            <strong>Stay on course</strong>
-            Once a loop has started, runners stay on the route until it is complete, apart from toilet breaks.
-          </div>
-          <div class="rule-card" role="listitem">
-            <strong>No course-side help</strong>
-            No outside or personal aid while you are out on the loop. Support happens back at basecamp between loops.
-          </div>
-          <div class="rule-card" role="listitem">
-            <strong>No artificial aids</strong>
-            Keep it simple: no poles or other artificial aids out on the course.
-          </div>
-          <div class="rule-card" role="listitem">
-            <strong>Last runner standing</strong>
-            The winner is the final runner to complete one more loop than everyone else. Everyone else is recorded as DNF, with their completed loop total shown in the results.
-          </div>
-          <div class="rule-card" role="listitem">
-            <strong>No finish time to chase</strong>
-            The event is open-ended. There is no fixed finish time; it stops when the format says it stops.
+          <div class="proof-card">
+            <strong>&pound;2,000+</strong>
+            <span>onsite kit shop net sales revenue</span>
           </div>
         </div>
+        <div class="card-actions">
+          <a href="archive-2026.html" class="button-secondary">Explore the 2026 Archive</a>
+        </div>
+      </div>
+    </section>
 
-        <div class="rules-actions">
-          <a
-            href="https://bigsbackyardultra.com/backyard-ultra-rules/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="button-secondary on-light"
-          >
-            View official Backyard Ultra rules
+    <section class="card-section">
+      <div class="section-content split-feature">
+        <figure class="feature-image">
+          <img src="images/Start-line" alt="Runners gathered at the Bristol Backyard Ultra start line before a loop." loading="lazy" decoding="async" />
+        </figure>
+        <div class="feature-copy">
+          <div class="kicker">What on earth is a Backyard Ultra?</div>
+          <h2>The format is simple. The challenge is not.</h2>
+          <p>
+            Every hour, on the hour, runners complete one 4.167 mile loop. Finish in time and you earn the right to go again. Miss the bell, finish late, or choose not to continue, and your race is over.
+          </p>
+          <p>
+            There is no fixed distance, no traditional finish line and no set race duration. The last runner standing is the only finisher.
+          </p>
+          <div class="card-actions">
+            <a href="race-info.html#rules" class="button-secondary">Read the Rules</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Find what you need</div>
+          <h2>Choose your next step</h2>
+        </div>
+        <div class="teaser-grid">
+          <a href="race-info.html" class="teaser-card">
+            <h3>Race Info</h3>
+            <p>Course details, rules, route map, GPX, basecamp facilities, kit guidance, crew access, parking and handbook links.</p>
+            <strong>Plan race weekend</strong>
+          </a>
+          <a href="faq.html" class="teaser-card">
+            <h3>FAQ</h3>
+            <p>Clear answers for runners, crews and spectators, grouped by format, entries, course, kit, basecamp and rules.</p>
+            <strong>Get answers</strong>
+          </a>
+          <a href="archive-2026.html" class="teaser-card">
+            <h3>2026 Archive</h3>
+            <p>Results, gallery, event story, key stats and proof from the inaugural Bristol Backyard Ultra.</p>
+            <strong>See last year</strong>
           </a>
         </div>
       </div>
     </section>
 
+    <section class="card-section">
+      <div class="section-content split-feature">
+        <div class="feature-copy">
+          <div class="kicker">Blaise Castle Estate</div>
+          <h2>Beautiful, runnable, and brutally honest</h2>
+          <p>
+            The loop winds through woodland trails, open fields, rocky sections and a demanding climb towards the folly. Expect around 160m of elevation gain each lap, with terrain that rewards patience more than speed.
+          </p>
+          <p>
+            It is not a polished speed loop. It is a proper Bristol trail challenge with a basecamp built around community.
+          </p>
+          <div class="card-actions">
+            <a href="race-info.html#course" class="button-secondary">View Course Info</a>
+          </div>
+        </div>
+        <figure class="feature-image">
+          <img src="images/Runners-and-castle" alt="Runners moving through Blaise Castle Estate with the castle visible in the landscape." loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </section>
 
-
-    <section id="testimonials" class="card-section testimonials-section" aria-labelledby="testimonials-title">
+    <section class="card-section">
       <div class="section-content">
         <div class="section-heading">
           <div class="kicker">Social proof</div>
-          <h2 id="testimonials-title">What runners said</h2>
+          <h2>What runners said</h2>
         </div>
+        <p class="section-intro">Without this community, we would just be some tents in a field. You are the reason we do this.</p>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <h3>Best event experience</h3>
+            <p>“Just a massive thank you to the organisers and volunteers, it's the best running event experience I've ever had!”</p>
+          </article>
+          <article class="testimonial-card">
+            <h3>The one more feeling</h3>
+            <p>“Just that feeling of one more being encouraged by everyone participating and spectating. The Crewless Crew was such a nice touch as well.”</p>
+          </article>
+          <article class="testimonial-card">
+            <h3>Inclusive and friendly</h3>
+            <p>“A great event which is far more inclusive than people might think. It's a great way to have lots of people together as you see each other every hour!”</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="card-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Quick answers</div>
+          <h2>Common questions before you enter</h2>
+        </div>
+        <div class="mini-faq">
+          <article>
+            <h3>Is it beginner friendly?</h3>
+            <p>Yes, because you choose how far you go. But the Blaise Castle course is hilly, technical and deserves respect.</p>
+          </article>
+          <article>
+            <h3>Do I need a crew?</h3>
+            <p>No. Plenty of runners take part solo, and we will again provide a Crewless Crew area at basecamp.</p>
+          </article>
+          <article>
+            <h3>Can friends and family come?</h3>
+            <p>Absolutely. Supporters are part of the atmosphere, and Blaise Castle Estate has space and facilities nearby.</p>
+          </article>
+          <article>
+            <h3>What should I bring?</h3>
+            <p>Trail shoes, warm layers, waterproofs, spare socks, headtorch, nutrition, hydration and basecamp comfort kit.</p>
+          </article>
+        </div>
+        <div class="card-actions">
+          <a href="faq.html" class="button-secondary">Read the Full FAQ</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">Partnership</div>
+          <h2>Work with Gravel &amp; Grit Events</h2>
+        </div>
         <p class="section-intro">
-          Without this community, we'd just be some tents in a field. You are the reason we do this!
+          We work with local, outdoor, running, wellness, food and drink, retail, media and community-aligned brands who can add something genuinely useful to race weekend.
         </p>
-
-        <div class="testimonial-carousel">
-          <p class="testimonial-carousel-hint" aria-hidden="true">Swipe for more runner stories</p>
-          <div class="testimonial-grid" role="list" aria-label="Runner testimonials" tabindex="0">
-            <figure class="testimonial-card" role="listitem">
-              <blockquote>
-                Great vibes - beast of a course.
-              </blockquote>
-              <figcaption>Dan D.</figcaption>
-            </figure>
-
-            <figure class="testimonial-card" role="listitem">
-              <blockquote>
-                Just a massive thank you to the organisers and volunteers, it's the best running event experience I've ever had!
-              </blockquote>
-              <figcaption>Gary D.</figcaption>
-            </figure>
-
-            <figure class="testimonial-card" role="listitem">
-              <blockquote>
-                Had an absolute blast!
-              </blockquote>
-              <figcaption>Alex K.</figcaption>
-            </figure>
-
-            <figure class="testimonial-card" role="listitem">
-              <blockquote>
-                First ever proper race/event that I've paid for and it was epic. The organisation, the course and whole vibe was so good and I've got the bug now for Backyard Ultras. Genuinely thank you.
-              </blockquote>
-              <figcaption>Callum B.</figcaption>
-            </figure>
-
-            <figure class="testimonial-card" role="listitem">
-              <blockquote>
-                Just that feeling of 'one more' being encouraged by everyone participating and spectating. The 'Crewless Crew' was such a nice touch as well.
-              </blockquote>
-              <figcaption>Deane A.</figcaption>
-            </figure>
-
-            <figure class="testimonial-card" role="listitem">
-              <blockquote>
-                A great event which is far more inclusive than people might think. We (Bristol Trail Runners) had a great day. It's a great way to have lots of people together as you see each other every hour!
-              </blockquote>
-              <figcaption>Ash T.</figcaption>
-            </figure>
-
-            <figure class="testimonial-card" role="listitem">
-              <blockquote>
-                I loved the camaraderie and the energy back at base camp. However nothing beats the feeling of pitting myself against something truly challenging backed by a genuine and supportive community of like-minded (crazy!) friends.
-              </blockquote>
-              <figcaption>Josh M.</figcaption>
-            </figure>
-
-            <figure class="testimonial-card" role="listitem">
-              <blockquote>
-                Thank you for organising the event, it had a brilliant atmosphere, everyone was friendly and encouraging, and the route through the Blaise Castle Estate was amazing!
-              </blockquote>
-              <figcaption>Jeff M.</figcaption>
-            </figure>
-
-            <figure class="testimonial-card" role="listitem">
-              <blockquote>
-                My friend and I were both new to Ultra running and felt like we wouldn't be judged for not being good enough. This allowed us both to achieve things we never thought possible.
-              </blockquote>
-              <figcaption>Steffan C.</figcaption>
-            </figure>
-          </div>
-          <div class="testimonial-dots" aria-label="Testimonial carousel pagination"></div>
+        <div class="card-actions">
+          <a href="partners.html" class="button-secondary">Explore Partnership Opportunities</a>
         </div>
       </div>
     </section>
 
-    <section id="archive" class="card-section archive-section">
+    <section id="contact" class="card-section final-cta">
       <div class="section-content">
         <div class="section-heading">
-          <div class="kicker">Event record</div>
-          <h2>2026 Event Archive</h2>
+          <div class="kicker">Ready for one more lap?</div>
+          <h2>Join us on the 2027 start line</h2>
         </div>
-
-        <p class="centered-copy">
-          The official Bristol Backyard Ultra 2026 results and photo gallery are live, preserving the first edition of the event in full.
+        <p class="section-intro">
+          Enter now, read the race information, or get in touch if you have a question that is not covered elsewhere.
         </p>
-
-        <div class="archive-actions">
-          <a href="results/bristol-backyard-ultra-2026/" class="archive-card">
-            <strong>View official results</strong>
-            <span>Full 2026 results table and CSV download.</span>
-          </a>
-          <a href="gallery.html" class="archive-card">
-            <strong>View 2026 gallery</strong>
-            <span>Rain, mud, headtorches, sunrise finishes and every unforgettable yard.</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="course" class="card-section">
-      <div class="section-content">
-        <div class="section-heading">
-          <div class="kicker">Blaise Castle Estate</div>
-          <h2>The Course</h2>
-        </div>
-
-        <figure class="storytelling-visual storytelling-visual--course" aria-label="Runners on the Blaise Castle Estate course">
-          <img
-            src="images/Runners-and-castle"
-            alt="Runners moving through Blaise Castle Estate with the castle visible in the landscape."
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-
-        <div class="course-copy">
-          <p>
-            This is not a fast, flat Backyard Ultra — and that’s exactly why people love it. The Blaise Castle loop is gritty, hilly, rocky and rooty, with woodland trails, open parkland and constantly changing terrain. Every lap feels earned.
-          </p>
-
-          <blockquote class="course-pullquote">
-            Grit over speed. Character over PBs.
-          </blockquote>
-
-          <p>
-            The course is 4.167-mile (6.7 km) long, and winds through the varied trails of <strong>Blaise Castle Estate</strong>. From basecamp you climb towards the folly, move through woodland trails and open fields, then drop down Dynamite Hill towards the river valley. Expect around 160m of elevation gain each lap, with runnable but demanding terrain underfoot.
-          </p>
-
-          <p>
-            Good trail shoes are strongly recommended, especially if the weather turns wet. Roots, rocks, mud and slick woodland sections are all part of the route, so come prepared for a proper trail challenge rather than a polished speed loop.
-          </p>
-
-          <p>
-            The loop is fully marked with marshals for the first few loops, as well as signs and ribbon. The route is easy to follow, with no navigation required, allowing runners to focus on the rhythm of each lap, the support at basecamp, and getting back before the next bell.
-          </p>
-        </div>
-
-        <div class="stats-grid">
-          <div class="stat-card">
-            <strong>Lap Distance</strong>
-            4.167 miles (6.7km)
-          </div>
-          <div class="stat-card">
-            <strong>Elevation Gain</strong>
-            160m per lap
-          </div>
-          <div class="stat-card">
-            <strong>Terrain</strong>
-            Hilly trail, grass, woodland path, roots, rocks and a 1.5km stretch of concrete.
-          </div>
-        </div>
-
-        <div class="route-map-shell">
-          <div id="route-map"></div>
-          <div class="route-map-note">Interactive course map powered directly by the official GPX route.</div>
-        </div>
-
-        <div style="text-align: center; margin-top: 30px;">
-          <a href="bristol-backyard-ultra-route.gpx" download class="button-primary">
-            Download Official Course GPX
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="card-section">
-      <div class="section-content">
-        <div class="section-heading">
-          <div class="kicker">Need to Know</div>
-          <h2>Frequently Asked Questions</h2>
-        </div>
-
-        <div class="faq-carousel" data-carousel="faq">
-          <p class="faq-carousel-hint" aria-hidden="true">Swipe for more FAQs</p>
-          <div class="faq-grid" role="list" aria-label="Frequently asked questions" tabindex="0">
-            <div class="faq-item" role="listitem">
-              <h3>What is a Backyard Ultra?</h3>
-              <p>A Backyard Ultra is a simple but brutally effective format.</p>
-              <p>Every hour, on the hour, runners complete one 4.167 mile (6.7km) loop. Finish the loop within the hour and you earn the right to go again. Finish late, or choose not to return to the start corral for the next lap, and your race is over.</p>
-              <p>This repeats hour after hour until only one runner remains.</p>
-              <p>There’s no fixed distance, no traditional finish line, and no set race duration. The only question is whether you’re willing to keep stepping back onto the line for one more lap.</p>
-            </div>
-
-            <div class="faq-item" role="listitem">
-              <h3>Is Bristol Backyard Ultra beginner friendly?</h3>
-              <p>Yes — but we also believe in being honest about the challenge.</p>
-              <p>The Backyard Ultra format itself is naturally beginner friendly because you decide how far you go. One lap is an achievement. Three laps is an achievement. Ten laps is an achievement.</p>
-              <p>That said, Blaise Castle Estate is not an easy course. It’s hilly, technical in places, and becomes increasingly demanding as the hours pass.</p>
-              <p>You do not need to be an elite runner to take part, but you do need to respect the challenge and come prepared.</p>
-              <p>We care far more about attitude, grit and community than pace.</p>
-            </div>
-
-            <div class="faq-item" role="listitem">
-              <h3>How difficult is the course?</h3>
-              <p>Brutally honest answer? Harder than many Backyard Ultra courses.</p>
-              <p>Blaise Castle Estate is beautiful, but it isn’t flat. Expect climbs, uneven ground, roots, rocks, woodland trails and a steep downhill section that becomes increasingly challenging on tired legs.</p>
-              <p>The course is fully marked and easy to follow, but trail shoes are strongly recommended — especially if the weather turns wet.</p>
-              <p>It’s tough, honest trail running. We think that’s part of what makes the event special.</p>
-            </div>
-
-            <div class="faq-item" role="listitem">
-              <h3>What facilities are available at Basecamp?</h3>
-              <p>Basecamp is the heart of the event.</p>
-              <p>There will be:</p>
-              <ul>
-                <li>Toilets</li>
-                <li>Designated event parking</li>
-                <li>A fully stocked aid station</li>
-                <li>Hot and cold water</li>
-                <li>Space for runners to set up camp between loops</li>
-                <li>Easy crew access</li>
-                <li>A clearly marked start/finish corral</li>
-              </ul>
-              <p>Nearby there is also a café, green space and playground for friends and family supporting throughout the event.</p>
-              <p>As the hours go on, Basecamp develops a unique atmosphere — camp chairs, headtorches, tired runners, crew support, laughter, low moments and breakthroughs all happening side by side.</p>
-            </div>
-
-            <div class="faq-item" role="listitem">
-              <h3>Can friends and family come along?</h3>
-              <p>Absolutely.</p>
-              <p>Backyard Ultras are as much about community as they are running, and supporters genuinely become part of the experience.</p>
-              <p>Whether someone is staying for one lap or all night long, they’ll be welcomed into the atmosphere at Basecamp.</p>
-              <p>Blaise Castle Estate is also a great location for spectators, with nearby facilities such as a cafe and play park, and plenty of space to spend time between laps.</p>
-            </div>
-
-            <div class="faq-item" role="listitem">
-              <h3>Can I take my vehicle onto the event village?</h3>
-              <p>No. Vehicles cannot be taken into the event village.</p>
-              <p>The walk from the car park to the event village is a short 200m walk, so please arrive with enough time to move your kit over before the start.</p>
-              <p>There is no limit on the size of camp you set up or the amount of kit you bring with you.</p>
-            </div>
-
-            <div class="faq-item" role="listitem">
-              <h3>What happens when I stop?</h3>
-              <p>Your race ends when:</p>
-              <ul>
-                <li>you do not complete a lap within the hour, or</li>
-                <li>you choose not to continue onto the next lap.</li>
-              </ul>
-              <p>And honestly? There is absolutely no shame in stopping. Ring the bell, celebrate with the team and enjoy the rest of the show!</p>
-              <p>One of the things we love most about the Backyard Ultra format is that it gives runners a safe space to explore their limits — physically and mentally — without judgement.</p>
-              <p>Whether you complete one lap or twenty, every return to the start line takes courage.</p>
-            </div>
-
-            <div class="faq-item" role="listitem">
-              <h3>Do I need a support crew?</h3>
-              <p>No — plenty of runners take part solo.</p>
-              <p>However, having a crew can make life much easier once the race moves deeper into the night. They can help with food, kit changes, motivation and keeping you organised between loops.</p>
-              <p>If you don’t have a crew, don’t worry. We’ll once again have a designated “Crewless Crew” area at Basecamp — a space for solo runners to set up alongside each other, share the experience and support one another throughout the race.</p>
-              <p>One of the best things about the Backyard Ultra format is how quickly strangers start looking after each other once the miles begin to build.</p>
-            </div>
-
-            <div class="faq-item" role="listitem">
-              <h3>What should I bring?</h3>
-              <p>Every runner approaches the event differently, but we’d strongly recommend:</p>
-              <ul>
-                <li>Trail shoes</li>
-                <li>Warm layers</li>
-                <li>Waterproofs</li>
-                <li>Spare socks and shoes</li>
-                <li>Headtorch (plus spare batteries)</li>
-                <li>Nutrition and hydration</li>
-                <li>Chair or shelter for Basecamp</li>
-                <li>Changes of clothing for overnight conditions</li>
-              </ul>
-              <p>A full race information pack will be sent closer to race day.</p>
-            </div>
-
-            <div class="faq-item" role="listitem">
-              <h3>Is there a cut-off?</h3>
-              <p>Only one: complete the loop before the next hour begins.</p>
-              <p>There are no traditional cut-offs, pace requirements or elimination points outside of the hourly format itself.</p>
-            </div>
-
-            <div class="faq-item" role="listitem">
-              <h3>What makes Bristol Backyard Ultra different?</h3>
-              <p>We’re not trying to build the biggest event.</p>
-              <p>We’re trying to build one that people genuinely feel connected to.</p>
-              <p>Bristol Backyard Ultra was created around the idea that endurance events should feel challenging, inclusive, emotional and community-driven all at the same time.</p>
-              <p>This is a grassroots event built by runners, for runners.</p>
-              <p>No ego. No gimmicks. Just grit, determination, community and one more lap.</p>
-            </div>
-          </div>
-          <div class="faq-carousel-dots" aria-label="FAQ carousel pagination"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="card-section instagram-section">
-      <div class="section-content">
-        <div class="section-heading">
-          <div class="kicker">Follow the Journey</div>
-          <h2>On Instagram</h2>
-        </div>
-
-        <div class="instagram-card">
-          <p>
-            Follow <strong>@gravelandgritevents</strong> for results, photos, race stories,
-            future event news, and the behind-the-scenes bits that make Gravel &amp; Grit feel like us.
-          </p>
-
-          <a
-            href="https://www.instagram.com/gravelandgritevents/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="button-primary"
-          >
-            Follow on Instagram
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="community" class="card-section">
-      <div class="section-content">
-        <div class="section-heading">
-          <div class="kicker">What we build</div>
-          <h2>Runner-led, practical, and welcoming</h2>
-        </div>
-
-        <figure class="storytelling-visual storytelling-visual--community" aria-label="Crewless Crew support at basecamp">
-          <img
-            src="images/Crewless-Crew"
-            alt="Crewless Crew volunteers supporting runners at Bristol Backyard Ultra basecamp."
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-
-        <ul class="benefits-list">
-          <li>Grassroots trail events with a proper community feel — serious enough to matter, relaxed enough to feel human.</li>
-          <li>Clear routes, calm organisation, and friendly volunteers so runners can focus on the challenge in front of them.</li>
-          <li>Basecamp energy that makes space for crews, supporters, first-timers, experienced ultra runners, and everyone in between.</li>
-          <li>Inclusive racing where personal goals matter as much as podiums, distances, and final results.</li>
-          <li>Honest communication before and after events, including official results, recaps, and practical updates.</li>
-          <li>Partnerships with local and like-minded brands who add something useful to race weekend.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="card-section partner-section">
-      <div class="section-content">
-        <div class="section-heading">
-          <div class="kicker">Partnership</div>
-          <h2>Official Media Partner</h2>
-        </div>
-
-        <div class="partner-grid">
-          <div class="partner-logo-wrap">
-            <img
-              src="images/fir-tree-media-logo.png"
-              alt="Fir Tree Media logo"
-              class="partner-logo"
-              loading="lazy"
-            />
-          </div>
-
-          <div class="partner-copy">
-            <h3>Fir Tree Media</h3>
-            <p>
-              We’re proud to partner with Fir Tree Media, who captured the official photo and video story of the Bristol Backyard Ultra.
-            </p>
-            <p>
-              Their team helped capture the grit, the atmosphere, and the small human stories that made the first event special.
-            </p>
-
-            <a
-              href="https://firtreemedia.co.uk/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button-primary"
-            >
-              Visit Fir Tree Media
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="card-section partner-section">
-      <div class="section-content">
-        <div class="section-heading">
-          <div class="kicker">Partnership</div>
-          <h2>Official Retail Partner</h2>
-        </div>
-
-        <div class="partner-grid">
-          <div class="partner-logo-wrap">
-            <img
-              src="up-and-running-bristol-logo.png"
-              alt="Up &amp; Running Bristol logo"
-              class="partner-logo"
-              loading="lazy"
-            />
-          </div>
-
-          <div class="partner-copy">
-            <h3>Up &amp; Running Bristol</h3>
-            <p>
-              We were delighted to partner with Up &amp; Running Bristol to support Bristol Backyard Ultra runners with practical race-weekend kit advice and an exclusive event discount.
-            </p>
-
-            <p>
-              Their knowledgeable team share our passion for running and understood the Backyard format — helping runners think through clothing, footwear, and fuelling for hour-after-hour consistency.
-            </p>
-
-            <p>
-              We’re grateful for their support in helping runners arrive prepared and supported.
-            </p>
-
-            <p style="font-weight:700; margin-bottom:20px;">
-              Up &amp; Running Bristol<br />
-              <a
-                href="https://www.google.com/maps?q=Up+%26+Running+Bristol,+38+North+View,+Westbury+Park,+Bristol+BS6+7QA"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="location-link"
-              >
-                38 North View, Westbury Park, Bristol BS6 7QA
-              </a>
-            </p>
-
-            <a
-              href="https://www.upandrunning.co.uk/pages/up-running-bristol"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button-primary"
-            >
-              Visit Up &amp; Running
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="partners" class="card-section partner-section">
-      <div class="section-content">
-        <div class="section-heading">
-          <div class="kicker">Supporters</div>
-          <h2>Event Partners</h2>
-        </div>
-
-        <p class="event-partners-intro">
-          We’re grateful to the brands who supported Bristol Backyard Ultra 2026 with prizes, products, and race-weekend support.
-        </p>
-
-        <div class="partner-enquiry-card">
-          <h3>Interested in partnering with us?</h3>
-          <p>
-            We work with local, outdoor, running, wellness, food and drink, retail, media, and community-aligned brands who can add something useful to race weekend.
-          </p>
-          <a href="partners.html" class="button-primary">Explore Partnership Opportunities</a>
-        </div>
-
-        <div class="event-partners-grid">
-          <a
-            href="https://www.salomon.com/en-gb"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="event-partner-card"
-          >
-            <div class="event-partner-logo-wrap">
-              <img
-                src="images/salomon-logo.png"
-                alt="Salomon logo"
-                class="event-partner-logo"
-                loading="lazy"
-              />
-            </div>
-            <h3>Salomon</h3>
-            <p>Supported the event with a winner’s prize and race-weekend footwear demo opportunities for runners.</p>
-          </a>
-
-          <a
-            href="https://www.oofos.co.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="event-partner-card"
-          >
-            <div class="event-partner-logo-wrap">
-              <img
-                src="images/oofos-logo.png"
-                alt="OOFOS logo"
-                class="event-partner-logo"
-                loading="lazy"
-              />
-            </div>
-            <h3>OOFOS</h3>
-            <p>Provided recovery-focused prize support to help one of our runners-up look after their tired legs and feet.</p>
-          </a>
-
-          <a
-            href="https://www.instagram.com/tribodrinks/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="event-partner-card"
-          >
-            <div class="event-partner-logo-wrap">
-              <img
-                src="images/tribo-logo.png"
-                alt="Tribo logo"
-                class="event-partner-logo"
-                loading="lazy"
-              />
-            </div>
-            <h3>Tribo</h3>
-            <p>A Bristol-based drinks company that supported the weekend with a prize for one of our runners-up.</p>
-          </a>
-
-          <a
-            href="https://lostandgrounded.co.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="event-partner-card"
-          >
-            <div class="event-partner-logo-wrap">
-              <img
-                src="images/lost-and-grounded-logo.png"
-                alt="Lost and Grounded logo"
-                class="event-partner-logo"
-                loading="lazy"
-              />
-            </div>
-            <h3>Lost &amp; Grounded</h3>
-            <p>A beer for every finisher, courtesy of Bristol’s best-loved independent brewery.</p>
-          </a>
-
-          <a
-            href="https://www.truestartcoffee.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="event-partner-card"
-          >
-            <div class="event-partner-logo-wrap">
-              <img
-                src="images/truestart-logo.png"
-                alt="TrueStart Coffee logo"
-                class="event-partner-logo"
-                loading="lazy"
-              />
-            </div>
-            <h3>TrueStart Coffee</h3>
-            <p>Helped fuel race weekend with coffee support at basecamp, and a prize for one of our runners-up.</p>
-          </a>
-
-          <a
-            href="https://www.proteinrebel.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="event-partner-card"
-          >
-            <div class="event-partner-logo-wrap">
-              <img
-                src="images/protein-rebel-logo.png"
-                alt="Protein Rebel logo"
-                class="event-partner-logo"
-                loading="lazy"
-              />
-            </div>
-            <h3>Protein Rebel</h3>
-            <p>Supported the event with a prize contribution, as well as 200 gels for runners to sample during the event.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="card-section">
-      <div class="section-content">
-        <div class="section-heading">
-          <div class="kicker">Get in Touch</div>
-          <h2>Contact</h2>
-        </div>
-
-        <div class="contact-card">
-          <p>Email us at <a href="mailto:info@gravelandgritevents.com">info@gravelandgritevents.com</a></p>
-          <p>Love, </p>
-          <p>Ewan, Sunny and the rest of the Gravel & Grit family x </p>
+        <div class="entry-actions">
+          <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer" class="button-primary">Enter 2027</a>
+          <a href="mailto:info@gravelandgritevents.com" class="button-secondary">Email Us</a>
         </div>
       </div>
     </section>
@@ -2644,103 +713,13 @@
   <footer>
     <nav class="footer-nav" aria-label="Footer">
       <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
-      <a href="#course">The Course</a>
-      <a href="#rules">Rules</a>
-      <a href="#faq">FAQ</a>
-      <a href="#archive">Results</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="race-info.html">Race Info</a>
+      <a href="faq.html">FAQ</a>
+      <a href="archive-2026.html">2026 Archive</a>
       <a href="partners.html">Partners</a>
       <a href="#contact">Contact</a>
     </nav>
-    <p>&copy; 2026 Gravel &amp; Grit Events · Built with grit, community, and care.</p>
+    <p>&copy; 2026 Gravel &amp; Grit Events &middot; Built with grit, community, and care.</p>
   </footer>
-
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
-
-  <script>
-    function setupTestimonialCarousel() {
-      const carousel = document.querySelector(".testimonial-grid");
-      const dotsContainer = document.querySelector(".testimonial-dots");
-      if (!carousel || !dotsContainer) return;
-
-      const cards = Array.from(carousel.querySelectorAll(".testimonial-card"));
-      if (!cards.length) return;
-
-      const dots = cards.map((card, index) => {
-        const dot = document.createElement("button");
-        dot.type = "button";
-        dot.className = "testimonial-dot";
-        dot.setAttribute("aria-label", `Show testimonial ${index + 1}`);
-        dot.addEventListener("click", () => {
-          card.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-        });
-        dotsContainer.appendChild(dot);
-        return dot;
-      });
-
-      function setActiveDot(activeIndex) {
-        dots.forEach((dot, index) => {
-          dot.classList.toggle("is-active", index === activeIndex);
-          dot.setAttribute("aria-current", index === activeIndex ? "true" : "false");
-        });
-      }
-
-      function updateActiveDot() {
-        const carouselCenter = carousel.scrollLeft + carousel.clientWidth / 2;
-        const nearestIndex = cards.reduce((bestIndex, card, index) => {
-          const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-          const bestCard = cards[bestIndex];
-          const bestDistance = Math.abs(bestCard.offsetLeft + bestCard.offsetWidth / 2 - carouselCenter);
-          return Math.abs(cardCenter - carouselCenter) < bestDistance ? index : bestIndex;
-        }, 0);
-        setActiveDot(nearestIndex);
-      }
-
-      carousel.addEventListener("scroll", () => window.requestAnimationFrame(updateActiveDot), { passive: true });
-      window.addEventListener("resize", updateActiveDot);
-      setActiveDot(0);
-      updateActiveDot();
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      setupTestimonialCarousel();
-
-      const mapElement = document.getElementById("route-map");
-      if (!mapElement) return;
-
-      const map = L.map("route-map", {
-        scrollWheelZoom: false
-      });
-
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 18,
-        attribution: "&copy; OpenStreetMap contributors"
-      }).addTo(map);
-
-      new L.GPX("bristol-backyard-ultra-route.gpx", {
-        async: true,
-        marker_options: {
-          startIconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/pin-icon-start.png",
-          endIconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/pin-icon-end.png",
-          shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png"
-        },
-        polyline_options: {
-          color: "#D17C3A",
-          weight: 5,
-          opacity: 0.9
-        }
-      })
-        .on("loaded", function (e) {
-          map.fitBounds(e.target.getBounds(), { padding: [20, 20] });
-        })
-        .on("error", function () {
-          mapElement.innerHTML =
-            "<p style='padding: 20px; text-align: center;'>Unable to load the GPX route map. Please use the download button above.</p>";
-        })
-        .addTo(map);
-    });
-  </script>
 </body>
 </html>
