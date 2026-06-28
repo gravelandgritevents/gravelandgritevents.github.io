@@ -6,6 +6,15 @@
   <title>Race Info | Bristol Backyard Ultra 2027 | Gravel &amp; Grit Events</title>
   <meta name="description" content="Practical race information for Bristol Backyard Ultra 2027, including the course, rules, basecamp, crew access, kit guidance, parking, GPX download, and race handbook." />
   <link rel="canonical" href="https://www.gravelandgritevents.com/race-info.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Race Info | Bristol Backyard Ultra 2027 | Gravel &amp; Grit Events" />
+  <meta property="og:description" content="Practical race information for Bristol Backyard Ultra 2027, including the course, rules, basecamp, crew access, kit guidance, parking, GPX download, and race handbook." />
+  <meta property="og:url" content="https://www.gravelandgritevents.com/race-info.html" />
+  <meta property="og:image" content="https://www.gravelandgritevents.com/images/runners-and-castle.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Race Info | Bristol Backyard Ultra 2027 | Gravel &amp; Grit Events" />
+  <meta name="twitter:description" content="Practical race information for Bristol Backyard Ultra 2027, including the course, rules, basecamp, crew access, kit guidance, parking, GPX download, and race handbook." />
+  <meta name="twitter:image" content="https://www.gravelandgritevents.com/images/runners-and-castle.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -99,7 +108,7 @@
       min-height: 736px;
       background:
         linear-gradient(135deg, rgba(4, 25, 22, 0.74), rgba(9, 73, 60, 0.48) 48%, rgba(0, 0, 0, 0.38)),
-        url("images/Runners-and-castle") center/cover no-repeat;
+        url("images/runners-and-castle.jpg") center/cover no-repeat;
       color: var(--stone);
       overflow: hidden;
     }
@@ -430,9 +439,12 @@
       .footer-nav { display: none; }
     }
   </style>
+  <link rel="stylesheet" href="assets/site.css" />
 </head>
 <body>
-  <main>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content">
     <section class="hero">
       <div class="hero-inner">
         <p class="eyebrow">Bristol Backyard Ultra 2027</p>
@@ -440,7 +452,7 @@
         <p>Everything practical in one place: the route, rules, basecamp setup, parking, crew guidance, kit advice, and useful downloads.</p>
         <div class="button-row">
           <a class="button-primary" href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
-          <a class="button-secondary" href="race-handbook.pdf">Race handbook</a>
+          <a class="button-secondary" href="race-handbook.pdf">Race handbook <span class="file-meta">PDF</span></a>
         </div>
       </div>
     </section>
@@ -493,10 +505,14 @@
           <h2>Hilly, runnable, and properly engaging.</h2>
           <p>The route is a 4.167 mile / 6.7km loop around Blaise Castle Estate, with approximately 160m of elevation gain per lap. Expect mixed trail surfaces, woodland paths, roots, rocks, grass, and around 1.5km of concrete path.</p>
         </div>
-        <div class="card map-card">
+        <div class="card map-card" id="course-map-card">
           <div id="route-map" aria-label="Interactive route map"></div>
+          <div class="map-fallback" role="status">
+            <p>The interactive route map could not be loaded in this browser.</p>
+            <p><a href="bristol-backyard-ultra-route.gpx" download>Download the GPX route file instead.</a></p>
+          </div>
           <div class="download-row">
-            <a class="button-primary" href="bristol-backyard-ultra-route.gpx">Download GPX</a>
+            <a class="button-primary" href="bristol-backyard-ultra-route.gpx" download>Download GPX <span class="file-meta">GPX</span></a>
             <a class="button-secondary" href="faq.html">Course FAQs</a>
           </div>
         </div>
@@ -618,12 +634,21 @@
       <a href="archive-2026.html">2026 Archive</a>
       <a href="partners.html">Partners</a>
       <a href="index.html#contact">Contact</a>
+          <a href="privacy.html">Privacy</a>
     </nav>
+    <p class="footer-privacy"><a class="privacy-link" href="privacy.html">Privacy &amp; Cookies</a></p>
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
     const mapElement = document.getElementById("route-map");
+    const mapCard = document.getElementById("course-map-card");
+
+    function showMapFallback() {
+      if (mapCard) {
+        mapCard.classList.add("has-map-error");
+      }
+    }
 
     if (mapElement && window.L) {
       const map = L.map("route-map", {
@@ -639,7 +664,12 @@
       window.setTimeout(() => map.invalidateSize(), 250);
 
       fetch("bristol-backyard-ultra-route.gpx")
-        .then((response) => response.text())
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Route file unavailable");
+          }
+          return response.text();
+        })
         .then((gpxText) => {
           const gpx = new DOMParser().parseFromString(gpxText, "application/xml");
           const points = Array.from(gpx.querySelectorAll("trkpt, rtept"))
@@ -649,7 +679,10 @@
             ])
             .filter(([lat, lon]) => Number.isFinite(lat) && Number.isFinite(lon));
 
-          if (!points.length) return;
+          if (!points.length) {
+            showMapFallback();
+            return;
+          }
 
           const route = L.polyline(points, {
             color: "#D95E1F",
@@ -661,7 +694,10 @@
           route.bringToFront();
           map.invalidateSize();
           map.fitBounds(route.getBounds(), { padding: [24, 24] });
-        });
+        })
+        .catch(showMapFallback);
+    } else {
+      showMapFallback();
     }
   </script>
   <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/45362f8425ca47e31537b996b/edd1ed29fee84874ad4fd0764.js");</script>
