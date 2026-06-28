@@ -150,8 +150,8 @@
     .partners-hero h1 {
       margin: 0;
       color: var(--white);
-      font-size: clamp(3rem, 7vw, 5.5rem);
-      line-height: 0.98;
+      font-size: clamp(3.05rem, 7.2vw, 5.75rem);
+      line-height: 0.96;
       text-shadow: 0 7px 24px rgba(0, 0, 0, 0.46);
       letter-spacing: -0.03em;
     }
@@ -189,7 +189,7 @@
     }
 
     .button-primary {
-      background-color: #C6531B;
+      background-color: var(--burnt-orange);
       color: var(--white);
       box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
     }
@@ -257,20 +257,23 @@
     }
 
     .section-shell {
-      padding: 48px 20px 0;
+      padding: 48px 0 0;
     }
 
     .card-section {
-      max-width: var(--max-width);
-      margin: 0 auto 34px;
-      border-radius: var(--radius);
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
       background: rgba(255, 255, 255, 0.78);
-      border: 1px solid rgba(9, 73, 60, 0.07);
+      border: 0;
+      border-top: 1px solid rgba(9, 73, 60, 0.07);
       box-shadow: var(--shadow-hairline);
       overflow: hidden;
     }
 
     .section-content {
+      max-width: var(--max-width);
+      margin: 0 auto;
       padding: 46px 34px;
     }
 
@@ -556,7 +559,7 @@
       }
 
       .partners-hero h1 {
-        font-size: clamp(2.75rem, 14vw, 4.5rem);
+        font-size: clamp(3.25rem, 16vw, 4.7rem);
       }
 
       .partners-hero .subtitle {
@@ -576,7 +579,7 @@
       }
 
       .section-shell {
-        padding: 24px 10px 0;
+        padding: 24px 0 0;
       }
 
       .section-content {
@@ -624,12 +627,13 @@
 
   <nav aria-label="Primary">
     <div class="nav-inner">
+      <a href="index.html">Home</a>
       <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
       <a href="race-info.html">Race Info</a>
       <a href="faq.html">FAQ</a>
       <a href="archive-2026.html">2026 Archive</a>
       <a href="partners.html" aria-current="page">Partners</a>
-      <a href="#partner-contact-details">Contact</a>
+      <a href="index.html#contact">Contact</a>
     </div>
   </nav>
 
@@ -862,12 +866,13 @@
 
   <footer>
     <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
       <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
       <a href="race-info.html">Race Info</a>
       <a href="faq.html">FAQ</a>
       <a href="archive-2026.html">2026 Archive</a>
       <a href="partners.html" aria-current="page">Partners</a>
-      <a href="#partner-contact-details">Contact</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
     <p>&copy; 2026 Gravel &amp; Grit Events · Built with grit, community, and care.</p>
   </footer>

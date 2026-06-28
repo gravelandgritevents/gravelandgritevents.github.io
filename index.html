@@ -198,7 +198,7 @@
     }
 
     .button-primary {
-      background-color: #C6531B;
+      background-color: var(--burnt-orange);
       color: var(--white);
       box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
     }
@@ -249,18 +249,23 @@
     nav a:hover, nav a[aria-current="page"] { color: var(--white); }
     nav a[aria-current="page"] { border-bottom: 2px solid var(--burnt-orange); }
 
-    .section-shell { padding: 48px 20px 0; }
+    .section-shell { padding: 48px 0 0; }
     .card-section {
-      max-width: var(--max-width);
-      margin: 0 auto 34px;
-      border-radius: var(--radius);
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
       background: rgba(255, 255, 255, 0.78);
-      border: 1px solid rgba(9, 73, 60, 0.07);
+      border: 0;
+      border-top: 1px solid rgba(9, 73, 60, 0.07);
       box-shadow: var(--shadow-hairline);
       overflow: hidden;
     }
 
-    .section-content { padding: 46px 34px; }
+    .section-content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 46px 34px;
+    }
     .section-heading {
       max-width: 780px;
       margin: 0 auto 28px;
@@ -473,7 +478,7 @@
       .hero h1 { font-size: clamp(3.25rem, 16vw, 4.7rem); }
       .nav-inner { justify-content: center; padding: 10px 14px; gap: 0 18px; }
       nav a { font-size: 0.86rem; line-height: 1.25; }
-      .section-shell { padding: 24px 10px 0; }
+      .section-shell { padding: 24px 0 0; }
       .section-content { padding: 30px 18px; }
       .mini-faq { grid-template-columns: 1fr; }
       .button-primary, .button-secondary { width: 100%; min-width: unset; }
@@ -506,6 +511,7 @@
 
   <nav aria-label="Primary">
     <div class="nav-inner">
+      <a href="index.html" aria-current="page">Home</a>
       <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
       <a href="race-info.html">Race Info</a>
       <a href="faq.html">FAQ</a>
@@ -720,6 +726,7 @@
 
   <footer>
     <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html" aria-current="page">Home</a>
       <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
       <a href="race-info.html">Race Info</a>
       <a href="faq.html">FAQ</a>

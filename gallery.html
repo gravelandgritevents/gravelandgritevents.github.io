@@ -135,9 +135,9 @@
     .gallery-hero h1 {
       margin: 0;
       color: var(--white);
-      font-size: clamp(3rem, 7.2vw, 5.7rem);
-      line-height: 0.98;
-      letter-spacing: -0.04em;
+      font-size: clamp(3.05rem, 7.2vw, 5.75rem);
+      line-height: 0.96;
+      letter-spacing: -0.03em;
       text-shadow: 0 7px 24px rgba(0, 0, 0, 0.46);
     }
 
@@ -173,7 +173,7 @@
     }
 
     .button-primary {
-      background-color: #C6531B;
+      background-color: var(--burnt-orange);
       color: var(--white);
       box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
     }
@@ -241,15 +241,16 @@
     }
 
     .section-shell {
-      padding: 48px 20px 0;
+      padding: 48px 0 0;
     }
 
     .gallery-card {
-      max-width: calc(var(--max-width) + 120px);
-      margin: 0 auto 34px;
+      width: 100%;
+      margin: 0;
       background: rgba(255, 255, 255, 0.78);
-      border: 1px solid rgba(9, 73, 60, 0.07);
-      border-radius: var(--radius);
+      border: 0;
+      border-top: 1px solid rgba(9, 73, 60, 0.07);
+      border-radius: 0;
       box-shadow: var(--shadow-hairline);
       overflow: hidden;
     }
@@ -290,7 +291,15 @@
     }
 
     .picflow-wrap {
+      max-width: calc(var(--max-width) + 120px);
+      margin: 0 auto;
       padding: 8px 28px 42px;
+    }
+
+    .gallery-attribution {
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      color: #999;
     }
 
     picflow-gallery {
@@ -351,7 +360,7 @@
       }
 
       .gallery-hero h1 {
-        font-size: clamp(2.8rem, 14vw, 4.5rem);
+        font-size: clamp(3.25rem, 16vw, 4.7rem);
       }
 
       .gallery-hero .subtitle {
@@ -383,12 +392,12 @@
       }
 
       .section-shell {
-        padding: 24px 10px 0;
+        padding: 24px 0 0;
       }
 
       .gallery-card {
-        margin-bottom: 20px;
-        border-radius: 16px;
+        margin-bottom: 0;
+        border-radius: 0;
       }
 
       .gallery-intro {
@@ -438,6 +447,7 @@
 
   <nav aria-label="Primary">
     <div class="nav-inner">
+      <a href="index.html">Home</a>
       <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
       <a href="race-info.html">Race Info</a>
       <a href="faq.html">FAQ</a>
@@ -484,7 +494,7 @@ no-padding="true"
 no-background="true"
 show-cover="true">
 
-  <p style="font-size:12px;color:#999;font-family:sans-serif">
+  <p class="gallery-attribution">
     Client gallery powered by
     <a href="https://picflow.com">Picflow</a>
   </p>
@@ -495,6 +505,7 @@ show-cover="true">
 
   <footer>
     <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
       <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
       <a href="race-info.html">Race Info</a>
       <a href="faq.html">FAQ</a>

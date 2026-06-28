@@ -59,9 +59,6 @@
       justify-content: center;
       padding: 12px 20px;
     }
-    .brand {
-      display: none;
-    }
     .nav-links {
       display: flex;
       align-items: center;
@@ -142,10 +139,9 @@
     }
     main { padding: 0; }
     .card-section {
-      width: calc(100% - 40px);
-      max-width: var(--max-width);
-      margin: 0 auto 22px;
-      border-radius: var(--radius);
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
       background: rgba(255, 255, 255, 0.78);
       backdrop-filter: blur(10px);
       box-shadow: var(--shadow-hairline);
@@ -153,7 +149,11 @@
     }
     .card-section.alt { background: rgba(255, 255, 255, 0.78); }
     .site-header + .card-section { margin-top: 48px; }
-    .section-inner { padding: 46px 34px; }
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 46px 34px;
+    }
     .section-heading {
       max-width: 780px;
       margin-bottom: 24px;
@@ -237,27 +237,26 @@
       transform: translateY(-2px);
       background: var(--earthy-green-2);
     }
-    .site-footer {
+    footer {
       text-align: center;
+      font-size: 0.92rem;
       padding: 38px 20px 58px;
       color: var(--slate-grey);
+      font-weight: 500;
     }
-    .footer-inner {
-      width: min(var(--max-width), 100%);
-      margin: 0 auto;
+    .footer-nav {
+      position: static;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 24px;
-      flex-wrap: wrap;
+      gap: 10px 18px;
+      background: transparent;
+      border: 0;
+      backdrop-filter: none;
     }
-    .footer-inner strong { color: var(--earthy-green); }
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-    .footer-links a { color: var(--earthy-green); text-decoration: none; font-weight: 700; }
-    .footer-links a:hover { color: var(--burnt-orange-dark); }
+    .footer-nav a { color: var(--earthy-green); text-decoration: none; font-weight: 800; }
+    .footer-nav a:hover { color: var(--burnt-orange-dark); }
+    footer p { margin: 18px 0 0; }
     @media (max-width: 820px) {
       .nav { padding: 10px 14px; }
       .nav-links { gap: 0 18px; }
@@ -268,11 +267,11 @@
       .hero-inner { padding: 62px 18px 72px; }
       .hero h1 { font-size: clamp(3.25rem, 16vw, 4.7rem); }
       .nav-links a { font-size: 0.86rem; line-height: 1.25; }
-      .card-section { width: calc(100% - 20px); }
       .site-header + .card-section { margin-top: 24px; }
       .section-inner { padding: 30px 18px; }
       .button-primary,
       .button-secondary { width: 100%; min-width: unset; }
+      .footer-nav { display: none; }
     }
   </style>
 </head>
@@ -287,9 +286,9 @@
     </section>
 
     <header class="site-header">
-      <nav class="nav" aria-label="Primary navigation">
-        <a class="brand" href="index.html">Gravel &amp; Grit Events</a>
+      <nav class="nav" aria-label="Primary">
         <div class="nav-links">
+          <a href="index.html">Home</a>
           <a class="entry-link" href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
           <a href="race-info.html">Race Info</a>
           <a href="faq.html" aria-current="page">FAQ</a>
@@ -466,18 +465,16 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <strong>Gravel &amp; Grit Events</strong>
-      <div class="footer-links">
-        <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
-        <a href="race-info.html">Race Info</a>
-        <a href="faq.html">FAQ</a>
-        <a href="archive-2026.html">2026 Archive</a>
-        <a href="partners.html">Partners</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-    </div>
+  <footer>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer">Enter 2027</a>
+      <a href="race-info.html">Race Info</a>
+      <a href="faq.html">FAQ</a>
+      <a href="archive-2026.html">2026 Archive</a>
+      <a href="partners.html">Partners</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
   </footer>
 </body>
 </html>
