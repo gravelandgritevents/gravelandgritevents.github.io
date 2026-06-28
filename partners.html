@@ -107,6 +107,7 @@
 
     .partners-hero {
       position: relative;
+      min-height: 736px;
       background:
         linear-gradient(135deg, rgba(4, 25, 22, 0.78), rgba(9, 73, 60, 0.52) 48%, rgba(0, 0, 0, 0.38)),
         url("images/Runners-and-castle") center/cover no-repeat;
@@ -129,7 +130,7 @@
       z-index: 2;
       max-width: 900px;
       margin: 0 auto;
-      padding: 88px 20px 98px;
+      padding: 86px 20px 98px;
       text-align: center;
     }
 
@@ -216,6 +217,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      min-height: 53px;
       background: rgba(9, 73, 60, 0.94);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -551,11 +553,12 @@
 
     @media (max-width: 640px) {
       .partners-hero {
+        min-height: auto;
         background-position: 48% center;
       }
 
       .hero-inner {
-        padding: 66px 18px 76px;
+        padding: 62px 18px 72px;
       }
 
       .partners-hero h1 {

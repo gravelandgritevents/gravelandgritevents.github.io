@@ -87,6 +87,7 @@
 
     .hero {
       position: relative;
+      min-height: 736px;
       background:
         linear-gradient(135deg, rgba(9, 73, 60, 0.72), rgba(15, 91, 76, 0.44)),
         url("../../images/GRAVEL&GRITPREEVENTSHOOTBTSLAUINFOCUS(31).jpg") center/cover no-repeat;
@@ -191,6 +192,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      min-height: 53px;
       background: rgba(9, 73, 60, 0.92);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -199,11 +201,18 @@
     .nav-inner {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 14px 20px;
+      padding: 12px 20px;
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
+      flex-wrap: nowrap;
       justify-content: center;
       gap: 8px 30px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .nav-inner::-webkit-scrollbar {
+      display: none;
     }
 
     nav a {
@@ -211,6 +220,7 @@
       text-decoration: none;
       font-weight: 700;
       font-size: 0.96rem;
+      white-space: nowrap;
       opacity: 0.95;
     }
 
@@ -616,6 +626,10 @@
     @media (max-width: 640px) {
       body {
         line-height: 1.62;
+      }
+
+      .hero {
+        min-height: auto;
       }
 
       .hero-inner {

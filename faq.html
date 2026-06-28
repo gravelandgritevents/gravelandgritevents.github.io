@@ -48,6 +48,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      min-height: 53px;
       background: rgba(9, 73, 60, 0.94);
       box-shadow: 0 9px 22px rgba(0, 0, 0, 0.18);
     }
@@ -63,14 +64,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0 24px;
-      flex-wrap: wrap;
+      gap: 8px 30px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .nav-links::-webkit-scrollbar {
+      display: none;
     }
     .nav-links a {
       text-decoration: none;
       font-weight: 700;
       font-size: 0.94rem;
-      padding: 6px 0;
+      padding: 0;
+      white-space: nowrap;
       color: var(--stone);
       transition: color 0.2s ease, border-color 0.2s ease;
     }
@@ -83,6 +90,7 @@
     }
     .hero {
       position: relative;
+      min-height: 736px;
       background:
         linear-gradient(135deg, rgba(4, 25, 22, 0.74), rgba(9, 73, 60, 0.48) 48%, rgba(0, 0, 0, 0.38)),
         url("images/Crewless-Crew") center/cover no-repeat;
@@ -264,6 +272,7 @@
     }
     @media (max-width: 640px) {
       body { line-height: 1.62; }
+      .hero { min-height: auto; }
       .hero-inner { padding: 62px 18px 72px; }
       .hero h1 { font-size: clamp(3.25rem, 16vw, 4.7rem); }
       .nav-links a { font-size: 0.86rem; line-height: 1.25; }
