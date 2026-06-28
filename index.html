@@ -216,6 +216,14 @@
 
     .button-secondary:hover { transform: translateY(-2px); background: var(--earthy-green-2); }
 
+    .button-light {
+      background: rgba(255, 255, 255, 0.94);
+      color: var(--earthy-green);
+      border: 1px solid rgba(255, 255, 255, 0.52);
+    }
+
+    .button-light:hover { transform: translateY(-2px); background: var(--white); }
+
     nav {
       position: sticky;
       top: 0;
@@ -430,6 +438,70 @@
 
     .mini-faq p { margin: 0; line-height: 1.55; }
 
+    .signup-section {
+      background:
+        linear-gradient(135deg, rgba(245, 245, 240, 0.98), rgba(255, 255, 255, 0.86)),
+        url("images/Runners-and-castle") center/cover no-repeat;
+    }
+
+    .signup-panel {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 34px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(9, 73, 60, 0.1);
+    }
+
+    .signup-form {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: end;
+      max-width: 660px;
+      margin: 28px auto 0;
+    }
+
+    .signup-form label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--earthy-green);
+      font-weight: 800;
+    }
+
+    .signup-form input[type="email"] {
+      width: 100%;
+      min-height: 52px;
+      padding: 13px 15px;
+      border: 1px solid rgba(9, 73, 60, 0.22);
+      border-radius: 10px;
+      background: var(--white);
+      color: var(--slate-grey);
+      font: inherit;
+    }
+
+    .signup-form input[type="email"]:focus {
+      outline: 3px solid rgba(217, 94, 31, 0.28);
+      border-color: var(--burnt-orange);
+    }
+
+    .signup-form button {
+      min-height: 52px;
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .signup-note {
+      max-width: 660px;
+      margin: 14px auto 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      text-align: center;
+    }
+
     .final-cta {
       background:
         linear-gradient(135deg, rgba(9, 73, 60, 0.94), rgba(15, 91, 76, 0.9)),
@@ -483,6 +555,8 @@
       .section-shell { padding: 24px 0 0; }
       .section-content { padding: 30px 18px; }
       .mini-faq { grid-template-columns: 1fr; }
+      .signup-panel { padding: 24px 18px; }
+      .signup-form { grid-template-columns: 1fr; }
       .button-primary, .button-secondary { width: 100%; min-width: unset; }
       .footer-nav { display: none; }
     }
@@ -506,6 +580,7 @@
       <div class="hero-meta">Built by runners, for runners.</div>
       <div class="hero-actions">
         <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer" class="button-primary">Enter 2027</a>
+        <a href="#race-updates" class="button-secondary button-light">Get Race Updates</a>
         <a href="race-info.html" class="button-secondary">Read Race Info</a>
       </div>
     </div>
@@ -534,8 +609,39 @@
           </p>
           <div class="entry-actions">
             <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer" class="button-primary">Enter 2027</a>
+            <a href="#race-updates" class="button-secondary">Get Race Updates</a>
             <a href="faq.html" class="button-secondary">Read the FAQ</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="race-updates" class="card-section signup-section">
+      <div class="section-content">
+        <div class="signup-panel">
+          <div class="section-heading">
+            <div class="kicker">Stay in the loop</div>
+            <h2>Get Bristol Backyard Ultra updates</h2>
+          </div>
+          <p class="section-intro">
+            Join the mailing list for race news, entry reminders, partner updates and useful notes before event weekend.
+          </p>
+          <form action="https://gravelandgritevents.us13.list-manage.com/subscribe/post?u=45362f8425ca47e31537b996b&amp;id=1cf3900049&amp;f_id=004734e5f0" method="post" class="signup-form" target="_blank">
+            <div>
+              <label for="mce-EMAIL">Email address</label>
+              <input type="email" name="EMAIL" id="mce-EMAIL" autocomplete="email" required />
+            </div>
+            <div hidden>
+              <input type="hidden" name="tags" value="7209456" />
+            </div>
+            <div aria-hidden="true" style="position: absolute; left: -5000px;">
+              <input type="text" name="b_45362f8425ca47e31537b996b_1cf3900049" tabindex="-1" value="" />
+            </div>
+            <button type="submit" class="button-primary">Subscribe</button>
+          </form>
+          <p class="signup-note">
+            We will only email you about Gravel &amp; Grit Events. You can unsubscribe at any time using the link in our emails.
+          </p>
         </div>
       </div>
     </section>
@@ -720,6 +826,7 @@
         </p>
         <div class="entry-actions">
           <a href="https://race-nation.co.uk/register/gravel-grit-events/bristol-backyard-ultra-27" target="_blank" rel="noopener noreferrer" class="button-primary">Enter 2027</a>
+          <a href="#race-updates" class="button-secondary button-light">Get Race Updates</a>
           <a href="mailto:info@gravelandgritevents.com" class="button-secondary">Email Us</a>
         </div>
       </div>
