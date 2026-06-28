@@ -50,7 +50,8 @@
       z-index: 1000;
       min-height: 53px;
       background: rgba(9, 73, 60, 0.94);
-      box-shadow: 0 9px 22px rgba(0, 0, 0, 0.18);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
     .nav {
       max-width: var(--max-width);
@@ -233,7 +234,7 @@
     }
     .button-primary:hover {
       transform: translateY(-2px);
-      background-color: #A84814;
+      background-color: var(--burnt-orange-dark);
     }
     .button-secondary {
       border: 2px solid rgba(245, 245, 240, 0.72);

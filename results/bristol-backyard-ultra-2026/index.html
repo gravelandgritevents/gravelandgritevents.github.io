@@ -33,7 +33,8 @@
       --muted: #6f6f6f;
       --white: #ffffff;
       --shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
-      --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.06);
+      --shadow-soft: 0 8px 22px rgba(9, 35, 30, 0.055);
+      --shadow-hairline: 0 1px 0 rgba(9, 73, 60, 0.06);
       --radius: 18px;
       --max-width: 1120px;
     }
@@ -89,7 +90,7 @@
       position: relative;
       min-height: 736px;
       background:
-        linear-gradient(135deg, rgba(9, 73, 60, 0.72), rgba(15, 91, 76, 0.44)),
+        linear-gradient(135deg, rgba(4, 25, 22, 0.74), rgba(9, 73, 60, 0.48) 48%, rgba(0, 0, 0, 0.38)),
         url("../../images/GRAVEL&GRITPREEVENTSHOOTBTSLAUINFOCUS(31).jpg") center/cover no-repeat;
       color: var(--stone);
       overflow: hidden;
@@ -99,7 +100,9 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.12));
+      background:
+        radial-gradient(circle at 50% 38%, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.38) 72%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
       pointer-events: none;
     }
 
@@ -173,7 +176,7 @@
 
     .button-primary:hover {
       transform: translateY(-2px);
-      background-color: #A84814;
+      background-color: var(--burnt-orange-dark);
     }
 
     .button-secondary {
@@ -193,7 +196,7 @@
       top: 0;
       z-index: 1000;
       min-height: 53px;
-      background: rgba(9, 73, 60, 0.92);
+      background: rgba(9, 73, 60, 0.94);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
@@ -229,6 +232,11 @@
       color: var(--white);
     }
 
+    nav a[aria-current="page"] {
+      color: var(--white);
+      border-bottom: 2px solid var(--burnt-orange);
+    }
+
     .section-shell {
       padding: 48px 0 0;
     }
@@ -236,18 +244,18 @@
     section.card-section {
       width: 100%;
       margin: 0;
-      background: rgba(255, 255, 255, 0.86);
+      background: rgba(255, 255, 255, 0.78);
       border: 0;
       border-top: 1px solid rgba(9, 73, 60, 0.06);
       border-radius: 0;
-      box-shadow: var(--shadow-soft);
+      box-shadow: var(--shadow-hairline);
       overflow: hidden;
     }
 
     .section-content {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 42px 32px;
+      padding: 46px 34px;
     }
 
     .section-heading {
@@ -264,7 +272,7 @@
       letter-spacing: 0.1em;
       font-size: 0.78rem;
       font-weight: 800;
-      color: var(--burnt-orange);
+      color: var(--burnt-orange-dark);
     }
 
     .section-heading h2 {
@@ -375,15 +383,6 @@
       color: var(--muted);
     }
 
-
-    .section-shell::before {
-      content: "";
-      display: block;
-      width: min(150px, 40vw);
-      height: 1px;
-      margin: 0 auto 28px;
-      background: linear-gradient(90deg, transparent, rgba(9, 73, 60, 0.18), transparent);
-    }
 
     .section-intro,
     .centered-copy {
@@ -671,10 +670,6 @@
 
       .section-shell {
         padding: 22px 0 0;
-      }
-
-      .section-shell::before {
-        margin-bottom: 20px;
       }
 
       section.card-section {
