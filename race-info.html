@@ -307,6 +307,16 @@
     #route-map .leaflet-pane > svg {
       max-width: none;
     }
+    #route-map .leaflet-tile-pane { z-index: 200; }
+    #route-map .leaflet-overlay-pane { z-index: 400; }
+    #route-map .leaflet-shadow-pane { z-index: 500; }
+    #route-map .leaflet-marker-pane { z-index: 600; }
+    #route-map .leaflet-tooltip-pane { z-index: 650; }
+    #route-map .leaflet-popup-pane { z-index: 700; }
+    #route-map .leaflet-overlay-pane svg {
+      z-index: 400;
+      pointer-events: none;
+    }
     #route-map .leaflet-control-container .leaflet-top,
     #route-map .leaflet-control-container .leaflet-bottom {
       position: absolute;
@@ -612,7 +622,6 @@
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
   <script>
     const mapElement = document.getElementById("route-map");
 
@@ -629,22 +638,30 @@
       requestAnimationFrame(() => map.invalidateSize());
       window.setTimeout(() => map.invalidateSize(), 250);
 
-      new L.GPX("bristol-backyard-ultra-route.gpx", {
-        async: true,
-        marker_options: {
-          startIconUrl: "",
-          endIconUrl: "",
-          shadowUrl: "",
-        },
-        polyline_options: {
-          color: "#D95E1F",
-          opacity: 0.95,
-          weight: 5,
-        },
-      }).on("loaded", function(event) {
-        map.invalidateSize();
-        map.fitBounds(event.target.getBounds(), { padding: [24, 24] });
-      }).addTo(map);
+      fetch("bristol-backyard-ultra-route.gpx")
+        .then((response) => response.text())
+        .then((gpxText) => {
+          const gpx = new DOMParser().parseFromString(gpxText, "application/xml");
+          const points = Array.from(gpx.querySelectorAll("trkpt, rtept"))
+            .map((point) => [
+              Number(point.getAttribute("lat")),
+              Number(point.getAttribute("lon")),
+            ])
+            .filter(([lat, lon]) => Number.isFinite(lat) && Number.isFinite(lon));
+
+          if (!points.length) return;
+
+          const route = L.polyline(points, {
+            color: "#D95E1F",
+            opacity: 1,
+            weight: 6,
+            lineJoin: "round",
+          }).addTo(map);
+
+          route.bringToFront();
+          map.invalidateSize();
+          map.fitBounds(route.getBounds(), { padding: [24, 24] });
+        });
     }
   </script>
 </body>
