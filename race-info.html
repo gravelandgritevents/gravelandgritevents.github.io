@@ -421,6 +421,22 @@
       border-top: 1px solid rgba(9, 73, 60, 0.08);
       background: var(--white);
     }
+    .course-warning {
+      margin: 22px 0 0;
+      padding: 22px 24px;
+      border-left: 5px solid var(--burnt-orange);
+      border-radius: 12px;
+      background: rgba(217, 94, 31, 0.08);
+    }
+    .course-warning h3 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+    .course-warning p {
+      margin: 0;
+      color: var(--slate-grey);
+      line-height: 1.62;
+    }
     footer {
       text-align: center;
       font-size: 0.92rem;
@@ -527,8 +543,13 @@
         <div class="section-heading">
           <p class="eyebrow">Course</p>
           <h2>A hard, brutally honest Backyard Ultra course.</h2>
-          <p>The route is a 4.167 mile / 6.7km loop around Blaise Castle Estate, with approximately 160m of elevation gain per lap. This is not a fast, flat Backyard Ultra. Expect a hilly and at times technical course with mixed trail surfaces, woodland paths, roots, rocks, grass, and around 1.5km of concrete path.</p>
+          <p>The route is a 4.167 mile / 6.7km loop around Blaise Castle Estate, with approximately 160m of elevation gain per lap. This is not a fast, flat Backyard Ultra. The loop winds through woodland trails, open fields, rocky sections, roots, grass, around 1.5km of concrete path, and the technical descent down Dynamite Hill.</p>
+          <p>It is a characterful, hilly, and at times technical route that rewards patience more than speed. Come expecting a proper Bristol challenge, not an easy rolling loop.</p>
         </div>
+        <aside class="course-warning" aria-label="Course difficulty note">
+          <h3>Before you enter</h3>
+          <p>Compared with a flat, runnable Backyard Ultra, this is a difficult course. The 160m of climb each yard adds up quickly, and the mixed surfaces mean tired legs need care, especially after dark or in wet conditions.</p>
+        </aside>
         <div class="card map-card" id="course-map-card">
           <div id="route-map" aria-label="Interactive route map"></div>
           <div class="map-fallback" role="status">
