@@ -216,6 +216,41 @@
       color: var(--slate-grey);
     }
     .faq-card ul { margin: 0; padding-left: 20px; }
+    .support-photo-band {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 0;
+      align-items: stretch;
+      overflow: hidden;
+      border-radius: 18px;
+      background: var(--earthy-green);
+      color: var(--stone);
+      box-shadow: var(--shadow-soft);
+    }
+    .support-photo-band img {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+    }
+    .support-photo-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 34px;
+      background: linear-gradient(135deg, rgba(9, 73, 60, 0.96), rgba(15, 91, 76, 0.9));
+    }
+    .support-photo-copy h2 {
+      color: var(--white);
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      line-height: 1.08;
+    }
+    .support-photo-copy p {
+      margin: 16px 0 0;
+      color: rgba(245, 245, 240, 0.9);
+      font-size: 1.04rem;
+      line-height: 1.68;
+    }
     .button-row {
       display: flex;
       flex-wrap: wrap;
@@ -279,6 +314,8 @@
       .nav { padding: 10px 14px; }
       .nav-links { gap: 0 18px; }
       .faq-grid { grid-template-columns: 1fr; }
+      .support-photo-band { grid-template-columns: 1fr; }
+      .support-photo-band img { min-height: 260px; }
     }
     @media (max-width: 640px) {
       body { line-height: 1.62; }
@@ -288,6 +325,7 @@
       .nav-links a { font-size: 0.86rem; line-height: 1.25; }
       .site-header + .card-section { margin-top: 24px; }
       .section-inner { padding: 30px 18px; }
+      .support-photo-copy { padding: 26px 20px; }
       .button-primary,
       .button-secondary { width: 100%; min-width: unset; }
       .footer-nav { display: none; }
@@ -497,6 +535,19 @@
             <h3>Can spectators walk onto the course?</h3>
             <p>Spectators should follow event instructions and avoid interfering with runners. Support must not be given out on the course.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-section alt">
+      <div class="section-inner">
+        <div class="support-photo-band">
+          <img src="images/basecamp-supporters.jpg" width="1600" height="1067" alt="A Bristol Backyard Ultra runner and supporters sitting together beside tents at basecamp." loading="lazy" decoding="async" />
+          <div class="support-photo-copy">
+            <p class="eyebrow">Basecamp atmosphere</p>
+            <h2>You can arrive with a crew, or find support here.</h2>
+            <p>Every hour brings runners back to the same place. That rhythm makes the event easy for supporters to follow, and it gives solo runners a welcoming point to reset before the next yard.</p>
+          </div>
         </div>
       </div>
     </section>

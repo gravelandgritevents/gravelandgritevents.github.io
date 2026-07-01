@@ -253,6 +253,29 @@
       gap: 18px;
     }
     .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .photo-story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .photo-story-card {
+      overflow: hidden;
+      border-radius: 18px;
+      background: var(--white);
+      border: 1px solid rgba(9, 73, 60, 0.08);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    }
+    .photo-story-card img {
+      width: 100%;
+      height: clamp(230px, 24vw, 310px);
+      object-fit: cover;
+    }
+    .photo-story-card figcaption {
+      padding: 18px 20px 20px;
+      color: var(--slate-grey);
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
     .card {
       background: var(--white);
       border: 1px solid rgba(9, 73, 60, 0.08);
@@ -423,7 +446,8 @@
       .nav { padding: 10px 14px; }
       .nav-links { gap: 0 18px; }
       .grid,
-      .grid.two { grid-template-columns: 1fr; }
+      .grid.two,
+      .photo-story-grid { grid-template-columns: 1fr; }
       #route-map { height: 330px; }
     }
     @media (max-width: 640px) {
@@ -515,6 +539,30 @@
             <a class="button-primary" href="bristol-backyard-ultra-route.gpx" download>Download GPX <span class="file-meta">GPX</span></a>
             <a class="button-secondary" href="faq.html">Course FAQs</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Race weekend in context</p>
+          <h2>The route, the reset, and the people around you.</h2>
+          <p>Backyard Ultra is not just the loop. It is the repeated return to basecamp, the help between yards, and the choice to go again when the hour comes round.</p>
+        </div>
+        <div class="photo-story-grid">
+          <figure class="photo-story-card">
+            <img src="images/course-trail-runners.jpg" width="1067" height="1600" alt="Runners moving together along a woodland trail at Bristol Backyard Ultra." loading="lazy" decoding="async" />
+            <figcaption>A mixed trail loop through woodland paths, roots, rocks, grass, and runnable sections.</figcaption>
+          </figure>
+          <figure class="photo-story-card">
+            <img src="images/basecamp-supporters.jpg" width="1600" height="1067" alt="Runner and supporters relaxing beside tents at the Bristol Backyard Ultra basecamp." loading="lazy" decoding="async" />
+            <figcaption>Basecamp gives runners, crews, families, and supporters a place to reset between yards.</figcaption>
+          </figure>
+          <figure class="photo-story-card">
+            <img src="images/crewless-crew-setup.jpg" width="933" height="1400" alt="People setting up a tent at Bristol Backyard Ultra basecamp." loading="lazy" decoding="async" />
+            <figcaption>Come prepared with the kit, shelter, and small comforts that will help you keep starting.</figcaption>
+          </figure>
         </div>
       </div>
     </section>

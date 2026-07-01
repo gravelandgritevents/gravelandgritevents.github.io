@@ -71,6 +71,11 @@
       color: inherit;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     a:focus-visible,
     button:focus-visible {
       outline: 3px solid var(--burnt-orange);
@@ -413,6 +418,34 @@
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(239, 238, 229, 0.78));
     }
 
+    .recap-photo-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .recap-photo-card {
+      overflow: hidden;
+      border-radius: 18px;
+      background: var(--white);
+      border: 1px solid rgba(9, 73, 60, 0.08);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .recap-photo-card img {
+      width: 100%;
+      height: clamp(280px, 32vw, 430px);
+      object-fit: cover;
+    }
+
+    .recap-photo-card figcaption {
+      padding: 18px 20px 20px;
+      color: var(--slate-grey);
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+
     .media-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -536,6 +569,10 @@
       .stats-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .recap-photo-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 640px) {
@@ -648,6 +685,15 @@
         margin-top: 18px;
       }
 
+      .recap-photo-grid {
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .recap-photo-card img {
+        height: 250px;
+      }
+
       .media-card {
         min-height: 176px;
         padding: 18px;
@@ -740,6 +786,28 @@
             <strong>3</strong>
             <span>reaching 100 miles</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-section media-section">
+      <div class="section-content">
+        <div class="section-heading">
+          <div class="kicker">2026 story</div>
+          <h2>Rain, crowds, and one more yard</h2>
+        </div>
+        <p class="section-intro">
+          The first Bristol Backyard Ultra had the full backyard rhythm: a packed start line, hard weather, and runners choosing to go again long after the easy miles were gone.
+        </p>
+        <div class="recap-photo-grid">
+          <figure class="recap-photo-card">
+            <img src="../../images/archive-2026-start-line.jpg" width="1600" height="1201" alt="Runners gathered between Gravel and Grit flags at the Bristol Backyard Ultra 2026 start line." loading="lazy" decoding="async" />
+            <figcaption>The inaugural start line brought runners, supporters, volunteers, and partners into one shared race weekend.</figcaption>
+          </figure>
+          <figure class="recap-photo-card">
+            <img src="../../images/archive-2026-rain-runner.jpg" width="1600" height="1067" alt="A Bristol Backyard Ultra runner moving through heavy rain near a sign reading go one more." loading="lazy" decoding="async" />
+            <figcaption>Heavy rain turned the simple instruction into the whole story: go one more.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
