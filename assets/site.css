@@ -114,3 +114,56 @@ footer .privacy-link:hover {
 .footer-privacy {
   margin: 14px 0 0;
 }
+
+/* Keep every route visible on phones instead of hiding it in a scrollable row. */
+@media (max-width: 640px) {
+  .nav-inner,
+  .nav-links {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 8px;
+    overflow-x: visible;
+    scrollbar-width: auto;
+  }
+
+  .nav-inner {
+    padding: 8px 10px;
+  }
+
+  .site-header .nav {
+    padding: 8px 10px;
+  }
+
+  .nav-inner a,
+  .nav-links a {
+    display: inline-flex;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 8px;
+    border-radius: 8px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .nav-inner a[aria-current="page"],
+  .nav-links a[aria-current="page"] {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  footer .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 8px;
+    margin: 0 auto;
+  }
+
+  footer .footer-nav a {
+    display: inline-flex;
+    min-height: 36px;
+    align-items: center;
+    padding: 6px 8px;
+  }
+}
