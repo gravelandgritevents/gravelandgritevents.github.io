@@ -13,6 +13,37 @@
   --shadow-hairline: 0 1px 0 rgba(9, 73, 60, 0.06);
   --radius: 18px;
   --max-width: 1120px;
+  --event-hero-image: url("../images/event-hero.jpg");
+}
+
+@supports (background-image: image-set(url("../images/event-hero-640.webp") type("image/webp"))) {
+  :root {
+    --event-hero-image: image-set(
+      url("../images/event-hero-640.avif") type("image/avif"),
+      url("../images/event-hero-640.webp") type("image/webp"),
+      url("../images/event-hero.jpg") type("image/jpeg")
+    );
+  }
+
+  @media (min-width: 641px) {
+    :root {
+      --event-hero-image: image-set(
+        url("../images/event-hero-1024.avif") type("image/avif"),
+        url("../images/event-hero-1024.webp") type("image/webp"),
+        url("../images/event-hero.jpg") type("image/jpeg")
+      );
+    }
+  }
+
+  @media (min-width: 1025px) {
+    :root {
+      --event-hero-image: image-set(
+        url("../images/event-hero-1600.avif") type("image/avif"),
+        url("../images/event-hero-1600.webp") type("image/webp"),
+        url("../images/event-hero.jpg") type("image/jpeg")
+      );
+    }
+  }
 }
 
 * { box-sizing: border-box; }
